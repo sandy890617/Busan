@@ -1,0 +1,592 @@
+:root {
+  --bg-main: #fdfbf7;
+  --bg-card: #ffffff;
+  --bg-subtle: #f7f4ef;
+  --primary: #e07a5f;
+  --primary-light: #fdf0ec;
+  --text-main: #3d3b3c;
+  --text-muted: #7d7879;
+  --text-light: #b0aba8;
+  --border: #eee8e0;
+  --radius-sm: 10px;
+  --radius: 16px;
+  --radius-pill: 999px;
+  --shadow: 0 4px 12px rgba(61, 59, 60, 0.05);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Noto Sans TC', sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.6;
+  padding-bottom: 40px;
+}
+
+/* Header */
+.simple-header {
+  text-align: center;
+  padding: 30px 16px 20px;
+}
+
+.couple-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  background: var(--primary-light);
+  color: var(--primary);
+  border-radius: var(--radius-pill);
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.page-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+/* 主要佈局 */
+.main-wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* 主導覽列 */
+.journal-nav {
+  display: flex;
+  gap: 8px;
+  padding: 6px 2px 14px;
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: none;
+}
+
+.journal-nav::-webkit-scrollbar {
+  display: none;
+}
+
+.nav-tab {
+  flex-shrink: 0;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  padding: 8px 16px;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  transition: all 0.2s ease;
+}
+
+.nav-tab.active {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+
+/* 分頁面板切換 */
+.tab-panel {
+  display: none;
+}
+
+.tab-panel.active {
+  display: block;
+  animation: fadeIn 0.25s ease;
+}
+
+.panel-header {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px;
+  margin-bottom: 16px;
+  box-shadow: var(--shadow);
+}
+
+.panel-tag {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--primary);
+  background: var(--primary-light);
+  padding: 3px 8px;
+  border-radius: var(--radius-pill);
+  margin-bottom: 6px;
+}
+
+.panel-header h2 {
+  font-size: 1.25rem;
+  margin-bottom: 4px;
+}
+
+.panel-intro {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+/* 列表與項目卡片 */
+.trip-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.check-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px 16px;
+  margin-bottom: 4px;
+  background-color: var(--bg-card);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border: 1px solid #f0f0f0;
+  transition: all 0.2s ease;
+}
+
+.check-item:hover {
+  border-color: var(--primary);
+}
+
+/* 打勾圖示 */
+.check-icon {
+  font-size: 1.1rem;
+  color: #d1d5db;
+  margin-top: 4px;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: color 0.2s ease;
+}
+
+.check-icon:hover {
+  color: var(--primary);
+}
+
+/* 內容文字區（防止 Flex 溢出） */
+.item-text {
+  flex: 1;
+  min-width: 0;
+  width: 100%;
+}
+
+.item-text strong {
+  display: block;
+  font-size: 0.98rem;
+  color: var(--text-main);
+  margin-bottom: 4px;
+  word-break: break-word;
+}
+
+.item-text p {
+  margin: 0 0 6px 0;
+  font-size: 0.86rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  word-break: break-word;
+}
+
+/* 劃掉狀態 */
+.check-item.done {
+  background: #f9f8f6;
+  opacity: 0.6;
+  border-color: #eee;
+}
+
+.check-item.done .check-icon {
+  color: var(--primary);
+}
+
+.check-item.done .item-text strong,
+.check-item.done .item-text p {
+  text-decoration: line-through;
+}
+
+.check-item.done .product-thumb img {
+  filter: grayscale(80%);
+}
+
+.check-item.done .product-link-btn {
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+/* 景點圖片橫向捲動列 */
+.item-gallery {
+  display: flex;
+  gap: 8px;
+  margin: 10px 0;
+  max-width: 100%;
+  overflow-x: auto;
+  padding-bottom: 6px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.item-gallery::-webkit-scrollbar {
+  height: 4px;
+}
+
+.item-gallery::-webkit-scrollbar-thumb {
+  background-color: var(--border);
+  border-radius: 4px;
+}
+
+.item-gallery img {
+  width: 120px;
+  height: 85px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+  cursor: zoom-in;
+  transition: transform 0.2s ease;
+}
+
+.item-gallery img:hover {
+  transform: scale(1.03);
+}
+
+/* 景點詳細說明框 */
+.item-details {
+  font-size: 0.84rem;
+  color: #6b7280;
+  line-height: 1.6;
+  background-color: #f9fafb;
+  padding: 10px 12px;
+  border-radius: 8px;
+  margin-top: 8px;
+  word-break: break-word;
+}
+
+.item-details div {
+  margin-bottom: 4px;
+}
+
+.item-details strong {
+  display: inline;
+  color: #374151;
+  font-size: 0.84rem;
+}
+
+.item-details ul {
+  margin: 4px 0 0 18px;
+  padding: 0;
+  list-style-type: disc;
+}
+
+.item-details li {
+  margin-bottom: 2px;
+}
+
+/* 次級選單 (必買清單) */
+.sub-nav {
+  display: flex;
+  gap: 6px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  padding: 6px;
+  border-radius: var(--radius-pill);
+  margin-bottom: 16px;
+  box-shadow: var(--shadow);
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: none;
+}
+
+.sub-nav::-webkit-scrollbar {
+  display: none;
+}
+
+.sub-tab {
+  flex: 1 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  font-weight: 500;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.sub-tab * {
+  pointer-events: none;
+}
+
+.sub-tab.active {
+  background: var(--primary-light);
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.sub-panel {
+  display: none !important;
+}
+
+.sub-panel.active {
+  display: block !important;
+  animation: fadeIn 0.25s ease;
+}
+
+/* 商品卡片樣式 */
+.check-item.has-product-detail {
+  padding: 14px;
+}
+
+.product-thumb {
+  flex-shrink: 0;
+  width: 72px;
+  height: 72px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background: var(--bg-subtle);
+  border: 1px solid var(--border);
+}
+
+.product-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  cursor: zoom-in;
+  transition: transform 0.2s ease;
+}
+
+.product-thumb img:hover {
+  transform: scale(1.05);
+}
+
+.product-head {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.product-tags {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.mini-tag {
+  font-size: 0.68rem;
+  font-weight: 500;
+  color: var(--primary);
+  background: var(--primary-light);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.product-tip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: var(--bg-subtle);
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.76rem;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+.product-tip i {
+  color: #e0a96d;
+}
+
+.product-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.product-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--primary);
+  background-color: var(--primary-light);
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.product-link-btn:hover {
+  background-color: var(--primary);
+  color: #ffffff;
+}
+
+.naver-map-btn {
+  color: #03C75A;
+  background-color: rgba(3, 199, 90, 0.1);
+}
+
+.naver-map-btn:hover {
+  background-color: #03C75A;
+  color: #ffffff;
+}
+
+/* 航班與住宿卡片 */
+.trip-card {
+  display: block;
+  text-decoration: none;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px;
+  color: inherit;
+  box-shadow: var(--shadow);
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.pill-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+}
+
+.label-flight { background: #e1f5fe; color: #0288d1; }
+.label-hotel { background: #ede7f6; color: #5e35b1; }
+
+.date-text {
+  font-size: 0.8rem;
+  color: var(--text-light);
+}
+
+.card-desc {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  margin: 6px 0 10px;
+}
+
+.card-footer {
+  border-top: 1px dashed var(--border);
+  padding-top: 10px;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  display: flex;
+}
+
+/* 圖片放大燈箱 (Lightbox) */
+.image-modal {
+  display: none;
+  position: fixed;
+  z-index: 99999;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(4px);
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.image-modal.show {
+  display: flex !important;
+}
+
+.modal-content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content img {
+  max-width: 100%;
+  max-height: 85vh;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  object-fit: contain;
+  animation: zoomIn 0.2s ease-out;
+}
+
+.modal-close {
+  position: absolute;
+  top: -14px;
+  right: -14px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #333333;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.85); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.map-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-map {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.btn-map:hover {
+  opacity: 0.85;
+}
+
+.btn-naver {
+  background-color: #03c75a;
+  color: #ffffff;
+}
+
+.btn-google {
+  background-color: #4285f4;
+  color: #ffffff;
+}
