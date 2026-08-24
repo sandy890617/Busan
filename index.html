@@ -29,14 +29,14 @@
     <!-- 選單 -->
 	<nav class="journal-nav">
 		<button class="nav-tab active" data-target="arrival">抵達日</button>
-		<button class="nav-tab" data-target="day1">Day 1</button>
-		<button class="nav-tab" data-target="day2">Day 2</button>
-		<button class="nav-tab" data-target="day3">Day 3</button>
-		<button class="nav-tab" data-target="day4">Day 4</button>
+		<button class="nav-tab" data-target="day1">影島區</button>
+		<button class="nav-tab" data-target="day2">海雲台</button>
+		<button class="nav-tab" data-target="day3">廣安里</button>
+		<button class="nav-tab" data-target="day4">西面</button>
 		<button class="nav-tab" data-target="restaurant">餐廳總合</button>
 		<button class="nav-tab nav-tab-info" data-target="info-flight"><i class="fa-solid fa-plane"></i> 航班</button>
 		<button class="nav-tab nav-tab-info" data-target="info-hotel"><i class="fa-solid fa-hotel"></i> 住宿</button>
-		<button class="nav-tab nav-tab-info" data-target="info-pack"><i class="fa-solid fa-list-check"></i> 清單</button>
+		<button class="nav-tab nav-tab-info" data-target="info-pack"><i class="fa-solid fa-list-check"></i> 購物清單</button>
 	</nav>
 
     <!-- 內容區 -->
@@ -49,14 +49,79 @@
 		<!-- Day 1 -->
 		<div class="tab-panel" id="day1">
 	        <div class="panel-header">
-	          <div class="panel-tag">DAY 1 · 10/20</div>
-	          <h2>初見釜山 · 牽手散步日</h2>
-	          <p class="panel-intro">抵達後第一站！暖暖的豬肉湯飯與夜間散策 ✨</p>
+	          <div class="panel-tag">影島區</div>
+	          <h2>懸崖海景與文青咖啡廳交織的海島漫遊</h2>
+	          <p class="panel-intro">位於釜山南側的一個海島區，過去以造船廠與修船工業聞名，近年來透過老舊建築改造與沿海景觀規劃，轉型為結合壯麗海景、文創藝術與大型海景咖啡廳的熱門旅遊地</p>
 	        </div>
+	        
+	        <!-- 區域篩選按鈕區 -->
+			<div class="filter-btn-group">
+			  <button class="filter-btn active" data-filter="day1-all">全部景點</button>
+			  <button class="filter-btn" data-filter="day1-attractions">景點</button>
+			  <button class="filter-btn" data-filter="day1-cafes">咖啡廳</button>
+			  <button class="filter-btn" data-filter="day1-restaurant">餐廳 / 小吃店</button>
+			  <button class="filter-btn" data-filter="day1-shop">選物店 / 衣服店</button>
+			</div>
 		
 	        <div class="trip-list">
+	        	<!-- 太宗台（태종대） -->
+				<div class="check-item" data-key="d1-6" data-area="day1-attractions">
+					<div class="sticker-pass">🎟️ 適用釜山 PASS</div>
+					<div class="item-text">
+						<strong>太宗台（태종대）</strong>
+						<div class="map-actions">
+							<a href="https://naver.me/GKUJ7xYL" target="_blank" rel="noopener noreferrer" class="btn-map btn-naver">
+								🗺️ Naver Map
+							</a>
+							<a href="https://lizzzstyle.tw/taejongdae/" target="_blank" rel="noopener noreferrer" class="btn-map btn-google">
+								📍 網頁資料
+							</a>
+						</div>
+						<p>
+							釜山最具代表性的壯闊國家地質公園！位於影島最南端，以茂密的松林、陡峭的奇岩絕壁與蔚藍無垠的開闊海景著稱。搭乘可愛的遊園列車（Danubi 列車）穿梭其中，登上影島燈塔與觀景台俯瞰海蝕崖，天氣晴朗時甚至能遠眺日本對馬島。
+						</p>
+					
+						<!-- 圖片展示區 -->
+						<div class="item-gallery">
+							<img src="IMG/太宗台/太宗台展望台.jpg" alt="太宗台影島燈塔與奇岩絕壁" onclick="openModal(this)" />
+							<img src="IMG/太宗台/水壺島.jpg" alt="水壺島" onclick="openModal(this)" />
+							<img src="IMG/太宗台/無限之光.jpg" alt="無限之光" onclick="openModal(this)" />
+							<img src="IMG/太宗台/小火車.jpg" alt="小火車" onclick="openModal(this)" />
+						</div>
+					
+						<!-- 詳細資訊與注意事項 -->
+						<div class="item-details">
+							<div>🕒 <strong>營業時間(10-3月)：</strong></div>
+							<ul>
+								<li>售票時間 09:00-17:30</li>
+								<li>營運時間 09:20-17:30</li>
+							</ul>
+				
+							<div>🎫 <strong>票價方式：</strong></div>
+							<ul>
+								<li>成人單程2000韓元、循環4000韓元</li>
+								<li>持釜山pass免費自由搭</li>
+							</ul>
+							
+							<div>🚌 <strong>交通方式：</strong></div>
+							<ul>
+								<li>從南浦站出發叫計程車，到Danubi換票處，總共需要20分鐘左右的車程</li>
+								<li>從南浦站出發，搭乘30號、8號公車，大約行經22個站，在太宗台、太宗台溫泉站下車，下車後步行9分鐘抵達Danubi換票處</li>
+								<li>搭乘綠色線觀光巴士，一大早從釜山站出發</li>
+							</ul>
+							
+							<div>⚠️ <strong>注意事項：</strong></div>
+							<ul>
+								<li>園區範圍廣大且坡度較陡，<strong>強烈建議購票搭乘 Danubi 遊園列車</strong>往返各站點以節省體力。</li>
+								<li>前往影島燈塔觀景台需走一段<strong>較長且陡峭的下坡與階梯步道</strong>，請穿著<strong>好走的平底運動鞋</strong>。</li>
+								<li>雨天或強風等惡劣氣候時，Danubi 遊園列車可能會<strong>暫停行駛</strong>，出發前請留意天氣狀況。</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
 				<!-- 國立海洋博物館 -->
-				<div class="check-item" data-key="d1-5">
+				<div class="check-item" data-key="d1-5" data-area="day1-attractions">
 					<div class="item-text">
 						<strong>國立海洋博物館（국립해양박물관）</strong>
 						<div class="map-actions">
@@ -101,7 +166,7 @@
 				</div>
 				
 				<!-- 明星/名聲一隻雞 -->
-				<div class="check-item" data-key="d1-3">
+				<div class="check-item" data-key="d1-3" data-area="day1-restaurant">
 					<div class="item-text">
 						<strong>明星一隻雞 / 名聲一隻雞（명성닭한마리）</strong>
 						<div class="map-actions">
@@ -143,7 +208,7 @@
 				</div>
 			
 				<!-- 影島海女村 -->
-				<div class="check-item" data-key="d1-1">
+				<div class="check-item" data-key="d1-1" data-area="day1-restaurant">
 					<div class="item-text">
 						<strong>影島海女村（영도해녀촌）</strong>
 						<div class="map-actions">
@@ -187,7 +252,7 @@
 				</div>
 
 	        	<!-- 白淺灘文化村（흰여울문화마을) -->
-				<div class="check-item" data-key="d1-2">
+				<div class="check-item" data-key="d1-2" data-area="day1-attractions">
 					<div class="item-text">
 						<strong>白淺灘文化村（흰여울문화마을）</strong>
 						<div class="map-actions">
@@ -222,8 +287,9 @@
 						</div>
 					</div>
 				</div>
+				
 				<!-- Space Onez -->
-				<div class="check-item" data-key="d1-4">
+				<div class="check-item" data-key="d1-4" data-area="day1-cafes">
 					<div class="item-text">
 						<strong>Space Onez（스페이스 원지）</strong>
 						<div class="map-actions">
@@ -262,7 +328,168 @@
 					</div>
 				</div>
 				
-	
+	        	<!-- P.ARK 複合文化空間（피아크） -->
+				<div class="check-item" data-key="d1-7" data-area="day1-cafes">
+					<div class="item-text">
+						<strong>P.ARK 複合文化空間（피아크）</strong>
+						<div class="map-actions">
+							<a href="https://naver.me/FqWtmvhO" target="_blank" rel="noopener noreferrer" class="btn-map btn-naver">
+								🗺️ Naver Map
+							</a>
+							<a href="https://alinalife.tw/p-ark-busan/" target="_blank" rel="noopener noreferrer" class="btn-map btn-google">
+								📷 網頁資料
+							</a>
+						</div>
+						<p>
+						  釜山影島超大型地標級複合文化咖啡旗艦空間！以「巨型郵輪」為建築設計概念，佔地數千坪。挑高的階梯式全景落地窗座位直面釜山港灣與五六島海景，館內集結了大型專業烘焙坊、精品咖啡、文創選品店與當代藝術展覽，兼具現代美學與壯闊海景。
+						</p>
+					
+						<!-- 圖片展示區 -->
+						<div class="item-gallery">
+							<img src="IMG/ARK/店面.webp" alt="店面" onclick="openModal(this)" />
+							<img src="IMG/ARK/四樓階梯.webp" alt="四樓階梯" onclick="openModal(this)" />
+							<img src="IMG/ARK/麵包.webp" alt="麵包" onclick="openModal(this)" />
+						</div>
+					
+						<!-- 詳細資訊與注意事項 -->
+						<div class="item-details">
+						  <div>🕒 <strong>營業時間：</strong>10:00–22:00</div>
+						  <div>👍 <strong>交通方式：</strong></div>
+						  <ul>
+						    <li>從「地鐵南浦站」出發，在6號出口旁的「影島大橋站 영도대교」公車站，坐綠色17號公車，就能輕鬆直達「米廠石油站 미창석유」</li>
+						  </ul>
+						  <div>⚠️ <strong>注意事項：</strong></div>
+						  <ul>
+						    <li>館內空間極為寬廣且設有多個樓層，點餐後可<strong>自由選擇各樓層室內或戶外草坪觀景區</strong>入座。</li>
+						    <li>烘焙麵包品項極為豐富且多樣，建議<strong>先挑選麵包再至櫃檯統一結帳點飲品</strong>。</li>
+						    <li>附設大型收費停車場與公車站點，搭乘<strong>公車至「國立海洋博物館」周邊站點</strong>或<strong>搭乘計程車</strong>前來皆十分便利。</li>
+						  </ul>
+						</div>
+					</div>
+				</div>
+	        
+	        	<!-- Cochonnet（꼬쇼네） -->
+				<div class="check-item" data-key="d1-8" data-area="day1-cafes">
+					<div class="item-text">
+						<strong>Cochonnet（꼬쇼네）</strong>
+						<div class="map-actions">
+							<a href="https://naver.me/GoD7V7DJ" target="_blank" rel="noopener noreferrer" class="btn-map btn-naver">
+								🗺️ Naver Map
+							</a>
+							<a href="https://www.visitbusan.net/zhs/index.do?menuCd=DOM_000000502003001000&uc_seq=2208&lang_cd=cng" target="_blank" rel="noopener noreferrer" class="btn-map btn-google">
+								📷 網頁資料
+							</a>
+							<a href="https://www.threads.com/@by.themood/post/C_mitGQhP4_?hl=zh-tw" target="_blank" rel="noopener noreferrer" class="btn-map btn-google">
+								ℹ️ Thread
+							</a>
+							<a href="https://www.instagram.com/sweet.cochonnet/" target="_blank" rel="noopener noreferrer" class="btn-map btn-google">
+								🌍 官網
+							</a>
+						</div>
+						<p>
+						  釜山廣安里巷弄裡宛如歐洲童話般的小法式雜貨咖啡廳！以法文「小豬（Cochonnet）」為名，店內擺滿精緻的法式復古雜貨、手作餐具與香醇烘焙。招牌提供道地的法式熱濃湯套餐、現烤歐式麵包與精緻甜點，溫馨鄉村風的每個角落都極具拍照美感。
+						</p>
+					
+						<!-- 圖片展示區 -->
+						<div class="item-gallery">
+							<img src="IMG/Cochonnet/店面.jfif" alt="法式復古木質門面" onclick="openModal(this)" />
+							<img src="IMG/Cochonnet/店狗.jfif" alt="店狗" onclick="openModal(this)" />
+							<img src="IMG/Cochonnet/麵包.jfif" alt="麵包" onclick="openModal(this)" />
+						</div>
+					
+						<!-- 詳細資訊與注意事項 -->
+						<div class="item-details">
+						  <div>🕒 <strong>營業時間：</strong>9:0–18:00 （最後點餐17:00）</div>
+						  <div>⚠️ <strong>注意事項：</strong></div>
+						  <ul>
+						    <li>店內座位數較少且空間精緻，熱門時段常需<strong>現場登記候位</strong>。</li>
+						    <li>招牌<strong>「每日手工法式濃湯搭配法棍」</strong>為限量供應，晚到容易售罄。</li>
+						    <li>陳列的法式餐具與雜貨小物多為<strong>可購買商品</strong>，挑選時請小心輕放。</li>
+						  </ul>
+						</div>
+					</div>
+				</div>
+	        
+	        	<!-- Dama-gada 文創選物店（담아가다） -->
+				<div class="check-item" data-key="d1-9" data-area="day1-shop">
+					<div class="item-text">
+						<strong>Dama-gada 文創選物店（담아가다）</strong>
+						<div class="map-actions">
+							<a href="https://naver.me/G7V4ATWl" target="_blank" rel="noopener noreferrer" class="btn-map btn-naver">
+								🗺️ Naver Map
+							</a>
+							<a href="https://www.visitbusan.net/index.do?menuCd=DOM_000000602002001000&uc_seq=1308&lang_cd=cnb&pagingParms=4ca15f3a76a21f554a6e515f5344f50c4f734814d27260977c0eb574b1e0019a33f5a8e2dd587a9efb82cc91cf112987488312a3bc08c3054da8c190c930f6592e7894a7ed3cf4243291b2529527de050aa608ee54ad79feb8b43e0becf2aedf306446a26175f37928b2e64d297ab48f8acfae3743ce2794ef15d99eb79334136e6112e649197131b1b4fe56c057ddfe064a5c73bc02c14fb59a37c423e37c297a1704be4d498a3e09420375b34e9f2510a1cc4d716862ae99920a8a5762c6af9ac22ac176c2b66e11a8d44eef418bbb4682048b5866c22bb084a7b3ef9af878e2d437f6474b3f70ab366ceee0154e358b4f29de7bede36cac8b626a1b97303c736314eea007010640393713f3fccf48efe24999cfdc85bb85247989a7b565c188b966678b37848e0d88865602a9ecd47a7ddf1406d80269895b9386fc9d120b54685de106a979027a6fb5c7bf90a1c8bf926b7a8e82fc894b6ec33d0e2cede1f9b0a88b6fca32c1431231fd2a39cac331bb432934a92cf6e6aad5dacce9f91679e0f167d0d79c3b59fcceeb7ed9a0cef2faaff2d3b87264367815c9f53c4f4ecbcb9d36a6045c9af35aa804d431440056418513af49517f4f79a55315722b93a340492d7be20285a25a5b31fe1498aaeb03980cb1031e10ebb655c00d31ed989ab7e55241a362937249ccdedef67a6ff7e802012cf40838e8f9b9f7df782352611e3221cc600bfb1a1df65ad422b447a891866d30c6a3ac177c0c336ab217bafc96a4aafe87e4f8d53c47b399853c6798bf07a3ef3af7230dfd5896ce340c4644d5bccb845f32c279d18f1f9cdc65713d7871231c2484183e655d5773e51e693157b6c8457fb14e1f1d7fc555f24c310e1b1fc3bb2ec3b8537e5c3c41ffde2f06bca9b29a52f3a820c30f9ef9ab393b9616c46fbc6ef5fd78ff334e3df20c860299b60aa334a70c5e98c1bf20a59ae3172de4ddb7c6306d39f9c46f407cb63c04889abd5e8e45f383f55448b9c6db2f" target="_blank" rel="noopener noreferrer" class="btn-map btn-google">
+								📷 網頁資訊
+							</a>
+						</div>
+						<p>
+						  釜山白淺灘文化村內極具人氣的療癒系文創雜貨小店！店名「담아가다」意為「滿載而歸、裝入心中」。店內網羅了眾多韓國獨立插畫家設計的文具、明信片、釜山限定海景貼紙、手作香氛與特色陶瓷器皿，非常適合作為挑選釜山旅行紀念品或伴手禮的挖寶基地。
+						</p>
+					
+						<!-- 圖片展示區 -->
+						<div class="item-gallery">
+							<img src="IMG/Damagada/店面.jfif" alt="Dama-gada 門市外觀" onclick="openModal(this)" />
+							<img src="IMG/Damagada/店內商品.jfif" alt="店內特色插畫文具與明信片" onclick="openModal(this)" />
+							<img src="IMG/Damagada/白沙.jfif" alt="手作雜貨與香氛選物區" onclick="openModal(this)" />
+						</div>
+					
+						<!-- 詳細資訊與注意事項 -->
+						<div class="item-details">
+						  <div>🕒 <strong>營業時間：</strong>10:00–18:00</div>
+						  <div>🚗 <strong>交通資訊：</strong></div>
+						  <ul>
+						    <li>地鐵 1號線南浦站6號出口，於影島大橋‧南浦站公車站搭乘508、7、71路公車，在影仙公寓公車站下車，步行2分鐘</li>
+						  </ul>
+						  <div>⚠️ <strong>注意事項：</strong></div>
+						  <ul>
+						    <li>店內空間小巧溫馨，若遇人潮較多時建議<strong>依序排隊入內參觀</strong>。</li>
+						    <li>架上陳列眾多精緻<strong>易碎手作陶瓷與玻璃飾品</strong>，挑選拿取時請小心輕放。</li>
+						    <li>店內提供多款以<strong>白淺灘貓咪、蔚藍海景</strong>為主題的原創明信片與文具，是極具紀念價值的特色伴手禮。</li>
+						  </ul>
+						</div>
+					</div>
+				</div>
+	        
+	        	<!-- 三進魚板 影島本店（삼진어묵 본점） -->
+				<div class="check-item" data-key="d1-10" data-area="day1-restaurant">
+					<div class="item-text">
+						<strong>三進魚板（삼진어묵）</strong>
+						<div class="map-actions">
+							<a href="https://naver.me/GpCTXMe4" target="_blank" rel="noopener noreferrer" class="btn-map btn-naver">
+								🗺️ Naver Map
+							</a>
+							<a href="https://www.samjinfood.com/" target="_blank" rel="noopener noreferrer" class="btn-map btn-google">
+								📍 官網預約
+							</a>
+							<a href="https://www.threads.com/share/FgRa98WgF/" target="_blank" rel="noopener noreferrer" class="btn-map btn-google">
+								📱 Thread
+							</a>
+							<a href="https://www.upmedia.mg/tw/lifestyle/food/154139" target="_blank" rel="noopener noreferrer" class="btn-map btn-google">
+								🌍 網頁資料
+							</a>
+						</div>
+						<p>
+						  創立於 1953 年的韓國元祖級國民美食！作為釜山歷史最悠久的魚板品牌，三進魚板首創「像挑選烘焙麵包一樣夾取魚板」的創新型態。店內提供數十種現炸現做的特色魚板，其中外皮金黃酥脆、內餡包入整顆香濃起司或整隻鮮蝦的「炸魚板可樂餅」更是必吃經典。
+						</p>
+					
+						<!-- 圖片展示區 -->
+						<div class="item-gallery">
+							<img src="IMG/三進魚板/店面.jfif" alt="三進魚板多樣化現做陳列區" onclick="openModal(this)" />
+							<img src="IMG/三進魚板/魚板.webp" alt="三進魚板" onclick="openModal(this)" />
+						</div>
+					
+						<!-- 詳細資訊與注意事項 -->
+						<div class="item-details">
+						  <div>🕒 <strong>營業時間：</strong>約 09:00-19:00</div>
+						  <div>⚠️ <strong>注意事項：</strong></div>
+						  <ul>
+						    <li>招牌<strong>「魚板可樂餅（어묵고로케）」</strong>（起司、鮮蝦、辣椒等口味）現炸現吃口感最佳，亦提供盒裝外帶。</li>
+						    <li>影島本店對面設有<strong>專屬內用休息區</strong>，備有微波爐可自行加熱現買的魚板享用。</li>
+						    <li>若行程不順路前往影島本店，<strong>釜山站（KTX 車站內）</strong>與各大百貨公司亦設有大型門市方便採購伴手禮。</li>
+						  </ul>
+						</div>
+					</div>
+				</div>
 	        </div>
 		</div>
 
@@ -526,11 +753,83 @@
 					    </div>
 					</div>
 				</div>
+        	
+        		<!-- 青沙浦小鎌倉／灌籃高手平交道（청사포 슬램덩크 철길） -->
+				<div class="check-item" data-key="d1-5">
+					<div class="item-text">
+						<strong>青沙浦小鎌倉（청사포 슬램덩크 철길）</strong>
+						<div class="map-actions">
+							<a href="https://naver.me/IItGsmtd" target="_blank" rel="noopener noreferrer" class="btn-map btn-naver">
+								🗺️ Naver Map
+							</a>
+							<a href="https://damei17.com/cheongsapo/" target="_blank" rel="noopener noreferrer" class="btn-map btn-google">
+								📍 網頁資料
+							</a>
+						</div>
+						<p>
+						  釜山版《灌籃高手》平交道！位於青沙浦站出站後下坡處，復古海岸列車從平交道緩緩駛過，背景正對著筆直延伸向蔚藍大海的下坡街道，充滿濃厚的日系日劇氛圍，是近年釜山極具人氣的電影感拍照熱點。
+						</p>
+					
+						<!-- 圖片展示區 -->
+						<div class="item-gallery">
+							<img src="IMG/青沙浦小鎌倉/海岸列車.jpg" alt="青沙浦平交道與海景" onclick="openModal(this)" />
+							<img src="IMG/青沙浦小鎌倉/紅色燈塔.jpg" alt="紅色燈塔" onclick="openModal(this)" />
+							<img src="IMG/青沙浦小鎌倉/白色燈塔.jpg" alt="白色燈塔" onclick="openModal(this)" />
+							<img src="IMG/青沙浦小鎌倉/青沙浦紅白燈塔.jpg" alt="青沙浦雙胞胎燈塔" onclick="openModal(this)" />
+						</div>
+					
+						<!-- 詳細資訊與注意事項 -->
+						<div class="item-details">
+						  <div>🕒 <strong>開放時間：</strong>全天開放（海岸列車約於 09:30–18:30 / 19:30 期間運行通過）</div>
+						  <div>🌅 <strong>建議到訪時間：</strong>推薦 <strong>上午順光時段（約 10:00–12:00）</strong> 或 <strong>午後 15:00–17:00</strong> 前往，海面最為湛藍清澈且不易逆光。</div>
+						  <div>⚠️ <strong>注意事項：</strong></div>
+						  <ul>
+						    <li>此處為<strong>實際行車幹道與鐵路路口</strong>，拍照時務必站在人行道與斑馬線內，<strong>切勿阻礙車輛通行或擅闖鐵軌</strong>。</li>
+						    <li>海岸列車約每 10–15 分鐘會有一班經過，可提前在對面街道架好相機等待畫面。</li>
+						    <li>拍完照後可順著斜坡往下走至海港，參觀<strong>紅白雙胞胎燈塔</strong>並品嚐青沙浦知名的<strong>炭烤扇貝與海鮮</strong>。</li>
+						  </ul>
+						</div>
+					</div>
+				</div>
+        		
+        		<!-- Standard Burn（스탠다드번） -->
+				<div class="check-item" data-key="d1-6">
+					<div class="item-text">
+						<strong>Standard Burn（스탠다드번）</strong>
+						<div class="map-actions">
+							<a href="https://naver.me/xF2j2lCi" target="_blank" rel="noopener noreferrer" class="btn-map btn-naver">
+								🗺️ Naver Map
+							</a>
+							<a href="https://ginatw.com/standard-bread-busan/" target="_blank" rel="noopener noreferrer" class="btn-map btn-google">
+								📷 網頁資料
+							</a>
+						</div>
+						<p>
+						  釜山廣受歡迎的人氣質感烘焙麵包店！以現烤出爐的特色麵包、可頌酥皮與招牌手工甜點聞名。店內空間散發著濃郁麥香與溫潤的木質調氛圍，是漫步探索釜山巷弄時不可錯過的下午茶與甜點補給站。
+						</p>
+					
+						<!-- 圖片展示區 -->
+						<div class="item-gallery">
+							<img src="IMG/StandardBread/店內環境.jpeg" alt="Standard Burn 門市外觀" onclick="openModal(this)" />
+							<img src="IMG/StandardBread/麵包.png" alt="店內招牌現烤麵包" onclick="openModal(this)" />
+							<img src="IMG/StandardBread/果醬.png" alt="果醬" onclick="openModal(this)" />
+						</div>
+					
+						<!-- 詳細資訊與注意事項 -->
+						<div class="item-details">
+						  <div>🕒 <strong>營業時間：</strong>約 9:00–21:00(最後點餐時間 20:30）</div>
+						  <div>🚌 <strong>交通方式：</strong></div>
+					      <ul>
+					        <li>從海雲台地鐵站 4 號出口出發，走路 6 分鐘就到Standard Bread</li>
+					      </ul>
+						</div>
+					</div>
+				</div>
         	</div>
 		</div>
 
-      <!-- Day 3 -->
-      <div class="tab-panel" id="day3">
+		<!-- Day 3 -->
+		<div class="tab-panel" id="day3">
         <div class="panel-header">
           <div class="panel-tag">DAY 3 · 10/22</div>
           <h2>小王子約會 & 懸崖海景咖啡</h2>
@@ -561,334 +860,370 @@
         </div>
       </div>
 
-      <!-- Day 4 -->
-      <div class="tab-panel" id="day4">
-        <div class="panel-header">
-          <div class="panel-tag">DAY 4 · 10/23</div>
-          <h2>伴手禮打包 · 滿滿幸福回家</h2>
-          <p class="panel-intro">裝滿整箱戰利品與滿滿的幸福回憶 ✈️</p>
-        </div>
+		<!-- Day 4 -->
+		<div class="tab-panel" id="day4">
+			<div class="panel-header">
+				<div class="panel-tag">西面</div>
+				<h2>相當於首爾的明洞與弘大綜合體</h2>
+				<p class="panel-intro">鄰近文青咖啡廳林立的田浦咖啡街，集結了購物、美食與潮流夜生活</p>
+			</div>
 
-        <div class="trip-list">
-          <div class="check-item" data-key="d4-1">
-            <div class="item-text">
-              <strong>樂天超市 (南浦店) 🛒</strong>
-              <p>杏仁果、布朗尼、海苔、辛拉麵大掃貨，行李箱塞滿滿！</p>
-            </div>
-          </div>
+			<!-- 區域篩選按鈕區 -->
+			<div class="filter-btn-group">
+			  <button class="filter-btn active" data-filter="day4-all">全部景點</button>
+			  <button class="filter-btn" data-filter="day4-attractions">景點</button>
+			  <button class="filter-btn" data-filter="day4-cafes">咖啡廳</button>
+			  <button class="filter-btn" data-filter="day4-restaurant">餐廳</button>
+			</div>
+		
 
-          <div class="check-item" data-key="d4-2">
-            <div class="item-text">
-              <strong>金海國際機場 ➔ 返台 ✈️</strong>
-              <p>辦理退稅手續，帶著滿滿的回憶平安回家 💕</p>
-            </div>
-          </div>
-        </div>
+			<div class="trip-list">
+          		<!-- EL16.52 海景咖啡廳（카페 EL16.52） -->
+				<div class="check-item" data-key="d4-1" data-area="day4-cafes">
+					<div class="item-text">
+						<strong>EL16.52 海景咖啡廳（EL16.52）</strong>
+						<div class="map-actions">
+							<a href="https://map.naver.com/p/entry/place/1476913552?placePath=%2Fhome" target="_blank" rel="noopener noreferrer" class="btn-map btn-naver">
+								🗺️ Naver Map
+							</a>
+							<a href="https://twobunnytravel.tw/el1652-busan/" target="_blank" rel="noopener noreferrer" class="btn-map btn-google">
+								📷 網頁資料
+							</a>
+						</div>
+						<p>
+						  釜山松島海岸旁極具設計感的獨棟大型海景咖啡廳！店名「EL16.52」取自建築所在的海拔高度（16.52公尺）。整棟建築擁有大片通透的落地窗與頂樓露天透明圓頂玻璃屋（Dome），可近距離俯瞰松島海水浴場、松島海上纜車穿梭橫跨海灣的壯麗全景。
+						</p>
+						
+						<!-- 樓層導覽 -->
+						<div class="item-details floor-guide">
+							<div>🏢 <strong>樓層指南：</strong></div>
+							<ul>
+							    <li><strong>R 樓：</strong>露天觀景平台、透明球屋座位區，可欣賞松島海景與海上纜車</li>
+							    <li><strong>4F ：</strong>海景咖啡廳座位區，設有室內空間與戶外露台</li>
+							    <li><strong>3F 主要點餐樓層：</strong>設有咖啡吧台、麵包展示區、室內座位與戶外露台</li>
+							    <li><strong>2F ：</strong>入口大廳與停車場出入口</li>
+							    <li><strong>1F ：</strong>停車場</li>
+							    <li><strong>B1 ：</strong>Roasting Room 烘豆室、Gallery 藝廊空間</li>
+						  	</ul>
+						</div>
+					
+						<!-- 圖片展示區 -->
+						<div class="item-gallery">
+							<img src="IMG/EL16/店面.jpg" alt="店面" onclick="openModal(this)" />
+							<img src="IMG/EL16/戶外區.webp" alt="戶外區" onclick="openModal(this)" />
+							<img src="IMG/EL16/四樓.jfif" alt="四樓" onclick="openModal(this)" />
+							<img src="IMG/EL16/麵包台.webp" alt="麵包台" onclick="openModal(this)" />
+							<img src="IMG/EL16/義式冰淇淋.webp" alt="義式冰淇淋" onclick="openModal(this)" />
+						</div>
+					
+						<!-- 詳細資訊與注意事項 -->
+						<div class="item-details">
+						  <div>🕒 <strong>營業時間：</strong>約 10:00–21:30</div>
+						  <div>👍 <strong>推薦玩法：</strong></div>
+						  <ul>
+						    <li>搭乘松島海上纜車：直接搭乘「松島海上纜車」跨海越過松島海水浴場，至山頂的「岩南公園站（Sky Park）」出站後，沿著右側的下坡路段步行約 5 分鐘，即可看到這棟設計感十足的獨棟白色建築</li>
+						    <li>搭乘市區公車：釜山地鐵 1 號線「札嘎其站」2 號出口 (忠武洞交叉路公車站) 或「南浦站」出站，轉乘 7 號、30 號或 71 號公車，直接坐到終點站「岩南公園站 (암남공원)」下車，下車後步行 1~2 分鐘即可抵達</li>
+						    <li>搭乘釜山觀光巴士：購買觀光巴士一日券的旅人，可以搭乘觀光巴士的「橘線 (Orange Line)」，並直接在「岩南公園 (龍宮雲橋)站」下車，下車處旁邊就是咖啡廳囉</li>
+						  </ul>
+						</div>
+					</div>
+				</div>
+          	
+			</div>
       </div>
 
 	  	<!-- 餐廳備選 -->
 		<div class="tab-panel" id="restaurant">
-	        <div class="panel-header">
-	          <div class="panel-tag">餐廳總集合</div>
-	          <h2>所有餐廳來這裡看</h2>
-	        </div>
-	        <div class="trip-list">
-	        	<!-- 明星/名聲一隻雞 -->
-				<div class="check-item" data-key="1">
+			<div class="panel-header">
+			    <div class="panel-tag">餐廳總集合</div>
+			    <h2>所有餐廳來這裡看</h2>
+			</div>
+
+  			<!-- 區域篩選按鈕區 -->
+			<div class="filter-btn-group">
+			  <button class="filter-btn active" data-filter="all">全部餐廳</button>
+			  <button class="filter-btn" data-filter="yeongdo">影島區</button>
+			  <button class="filter-btn" data-filter="haeundae">海雲台</button>
+			  <button class="filter-btn" data-filter="gwangan">廣安里</button>
+			  <button class="filter-btn" data-filter="seomyeon">西面</button>
+			</div>
+
+  			<div class="trip-list">
+	    		<!-- 1. 明星/名聲一隻雞 (影島) -->
+				<div class="check-item" data-key="1" data-area="yeongdo">
 					<div class="item-text">
 						<strong>明星一隻雞 / 名聲一隻雞（명성닭한마리）</strong>
 						<div class="map-actions">
-							<a href="https://naver.me/G0DXkbNR" target="_blank" rel="noopener noreferrer" class="btn-map btn-naver">
-								🗺️ Naver Map
-							</a>
-							<a href="https://judyer.com/msc/" target="_blank" rel="noopener noreferrer" class="btn-map btn-google">
-								📍 網頁資料
-							</a>
+						  <a href="https://naver.me/G0DXkbNR" target="_blank" rel="noopener noreferrer" class="btn-map btn-naver">🗺️ Naver Map</a>
+						  <a href="https://judyer.com/msc/" target="_blank" rel="noopener noreferrer" class="btn-map btn-google">📍 網頁資料</a>
 						</div>
-					    <p>
-					      草梁洞與釜山站周邊極具口碑的在地老字號！以整隻新鮮嫩雞搭配大量青蔥、馬鈴薯與秘製清甜高湯熬煮，湯頭甘醇鮮美、不油不膩。雞肉軟嫩多汁，沾上特製辣醬、黃芥末、醬油與高麗菜絲調配的靈魂沾醬更是一絕。最後加入刀削麵與煮成海苔雞蛋粥（죽）是老饕必吃的經典收尾。
-					    </p>
-				
-					    <!-- 圖片展示區 -->
-					    <div class="item-gallery">
-					      <img src="IMG/明星一隻雞/明星一隻雞.jpg" alt="招牌一隻雞鍋" onclick="openModal(this)" />
-					      <img src="IMG/明星一隻雞/雞肉.jpg" alt="雞肉" onclick="openModal(this)" />
-					      <img src="IMG/明星一隻雞/蔬菜雞蛋粥.jpg" alt="蔬菜雞蛋粥" onclick="openModal(this)" />
-					    </div>
-				
-					    <!-- 詳細資訊與注意事項 -->
-					    <div class="item-details">
-					      <div>📍 <strong>餐廳地址：</strong>부산 영도구 절영로 22  \ 대교동1가 163-2(釜山 影島區絕影路22 \ 大橋洞1街 163-2)</div>
-					      <div>🕒 <strong>營業時間：</strong>每日 11:00 – 24:00 \ 22:00 最後點餐(每月第一和第三個週一休息)</div>
-						  <div>🚌 <strong>交通方式：</strong></div>
-					      <ul>
-					        <li>從南浦站８號出口，走路過去１１分鐘</li>
-					        <li>南浦站６號出口處，轉搭乘６、７、１７、１１３號巴士過影島大橋</li>
-					      </ul>
-					      <div>⚠️ <strong>注意事項：</strong></div>
-					      <ul>
-					        <li><strong>靈魂沾醬吃法：</strong>依店家推薦比例將「辣椒醬＋黃芥末＋醬油醋＋蒜泥」混合均勻，拌入爽脆高麗菜絲，搭配雞肉一起入口最道地解膩。</li>
-					        <li><strong>二段式收尾：</strong>雞肉與馬鈴薯吃完後，務必先加點<strong>刀削麵（칼국수）</strong>吸附濃郁雞湯精華，最後再請店員加入白飯、海苔與雞蛋煮成<strong>精華粥（죽）</strong>。</li>
-					        <li>用餐尖峰時段常有在地上班族聚餐，建議提早抵達或稍微避開正餐尖峰期以減少候位時間。</li>
-					      </ul>
-					    </div>
+						<p>草梁洞與釜山站周邊極具口碑的在地老字號！以整隻新鮮嫩雞搭配大量青蔥、馬鈴薯與秘製清甜高湯熬煮，湯頭甘醇鮮美、不油不膩。雞肉軟嫩多汁，沾上特製辣醬、黃芥末、醬油與高麗菜絲調配的靈魂沾醬更是一絕。最後加入刀削麵與煮成海苔雞蛋粥（죽）是老饕必吃的經典收尾。</p>
+						<div class="item-gallery">
+						  <img src="IMG/明星一隻雞/明星一隻雞.jpg" alt="招牌一隻雞鍋" onclick="openModal(this)" />
+						  <img src="IMG/明星一隻雞/雞肉.jpg" alt="雞肉" onclick="openModal(this)" />
+						  <img src="IMG/明星一隻雞/蔬菜雞蛋粥.jpg" alt="蔬菜雞蛋粥" onclick="openModal(this)" />
+						</div>
+						<div class="item-details">
+							<div>📍 <strong>餐廳地址：</strong>부산 영도구 절영路 22 \ 대교동1가 163-2(釜山 影島區絕影路22 \ 大橋洞1街 163-2)</div>
+							<div>🕒 <strong>營業時間：</strong>每日 11:00 – 24:00 \ 22:00 最後點餐(每月第一和第三個週一休息)</div>
+							<div>🚌 <strong>交通方式：</strong></div>
+							<ul>
+							  <li>從南浦站８號出口，走路過去１１分鐘</li>
+							  <li>南浦站６號出口處，轉搭乘６、７、１７、１１３號巴士過影島大橋</li>
+							</ul>
+							<div>⚠️ <strong>注意事項：</strong></div>
+							<ul>
+							  <li><strong>靈魂沾醬吃法：</strong>依店家推薦比例將「辣椒醬＋黃芥末＋醬油醋＋蒜泥」混合均勻，拌入爽脆高麗菜絲，搭配雞肉一起入口最道地解膩。</li>
+							  <li><strong>二段式收尾：</strong>雞肉與馬鈴薯吃完後，務必先加點<strong>刀削麵（칼국수）</strong>吸附濃郁雞湯精華，最後再請店員加入白飯、海苔與雞蛋煮成<strong>精華粥（죽）</strong>。</li>
+							  <li>用餐尖峰時段常有在地上班族聚餐，建議提早抵達或稍微避開正餐尖峰期以減少候位時間。</li>
+							</ul>
+						</div>
 					</div>
 				</div>
-			
-				<!-- 影島海女村 -->
-				<div class="check-item" data-key="2">
+
+    			<!-- 2. 影島海女村 (影島) -->
+				<div class="check-item" data-key="2" data-area="yeongdo">
 					<div class="item-text">
 						<strong>影島海女村（영도해녀촌）</strong>
 						<div class="map-actions">
-							<a href="https://naver.me/GCvq1edv" target="_blank" rel="noopener noreferrer" class="btn-map btn-naver">
-								🗺️ Naver Map
-							</a>
-							<a href="https://tessatravel.tw/yeongdo-haenyeo-village/" target="_blank" rel="noopener noreferrer" class="btn-map btn-google">
-								📍 網頁資料
-							</a>
+							<a href="https://naver.me/GCvq1edv" target="_blank" rel="noopener noreferrer" class="btn-map btn-naver">🗺️ Naver Map</a>
+							<a href="https://tessatravel.tw/yeongdo-haenyeo-village/" target="_blank" rel="noopener noreferrer" class="btn-map btn-google">📍 網頁資料</a>
 						</div>
-					    <p>
-					      坐落於影島海岸邊的道地海味聚落，由在地海女阿姨每日現捕新鮮海鮮。坐在礁岩海岸旁吹著海風，品嚐招牌「紫菜包飯＋生海膽」與熱騰騰海鮮拉麵，體驗最粗獷純粹的釜山海濱風情。
-					    </p>
-				
-					    <!-- 圖片展示區 -->
-					    <div class="item-gallery">
-					      <img src="IMG/影島海女村/海鮮總拼盤.png" alt="海鮮總拼盤" onclick="openModal(this)" />
-					      <img src="IMG/影島海女村/海膽.png" alt="海膽" onclick="openModal(this)" />
-					      <img src="IMG/影島海女村/海螺.png" alt="海螺" onclick="openModal(this)" />
-					      <img src="IMG/影島海女村/海參.png" alt="海參" onclick="openModal(this)" />
-					      <img src="IMG/影島海女村/海鮮拉麵.png" alt="海鮮拉麵" onclick="openModal(this)" />
-					    </div>
-				
-					    <!-- 詳細資訊與注意事項 -->
-					    <div class="item-details">
-					      <div>🕒 <strong>營業時間：</strong>每日 09:00–18:00（1樓海鮮販售區全年無休；2樓海女文化展示館每週一公休）</div>
-					      <div>🌅 <strong>建議到訪時間：</strong>推薦 <strong>11:30–14:00</strong> 前往享用午餐，或 <strong>16:00–17:30</strong> 一邊看夕陽海景一邊享用下午茶點心。</div>
-					      <div>🚌 <strong>交通方式：</strong></div>
-					      <ul>
-					        <li>從地鐵南浦站6號出口轉508 / 7 / 71號公車到南高橋站（남고교）步行7分鐘</li>
-					        <li>從地鐵釜山站7號出口轉508號公車到南高橋站（남고교）步行7分鐘</li>
-					      </ul>
-					      <div>⚠️ <strong>注意事項：</strong></div>
-					      <ul>
-					        <li>戶外岩石座位區地面<strong>高低不平且臨海</strong>，行走與端托盤時請特別注意腳下安全。</li>
-					        <li>必點吃法：點一份<strong>紫菜包飯（김밥）</strong>與新鮮<strong>海膽（성게알）</strong>，自行將海膽鋪在飯捲上享用，鮮甜美味。</li>
-					        <li>戶外臨海區<strong>風勢通常較大</strong>，建議攜帶防風薄外套，用餐時也請壓好輕便餐具與紙巾。</li>
-					      </ul>
-					    </div>
+						<p>坐落於影島海岸邊的道地海味聚落，由在地海女阿姨每日現捕新鮮海鮮。坐在礁岩海岸旁吹著海風，品嚐招牌「紫菜包飯＋生海膽」與熱騰騰海鮮拉麵，體驗最粗獷純粹的釜山海濱風情。</p>
+						<div class="item-gallery">
+							<img src="IMG/影島海女村/海鮮總拼盤.png" alt="海鮮總拼盤" onclick="openModal(this)" />
+							<img src="IMG/影島海女村/海膽.png" alt="海膽" onclick="openModal(this)" />
+							<img src="IMG/影島海女村/海螺.png" alt="海螺" onclick="openModal(this)" />
+							<img src="IMG/影島海女村/海參.png" alt="海參" onclick="openModal(this)" />
+							<img src="IMG/影島海女村/海鮮拉麵.png" alt="海鮮拉麵" onclick="openModal(this)" />
+						</div>
+						<div class="item-details">
+							<div>🕒 <strong>營業時間：</strong>每日 09:00–18:00（1樓海鮮販售區全年無休；2樓海女文化展示館每週一公休）</div>
+							<div>🌅 <strong>建議到訪時間：</strong>推薦 <strong>11:30–14:00</strong> 前往享用午餐，或 <strong>16:00–17:30</strong> 一邊看夕陽海景一邊享用下午茶點心。</div>
+							<div>🚌 <strong>交通方式：</strong></div>
+							<ul>
+								<li>從地鐵南浦站6號出口轉508 / 7 / 71號公車到南高橋站（남고교）步行7分鐘</li>
+								<li>從地鐵釜山站7號出口轉508號公車到南高橋站（남고교）步行7分鐘</li>
+							</ul>
+							<div>⚠️ <strong>注意事項：</strong></div>
+							<ul>
+								<li>戶外岩石座位區地面<strong>高低不平且臨海</strong>，行走與端托盤時請特別注意腳下安全。</li>
+								<li>必點吃法：點一份<strong>紫菜包飯（김밥）</strong>與新鮮<strong>海膽（성게알）</strong>，自行將海膽鋪在飯捲上享用，鮮甜美味。</li>
+								<li>戶外臨海區<strong>風勢通常較大</strong>，建議攜帶防風薄外套，用餐時也請壓好輕便餐具與紙巾。</li>
+							</ul>
+						</div>
 					</div>
 				</div>
-	        	
-	        	<!-- 濟州河豚湯 -->
-				<div class="check-item" data-key="3">
-					<div class="item-text">
-						<strong>濟州河豚湯（제주복국）</strong>
-						<div class="map-actions">
-							<a href="https://naver.me/FUhs0sV8" target="_blank" rel="noopener noreferrer" class="btn-map btn-naver">
-								🗺️ Naver Map
-							</a>
-							<a href="https://journey.tw/jeju-bokguk-busan//" target="_blank" rel="noopener noreferrer" class="btn-map btn-google">
-								📍 網頁資料
-							</a>
-						</div>
-					    <p>
-					      草梁洞與釜山站周邊極具口碑的在地老字號！以整隻新鮮嫩雞搭配大量青蔥、馬鈴薯與秘製清甜高湯熬煮，湯頭甘醇鮮美、不油不膩。雞肉軟嫩多汁，沾上特製辣醬、黃芥末、醬油與高麗菜絲調配的靈魂沾醬更是一絕。最後加入刀削麵與煮成海苔雞蛋粥（죽）是老饕必吃的經典收尾。
-					    </p>
-				
-					    <!-- 圖片展示區 -->
-					    <div class="item-gallery">
-					      <img src="IMG/濟州河豚湯/外觀.png" alt="外觀" onclick="openModal(this)" />
-					      <img src="IMG/濟州河豚湯/小菜.png" alt="小菜" onclick="openModal(this)" />
-					      <img src="IMG/濟州河豚湯/河豚湯.webp" alt="河豚湯" onclick="openModal(this)" />
-					      <img src="IMG/濟州河豚湯/辣的河豚湯.webp" alt="辣的河豚湯" onclick="openModal(this)" />
-					    </div>
-				
-					    <!-- 詳細資訊與注意事項 -->
-					    <div class="item-details">
-					      <div>📍 <strong>餐廳地址：</strong>影島區絕影路481</div>
-					      <div>🍽️ <strong>推薦餐點：</strong>黃鰭東方魨（清湯、辣湯）, 中華多紀魨（清湯、辣湯）</div>
-					      <div>🕒 <strong>營業時間：</strong>週一~五：10:00-20:30(15:00-17:00 午休) 週六~日：09:00-21:00</div>
-						  <div>🚌 <strong>交通方式：</strong></div>
-					      <ul>
-					        <li>計程車：若從「南浦站」或「釜山站」出發，直接搭乘計程車是最省時省力的選擇</li>
-					        <li>地鐵 1 號線至 南浦站（남포역）> 從 6 號出口出站後，步行至附近的公車站牌，轉乘 6 號、7 號、9 號、30 號、71 號或 508 號公車 進入影島 > 於 「東三中學（동삼중학교）」 或 「咸池谷修煉館（함지골수련원）」 站下車，再步行約 5–10 分鐘即可抵達餐廳</li>
-					      </ul>
-					    </div>
-					</div>
+
+				<!-- 3. 濟州河豚湯 (影島) -->
+				<div class="check-item" data-key="3" data-area="yeongdo">
+				  <div class="item-text">
+				    <strong>濟州河豚湯（제주복국）</strong>
+				    <div class="map-actions">
+				      <a href="https://naver.me/FUhs0sV8" target="_blank" rel="noopener noreferrer" class="btn-map btn-naver">🗺️ Naver Map</a>
+				      <a href="https://journey.tw/jeju-bokguk-busan//" target="_blank" rel="noopener noreferrer" class="btn-map btn-google">📍 網頁資料</a>
+				    </div>
+				    <p>影島在地老牌河豚專門店！主打肉質緊實彈牙的清湯與辣湯河豚料理。湯頭加入大量黃豆芽與水芹菜慢火精燉，極致甘甜清爽且解酒暖胃，搭配豐富特色小菜與酥炸河豚，是來到釜山不可錯過的頂級海味。</p>
+				    <div class="item-gallery">
+				      <img src="IMG/濟州河豚湯/外觀.png" alt="外觀" onclick="openModal(this)" />
+				      <img src="IMG/濟州河豚湯/小菜.png" alt="小菜" onclick="openModal(this)" />
+				      <img src="IMG/濟州河豚湯/河豚湯.webp" alt="河豚湯" onclick="openModal(this)" />
+				      <img src="IMG/濟州河豚湯/辣的河豚湯.webp" alt="辣的河豚湯" onclick="openModal(this)" />
+				    </div>
+				    <div class="item-details">
+				      <div>📍 <strong>餐廳地址：</strong>影島區絕影路481</div>
+				      <div>🍽️ <strong>推薦餐點：</strong>黃鰭東方魨（清湯、辣湯）, 中華多紀魨（清湯、辣湯）</div>
+				      <div>🕒 <strong>營業時間：</strong>週一~五：10:00-20:30(15:00-17:00 午休) 週六~日：09:00-21:00</div>
+				      <div>🚌 <strong>交通方式：</strong></div>
+				      <ul>
+				        <li>計程車：若從「南浦站」或「釜山站」出發，直接搭乘計程車是最省時省力的選擇</li>
+				        <li>地鐵 1 號線至 南浦站（남포역）> 6 號出口轉乘 6、7、9、30、71 或 508 號公車 > 於「東三中學」或「咸池谷修煉館」站下車步行 5–10 分鐘</li>
+				      </ul>
+				    </div>
+				  </div>
 				</div>
-			
-				<!-- 小香牛肋排 -->
-				<div class="check-item" data-key="4">
-					<div class="item-text">
-						<strong>小香牛肋排（소향갈비찜）</strong>
-						<div class="map-actions">
-							<a href="https://naver.me/IItcqd7N" target="_blank" rel="noopener noreferrer" class="btn-map btn-naver">
-								🗺️ Naver Map
-							</a>
-							<a href="http://lizzzstyle.tw/sochon-galbijjim/" target="_blank" rel="noopener noreferrer" class="btn-map btn-google">
-								📍 網頁資料
-							</a>
-						</div>
-					    <p>
-					      影島與南浦洞一帶極具人氣的燉牛肋排專門店！招牌燉牛肋排（소갈비찜）燉煮得軟嫩入味、骨肉輕輕一夾即可分離。濃郁甘甜的特製秘醬帶有淡淡果香與芝麻香，拌飯吃堪稱白飯小偷，還可搭配滿滿拔絲起司與現烤大蔥，是在地人與旅客都盛讚的道地韓式肉食料理。
-					    </p>
-				
-					    <!-- 圖片展示區 -->
-					    <div class="item-gallery">
-					      <img src="IMG/小香牛肋排/店面.webp" alt="店面" onclick="openModal(this)" />
-					      <img src="IMG/小香牛肋排/排骨湯.webp" alt="排骨湯" onclick="openModal(this)" />
-					      <img src="IMG/小香牛肋排/牛肋排.webp" alt="牛肋排" onclick="openModal(this)" />
-					    </div>
-				
-					    <!-- 詳細資訊與注意事項 -->
-					    <div class="item-details">
-					      <div>🕒 <strong>營業時間：</strong>每日 11:00~21:00（15:20~17:00休息)</div>
-					      <div>💵 <strong>參考價位：</strong>燉牛肋排（小/2人份）約 35,000–40,000₩、加起司配料（치즈사리）3,000₩、精華炒飯（볶음밥）2,500₩</div>
-					      <div>🌅 <strong>建議用餐時間：</strong>推薦 <strong>午餐 12:00–13:30</strong> 或 <strong>晚餐 17:30–19:00</strong>，尖峰用餐時段容易客滿，建議提早前往。</div>
-					      <div>🚌 <strong>交通方式：</strong></div>
-					      <ul>
-					        <li>搭乘釜山地鐵2號線至海雲台站（해운대역），從 4號或2號出口 出站，步行約 2 分鐘（約 129 公尺）往舊火車站方向、越過鐵軌後的紅磚建築2樓即可抵達</li>
-					      </ul>
-					      <div>⚠️ <strong>注意事項：</strong></div>
-					      <ul>
-					        <li><strong>辣度可自選：</strong>點餐時通常可選擇<strong>微辣（순한맛）、普通辣（보통맛）或大辣（매운맛）</strong>，不敢吃辣者建議選擇微辣或普通辣。</li>
-					        <li><strong>加起司更美味：</strong>強烈推薦加點<strong>起司（치즈사리）</strong>，鋪在牛肋排上炙烤融化後拉絲濃郁，能完美中和醬汁的微辣感。</li>
-					        <li><strong>壓軸必吃炒飯：</strong>肉塊吃得差不多後，記得留下少許醬汁請店家加入海苔、麻油與白飯做成<strong>鐵板炒飯（볶음밥）</strong>收尾。</li>
-					      </ul>
-					    </div>
-					</div>
-				</div>
-			
-				<!-- 密陽血腸豬肉湯飯 -->
-				<div class="check-item" data-key="5">
-					<div class="item-text">
-						<strong>密陽血腸豬肉湯飯（밀양순대돼지국밥）</strong>
-						<div class="map-actions">
-							<a href="https://naver.me/5T4ABsWP" target="_blank" rel="noopener noreferrer" class="btn-map btn-naver">
-								🗺️ Naver Map
-							</a>
-							<a href="https://bobbytravel.tw/miryang-sundae/" target="_blank" rel="noopener noreferrer" class="btn-map btn-google">
-								📍 網頁資料
-							</a>
-						</div>
-					    <p>
-					      釜山極具代表性的 24 小時老字號豬肉湯飯名店！以 100% 國內產豬骨長時間大火熬製成濃郁乳白色的醇厚高湯，完全沒有豬腥味。鍋內鋪滿鮮嫩扎實的豬肉切片與扎實飽滿的手工血腸，熱氣騰騰、份量十足，是無論清晨早午餐或深夜宵夜都能隨時暖胃的經典美食。
-					    </p>
-				
-					    <!-- 圖片展示區 -->
-					    <div class="item-gallery">
-					      <img src="IMG/密陽血腸豬肉湯飯/店面.jpg" alt="店面" onclick="openModal(this)" />
-					      <img src="IMG/密陽血腸豬肉湯飯/小菜.jpg" alt="小菜" onclick="openModal(this)" />
-					      <img src="IMG/密陽血腸豬肉湯飯/豬肉湯飯.jpg" alt="豬肉湯飯" onclick="openModal(this)" />
-					      <img src="IMG/密陽血腸豬肉湯飯/血腸湯飯.jpg" alt="血腸湯飯" onclick="openModal(this)" />
-					    </div>
-				
-					    <!-- 詳細資訊與注意事項 -->
-					    <div class="item-details">
-					      <div>🕒 <strong>營業時間：</strong>24 小時營業（全年無休，隨時可前往用餐）</div>
-						  <div>🚌 <strong>交通方式：</strong></div>
-					      <ul>
-					        <li><strong>海雲台店（離埃爾莫門託最近）：</strong>從地鐵2號線<strong>海雲台站 5號出口</strong>直走步行約 3–5 分鐘（位於九南路主要大街上）。</li>
-					        <li><strong>南浦／釜山站分店：</strong>搭乘地鐵1號線至鄰近商圈站點，步行約 3–5 分鐘即達。</li>
-					      </ul>
-					      <div>⚠️ <strong>注意事項：</strong></div>
-					      <ul>
-					        <li><strong>在地調味秘訣：</strong>上桌時湯頭原味較淡，建議依個人口味加入<strong>蝦醬（새우젓）</strong>提鹹鮮味、<strong>辣醬（다대기）</strong>增香，並趁熱將<strong>涼拌韭菜（부추무침）</strong>與隨附的<strong>麵線（소면）</strong>整坨丟入湯中攪拌。</li>
-					        <li><strong>多種部位可選：</strong>若不敢吃內臟或血腸，可直接點純<strong>「豬肉湯飯（돼지국밥）」</strong>；若想吃切片三層肉沾醬包生菜，推薦點<strong>「白切肉定食（수육백반）」</strong>。</li>
-					        <li>自助吧檯（Self Bar）提供蒜頭、青椒、洋蔥、泡菜與辣蘿蔔，吃不夠可自行免費續加。</li>
-					      </ul>
-					    </div>
-					</div>
-				</div>
-			
-				<!-- 百年食堂 -->
-				<div class="check-item" data-key="6">
-					<div class="item-text">
-						<strong>百年食堂（백년식당）</strong>
-						<div class="map-actions">
-							<a href="https://naver.me/GZZueewE" target="_blank" rel="noopener noreferrer" class="btn-map btn-naver">
-								🗺️ Naver Map
-							</a>
-							<a href="https://alinalife.tw/baegnyeon-sikdang/" target="_blank" rel="noopener noreferrer" class="btn-map btn-google">
-								📍 網頁資料
-							</a>
-						</div>
-					    <p>
-					      海雲台最知名的超人氣厚切熟成烤肉名店！嚴選高品質韓國產熟成五花肉與厚切豬頸肉，由專業店員提供全程代烤桌邊服務，精準掌控火候將外皮烤得金黃酥脆、內裡肉汁滿溢。附贈滿桌精緻小菜，搭配招牌大醬湯或冷麵一起享用，是海雲台大口吃肉的排隊首選。
-					    </p>
-				
-					    <!-- 圖片展示區 -->
-					    <div class="item-gallery">
-					      <img src="IMG/百年食堂/店面.webp" alt="店面" onclick="openModal(this)" />
-					      <img src="IMG/百年食堂/小菜.webp" alt="小菜" onclick="openModal(this)" />
-					      <img src="IMG/百年食堂/豬五花.webp" alt="豬五花" onclick="openModal(this)" />
-					      <img src="IMG/百年食堂/大蔥泡菜湯.webp" alt="大蔥泡菜湯" onclick="openModal(this)" />
-					    </div>
-				
-					    <!-- 詳細資訊與注意事項 -->
-					    <div class="item-details">
-					      <div>📍 <strong>餐廳地址：</strong>부산 해운대구 구남로 23（釜山海雲台區九南路23）</div>
-					      <div>🕒 <strong>營業時間：</strong>每日 11:00–06:00（跨日營業至清晨，公休日依店家現場公告為準）</div>
-					      <div>💵 <strong>參考價位：</strong>熟成五花肉（통삼겹살 / 130g）約 12,000–14,000₩、厚切豬頸肉（통목살）約 12,000–14,000₩、韓式冷麵／大醬湯約 5,000–7,000₩</div>
-					      <div>🌅 <strong>建議用餐時間：</strong>推薦安排在<strong>午餐 11:30–13:00</strong> 或 <strong>晚餐 17:00–18:30</strong>（避開 19:00 尖峰排隊人潮）；夜貓族也可作為<strong>深夜宵夜</strong>。</div>
-					      <div>🚌 <strong>交通方式：</strong></div>
-					      <ul>
-					        <li>釜山地鐵「203海雲台站」3號出口，步行約3分鐘</li>
-					      </ul>
-					      <div>⚠️ <strong>注意事項：</strong></div>
-					      <ul>
-					        <li><strong>專人桌邊代烤：</strong>店員會負責將肉塊烤至最佳熟度並剪成適口大小，客人無需自己動手，只需安心享用。</li>
-					        <li><strong>經典吃法組合：</strong>將烤至酥香的五花肉沾取特製粗鹽、芥末或包肉醬，搭配烤過的水泡菜、紫蘇葉與醃蔥絲一起包著吃，清爽解膩。</li>
-					        <li>韓國烤肉店基本規定<strong>首次點餐至少須點 3 份肉品起（3人份）</strong>，即使 2 人用餐也是點 3 份肉為基準。</li>
-					      </ul>
-					    </div>
-					</div>
-				</div>
-			
-				<!-- 高飯食堂 -->
-				<div class="check-item" data-key="7">
-					<div class="item-text">
-						<strong>高飯食堂（고반식당）</strong>
-						<div class="map-actions">
-							<a href="https://naver.me/5D8tuyAK" target="_blank" rel="noopener noreferrer" class="btn-map btn-naver">
-								🗺️ Naver Map
-							</a>
-							<a href="https://damei17.com/goban/" target="_blank" rel="noopener noreferrer" class="btn-map btn-google">
-								📍 Google Maps
-							</a>
-						</div>
-					    <p>
-					      韓國知名的連鎖熟成頂級豬肉專門店，店名「高飯」寓意為「高水準的完美一餐」。主打高規格低溫熟成五花肉、橫膈膜肉（海鷗肉）與特級豬頸肉，並由受過專業訓練的店員提供全程代烤桌邊服務。滿桌提供蕨菜、明品名產泡菜與多款特調沾醬，層次豐富且口感軟嫩多汁。
-					    </p>
-				
-					    <!-- 圖片展示區 -->
-					    <div class="item-gallery">
-					      <img src="IMG/高飯食堂/店面.jpg" alt="店面" onclick="openModal(this)" />
-					      <img src="IMG/高飯食堂/小菜.jpg" alt="小菜" onclick="openModal(this)" />
-					      <img src="IMG/高飯食堂/蒸蛋.jpg" alt="蒸蛋" onclick="openModal(this)" />
-					      <img src="IMG/高飯食堂/熟成主花肉.jpg" alt="熟成主花肉" onclick="openModal(this)" />
-					      <img src="IMG/高飯食堂/松阪豬.jpg" alt="松阪豬" onclick="openModal(this)" />
-					      <img src="IMG/高飯食堂/烤蕨菜.jpg" alt="烤蕨菜" onclick="openModal(this)" />
-					    </div>
-				
-					    <!-- 詳細資訊與注意事項 -->
-					    <div class="item-details">
-					      <div>🕒 <strong>營業時間：</strong>平日 15:30–02:00｜週末 11:30–02:00（跨日營業至凌晨，公休以現場公告為準）</div>
-					      <div>💵 <strong>參考價位：</strong>熟成生五花肉（숙성 생삼겹살 / 150g）約 14,000–16,000₩、高飯特餐組合（兩人/三人拼盤）約 45,000–65,000₩、鄉村大醬湯／冷麵約 6,000–7,000₩</div>
-					      <div>🌅 <strong>建議用餐時間：</strong>推薦安排在<strong>晚餐 17:30–19:00</strong> 或 <strong>宵夜 21:30 之後</strong>，尖峰用餐時段人潮較多建議提早登記候位。</div>
-					      <div>🚌 <strong>交通方式：</strong></div>
-					      <ul>
-					        <li>釜山地鐵二號線至海雲台站（해운대역） 5號出口，步行約3分鐘路程</li>
-					      </ul>
-					      <div>⚠️ <strong>注意事項：</strong></div>
-					      <ul>
-					        <li><strong>專人桌邊代烤：</strong>店員全程幫忙烤肉、剪肉，並會將烤熟的肉品放在邊緣保溫石盤上，免動手就能享用最佳熟度。</li>
-					        <li><strong>烤蕨菜獨家吃法：</strong>店員代烤時會將<strong>智異山野生蕨菜（고사리）</strong>放上烤盤微煎，與厚切五花肉、名品明太魚子醬或芥末一起包著吃，風味絕佳。</li>
-					        <li><strong>點餐建議：</strong>初次造訪推薦直接選擇<strong>「高飯綜合套餐（고반세트）」</strong>，一次嚐遍五花肉、豬頸肉等多種經典熟成部位。</li>
-					      </ul>
-					    </div>
-					</div>
-				</div>
+
+			    <!-- 4. 小香牛肋排 (海雲台) -->
+			    <div class="check-item" data-key="4" data-area="haeundae">
+			      <div class="item-text">
+			        <strong>小香牛肋排（소향갈비찜）</strong>
+			        <div class="map-actions">
+			          <a href="https://naver.me/IItcqd7N" target="_blank" rel="noopener noreferrer" class="btn-map btn-naver">🗺️ Naver Map</a>
+			          <a href="http://lizzzstyle.tw/sochon-galbijjim/" target="_blank" rel="noopener noreferrer" class="btn-map btn-google">📍 網頁資料</a>
+			        </div>
+			        <p>海雲台極具人氣的燉牛肋排專門店！招牌燉牛肋排（소갈비찜）燉煮得軟嫩入味、骨肉輕輕一夾即可分離。濃郁甘甜的特製秘醬帶有淡淡果香與芝麻香，拌飯吃堪稱白飯小偷，還可搭配滿滿拔絲起司與現烤大蔥。</p>
+			        <div class="item-gallery">
+			          <img src="IMG/小香牛肋排/店面.webp" alt="店面" onclick="openModal(this)" />
+			          <img src="IMG/小香牛肋排/排骨湯.webp" alt="排骨湯" onclick="openModal(this)" />
+			          <img src="IMG/小香牛肋排/牛肋排.webp" alt="牛肋排" onclick="openModal(this)" />
+			        </div>
+			        <div class="item-details">
+			          <div>🕒 <strong>營業時間：</strong>每日 11:00~21:00（15:20~17:00休息)</div>
+			          <div>💵 <strong>參考價位：</strong>燉牛肋排（小/2人份）約 35,000–40,000₩、加起司配料（치즈사리）3,000₩、精華炒飯（볶음밥）2,500₩</div>
+			          <div>🌅 <strong>建議用餐時間：</strong>推薦 <strong>午餐 12:00–13:30</strong> 或 <strong>晚餐 17:30–19:00</strong>。</div>
+			          <div>🚌 <strong>交通方式：</strong></div>
+			          <ul>
+			            <li>搭乘釜山地鐵2號線至海雲台站（해운대역），從 4號或2號出口 出站，步行約 2 分鐘往舊火車站方向、越過鐵軌後的紅磚建築2樓即達</li>
+			          </ul>
+			          <div>⚠️ <strong>注意事項：</strong></div>
+			          <ul>
+			            <li><strong>辣度可自選：</strong>可選擇<strong>微辣（순한맛）、普通辣（보통맛）或大辣（매운맛）</strong>。</li>
+			            <li><strong>加起司更美味：</strong>強烈推薦加點<strong>起司（치즈사리）</strong>鋪在牛肋排上炙烤融化。</li>
+			            <li><strong>壓軸必吃炒飯：</strong>肉塊吃完後留下少許醬汁請店家加入海苔、麻油與白飯做成<strong>鐵板炒飯（볶음밥）</strong>。</li>
+			          </ul>
+			        </div>
+			      </div>
+			    </div>
+
+			    <!-- 5. 密陽血腸豬肉湯飯 (海雲台) -->
+			    <div class="check-item" data-key="5" data-area="haeundae">
+			      <div class="item-text">
+			        <strong>密陽血腸豬肉湯飯（밀양순대돼지국밥）</strong>
+			        <div class="map-actions">
+			          <a href="https://naver.me/5T4ABsWP" target="_blank" rel="noopener noreferrer" class="btn-map btn-naver">🗺️ Naver Map</a>
+			          <a href="https://bobbytravel.tw/miryang-sundae/" target="_blank" rel="noopener noreferrer" class="btn-map btn-google">📍 網頁資料</a>
+			        </div>
+			        <p>釜山極具代表性的 24 小時老字號豬肉湯飯名店！以 100% 國內產豬骨長時間大火熬製成濃郁乳白色的醇厚高湯，完全沒有豬腥味。鍋內鋪滿鮮嫩扎實的豬肉切片與手工血腸，熱氣騰騰、份量十足。</p>
+			        <div class="item-gallery">
+			          <img src="IMG/密陽血腸豬肉湯飯/店面.jpg" alt="店面" onclick="openModal(this)" />
+			          <img src="IMG/密陽血腸豬肉湯飯/小菜.jpg" alt="小菜" onclick="openModal(this)" />
+			          <img src="IMG/密陽血腸豬肉湯飯/豬肉湯飯.jpg" alt="豬肉湯飯" onclick="openModal(this)" />
+			          <img src="IMG/密陽血腸豬肉湯飯/血腸湯飯.jpg" alt="血腸湯飯" onclick="openModal(this)" />
+			        </div>
+			        <div class="item-details">
+			          <div>🕒 <strong>營業時間：</strong>24 小時營業（全年無休）</div>
+			          <div>🚌 <strong>交通方式：</strong></div>
+			          <ul>
+			            <li>地鐵2號線<strong>海雲台站 5號出口</strong>直走步行約 3–5 分鐘（位於九南路主要大街上）。</li>
+			          </ul>
+			          <div>⚠️ <strong>注意事項：</strong></div>
+			          <ul>
+			            <li><strong>在地調味秘訣：</strong>加入<strong>蝦醬（새우젓）</strong>提鮮、<strong>辣醬（다대기）</strong>增香，並趁熱加入<strong>涼拌韭菜</strong>與<strong>麵線</strong>。</li>
+			            <li>不敢吃內臟可點純<strong>「豬肉湯飯（돼지국밥）」</strong>；想吃切片三層肉可點<strong>「白切肉定食（수육백반）」</strong>。</li>
+			          </ul>
+			        </div>
+			      </div>
+			    </div>
+
+			    <!-- 6. 百年食堂 (海雲台) -->
+			    <div class="check-item" data-key="6" data-area="haeundae">
+			      <div class="item-text">
+			        <strong>百年食堂（백년식당）</strong>
+			        <div class="map-actions">
+			          <a href="https://naver.me/GZZueewE" target="_blank" rel="noopener noreferrer" class="btn-map btn-naver">🗺️ Naver Map</a>
+			          <a href="https://alinalife.tw/baegnyeon-sikdang/" target="_blank" rel="noopener noreferrer" class="btn-map btn-google">📍 網頁資料</a>
+			        </div>
+			        <p>海雲台超人氣厚切熟成烤肉名店！嚴選高品質韓國產熟成五花肉與厚切豬頸肉，由專業店員提供全程代烤桌邊服務，外皮金黃酥脆、內裡肉汁滿溢。</p>
+			        <div class="item-gallery">
+			          <img src="IMG/百年食堂/店面.webp" alt="店面" onclick="openModal(this)" />
+			          <img src="IMG/百年食堂/小菜.webp" alt="小菜" onclick="openModal(this)" />
+			          <img src="IMG/百年食堂/豬五花.webp" alt="豬五花" onclick="openModal(this)" />
+			          <img src="IMG/百年食堂/大蔥泡菜湯.webp" alt="大蔥泡菜湯" onclick="openModal(this)" />
+			        </div>
+			        <div class="item-details">
+			          <div>📍 <strong>餐廳地址：</strong>부산 해운대구 구남로 23（釜山海雲台區九南路23）</div>
+			          <div>🕒 <strong>營業時間：</strong>每日 11:00–06:00（跨日營業至清晨）</div>
+			          <div>🚌 <strong>交通方式：</strong>釜山地鐵「海雲台站」3號出口，步行約3分鐘</div>
+			          <div>⚠️ <strong>注意事項：</strong>首次點餐基本規定<strong>至少須點 3 份肉品起（3人份）</strong>。</div>
+			        </div>
+			      </div>
+			    </div>
+
+			    <!-- 7. 高飯食堂 (海雲台) -->
+			    <div class="check-item" data-key="7" data-area="haeundae">
+			      <div class="item-text">
+			        <strong>高飯食堂（고반식당）</strong>
+			        <div class="map-actions">
+			          <a href="https://naver.me/5D8tuyAK" target="_blank" rel="noopener noreferrer" class="btn-map btn-naver">🗺️ Naver Map</a>
+			          <a href="https://damei17.com/goban/" target="_blank" rel="noopener noreferrer" class="btn-map btn-google">📍 Google Maps</a>
+			        </div>
+			        <p>韓國知名的連鎖熟成頂級豬肉專門店，主打低溫熟成五花肉、橫膈膜肉（海鷗肉）與特級豬頸肉，提供專業全程桌邊代烤，搭配烤蕨菜與多款特調沾醬，風味層次豐富。</p>
+			        <div class="item-gallery">
+			          <img src="IMG/高飯食堂/店面.jpg" alt="店面" onclick="openModal(this)" />
+			          <img src="IMG/高飯食堂/小菜.jpg" alt="小菜" onclick="openModal(this)" />
+			          <img src="IMG/高飯食堂/蒸蛋.jpg" alt="蒸蛋" onclick="openModal(this)" />
+			          <img src="IMG/高飯食堂/熟成主花肉.jpg" alt="熟成主花肉" onclick="openModal(this)" />
+			          <img src="IMG/高飯食堂/松阪豬.jpg" alt="松阪豬" onclick="openModal(this)" />
+			          <img src="IMG/高飯食堂/烤蕨菜.jpg" alt="烤蕨菜" onclick="openModal(this)" />
+			        </div>
+			        <div class="item-details">
+			          <div>🕒 <strong>營業時間：</strong>平日 15:30–02:00｜週末 11:30–02:00</div>
+			          <div>🚌 <strong>交通方式：</strong>釜山地鐵海雲台站 5號出口，步行約3分鐘</div>
+			          <div>⚠️ <strong>注意事項：</strong>代烤時會將<strong>智異山野生蕨菜</strong>放上烤盤微煎，搭配五花肉食用非常推薦。</div>
+			        </div>
+			      </div>
+			    </div>
+
+			    <!-- 8. Baro Haejang (廣安里) -->
+			    <div class="check-item" data-key="8" data-area="gwangan">
+			      <div class="item-text">
+			        <strong>Baro Haejang（바로해장）</strong>
+			        <div class="map-actions">
+			          <a href="https://naver.me/Gubwk3F5" target="_blank" rel="noopener noreferrer" class="btn-map btn-naver">🗺️ Naver Map</a>
+			          <a href="https://www.threads.com/share/OO-BLT0vG/" target="_blank" rel="noopener noreferrer" class="btn-map btn-google">📍 網頁資料</a>
+			        </div>
+			        <p>釜山廣安里超人氣排隊名店！主打湯頭清澈卻濃醇甘甜的「韓式牛肉解酒湯」與肉質極度軟嫩厚實的「招牌白切牛肉（수육）」，是在地人與遊客爭相造訪的暖胃美食。</p>
+			        <div class="item-gallery">
+			          <img src="IMG/Baro/店面.jpg" alt="Baro Haejang 門市外觀與候位區" onclick="openModal(this)" />
+			          <img src="IMG/Baro/血腸湯.jpg" alt="血腸湯" onclick="openModal(this)" />
+			          <img src="IMG/Baro/牛肉.jpg" alt="招牌白切牛肉拼盤" onclick="openModal(this)" />
+			        </div>
+			        <div class="item-details">
+			          <div>🕒 <strong>營業時間：</strong>約 9:00–22:00（15:30–16:30 午休，21:00 最後點餐）</div>
+			          <div>⚠️ <strong>注意事項：</strong>門口設有 <strong>CatchTable 電子候位機</strong>，抵達後請先抽號碼牌。</div>
+			        </div>
+			      </div>
+			    </div>
+
+			    <!-- 9. 烤肉的男子 (西面) -->
+			    <div class="check-item" data-key="9" data-area="seomyeon">
+			      <div class="item-text">
+			        <strong>烤肉的男子（고기굽는남자）</strong>
+			        <div class="map-actions">
+			          <a href="https://map.naver.com/p/entry/place/36449259?placePath=%2Fhome" target="_blank" rel="noopener noreferrer" class="btn-map btn-naver">🗺️ Naver Map</a>
+			          <a href="https://feitravel.tw/p-5071551129/" target="_blank" rel="noopener noreferrer" class="btn-map btn-google">📍 網頁資料</a>
+			          <a href="https://www.threads.com/share/DuvBVyupg/" target="_blank" rel="noopener noreferrer" class="btn-map btn-google">📍 Thread</a>
+			        </div>
+			        <p>釜山廣受好評的高人氣連鎖熟成烤肉專賣店！主打厚切熟成五花肉與極嫩豬頸肉，提供專人桌邊代烤服務。內用還免費附贈一大鍋清甜鮮美的辣味螃蟹貝類海鮮湯（可免費續湯）！</p>
+			        <div class="item-gallery">
+			          <img src="IMG/烤肉的男子/店面.jpg" alt="店面" onclick="openModal(this)" />
+			          <img src="IMG/烤肉的男子/三點蟹鍋.jpg" alt="三點蟹鍋" onclick="openModal(this)" />
+			          <img src="IMG/烤肉的男子/肉盤.jpg" alt="肉盤" onclick="openModal(this)" />
+			          <img src="IMG/烤肉的男子/肉壽司.jpg" alt="肉壽司" onclick="openModal(this)" />
+			          <img src="IMG/烤肉的男子/杏鮑菇乳酪.jpg" alt="杏鮑菇乳酪" onclick="openModal(this)" />
+			        </div>
+			        <div class="item-details">
+			          <div>🕒 <strong>營業時間：</strong>11:30-00:30（最後點餐 00:00）</div>
+			          <div>🚌 <strong>交通方式：</strong>地鐵2號線西面站6號出口步行約2分鐘</div>
+			          <div>⚠️ <strong>注意事項：</strong>初次點餐需達 3 份以上起點；門口備有取號機。</div>
+			        </div>
+			      </div>
+			    </div>
+
+			    <!-- 10. 融化 Nok 咖啡 (廣安里) -->
+			    <div class="check-item" data-key="d1-11" data-area="gwangan">
+			      <div class="item-text">
+			        <strong>融化 Nok 咖啡（녹아들다 녹카페）</strong>
+			        <div class="map-actions">
+			          <a href="https://naver.me/xExW773B" target="_blank" rel="noopener noreferrer" class="btn-map btn-naver">🗺️ Naver Map</a>
+			          <a href="https://www.instagram.com/noke_cafe/" target="_blank" rel="noopener noreferrer" class="btn-map btn-google">📷 網頁資料</a>
+			          <a href="https://www.threads.com/share/FwQgFTRY_/" target="_blank" rel="noopener noreferrer" class="btn-map btn-google">📍 Thread</a>
+			        </div>
+			        <p>隱身在廣安里寧靜巷弄的療癒系韓屋風日式木質咖啡廳！店內以溫暖的「暖桌（被爐）」座位聞名，招牌必點現烤雙色烤糰子套餐與濃醇抹茶甜點，榮獲韓國藍絲帶美食推薦。</p>
+			        <div class="item-gallery">
+			          <img src="IMG/Nok/店面.jpg" alt="店面" onclick="openModal(this)" />
+			          <img src="IMG/Nok/用餐環境.jpg" alt="用餐環境" onclick="openModal(this)" />
+			          <img src="IMG/Nok/戶外區.jpg" alt="戶外區" onclick="openModal(this)" />
+			          <img src="IMG/Nok/展示品.jpg" alt="展示品" onclick="openModal(this)" />
+			          <img src="IMG/Nok/抹茶芒果冰.jpg" alt="抹茶芒果冰" onclick="openModal(this)" />
+			          <img src="IMG/Nok/烤糰子.jpg" alt="烤糰子" onclick="openModal(this)" />
+			        </div>
+			        <div class="item-details">
+			          <div>🕒 <strong>營業時間：</strong>11:00–20:00</div>
+			          <div>⚠️ <strong>注意事項：</strong>低消每人一杯飲品；暖桌客滿時限時 1.5–2 小時；烤糰子附迷你烤爐可自行烘烤。</div>
+			        </div>
+			      </div>
+    </div>
 			</div>
 		</div>
 
@@ -989,13 +1324,17 @@
 
         <!-- 必買分類次級選單 -->
         <div class="sub-nav">
-		  <button class="sub-tab active" data-sub-target="sub-oliveyoung">
+          <button class="sub-tab" data-sub-target="sub-oliveyoung">
 		    <i class="fa-solid fa-bag-shopping"></i>
 		    <span>Olive Young</span>
 		  </button>
 		  <button class="sub-tab" data-sub-target="sub-pharmacy">
 		    <i class="fa-solid fa-pills"></i>
 		    <span>藥局</span>
+		  </button>
+		  <button class="sub-tab" data-sub-target="sub-big">
+		    <i class="fa-solid fa-pills"></i>
+		    <span>韓國大創</span>
 		  </button>
 		  <button class="sub-tab" data-sub-target="sub-souvenir">
 		    <i class="fa-solid fa-gift"></i>
@@ -1007,7 +1346,7 @@
 		  </button>
 		</div>
 
-        <!-- 1. Olive Young 面板 -->
+        <!-- Olive Young 面板 -->
         <div class="sub-panel active" id="sub-oliveyoung">
 	        <div class="trip-list">
 	            <!-- Anua PDRN 噴霧 玻尿酸保濕膠囊噴霧 -->
@@ -1095,19 +1434,25 @@
 			</div>
 		</div>
 
-        <!-- 2. 藥局 面板 -->
+        <!-- 藥局 面板 -->
         <div class="sub-panel" id="sub-pharmacy">
           <div class="trip-list">
           </div>
         </div>
+        
+        <!-- 韓國大創 面板 -->
+        <div class="sub-panel" id="sub-big">
+          <div class="trip-list">
+          </div>
+        </div>
 
-        <!-- 3. 紀念品 面板 -->
+        <!-- 紀念品 面板 -->
         <div class="sub-panel" id="sub-souvenir">
           <div class="trip-list">
           </div>
         </div>
         
-        <!-- 4. 隱形眼鏡 -->
+        <!-- 隱形眼鏡 -->
         <div class="sub-panel" id="sub-eye">
           <div class="trip-list">
           	<!-- 俄羅斯煙灰色 -->
@@ -1172,7 +1517,7 @@
         </div>
 
       </div>
-
+</div>
     </section>
   </main>
 	

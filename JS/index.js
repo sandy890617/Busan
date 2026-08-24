@@ -98,3 +98,88 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const filterBtns = document.querySelectorAll('#restaurant .filter-btn');
+  const items = document.querySelectorAll('#restaurant .check-item');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      // 1. 切換按鈕 active 樣式
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const filterValue = btn.getAttribute('data-filter');
+
+      // 2. 篩選餐廳列表
+      items.forEach(item => {
+        const itemArea = item.getAttribute('data-area');
+        if (filterValue === 'all' || itemArea === filterValue) {
+          item.style.display = ''; // 恢復預設顯示
+        } else {
+          item.style.display = 'none'; // 隱藏非該區餐廳
+        }
+      });
+    });
+  });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const day1Panel = document.querySelector('#day1');		// 修改'#day1'
+  if (!day1Panel) return;
+
+  const filterBtns = day1Panel.querySelectorAll('.filter-btn');
+  const items = day1Panel.querySelectorAll('.check-item');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      // 1. 切換按鈕 active 樣式
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const filterValue = btn.getAttribute('data-filter');
+
+      // 2. 篩選 Day 1 景點列表
+      items.forEach(item => {
+        const itemArea = item.getAttribute('data-area');
+        
+        
+        if (filterValue === 'day1-all' || itemArea === filterValue) {// 修改day1-all'
+          item.style.display = '';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    });
+  });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const day1Panel = document.querySelector('#day4');		// 修改'#day1'
+  if (!day1Panel) return;
+
+  const filterBtns = day1Panel.querySelectorAll('.filter-btn');
+  const items = day1Panel.querySelectorAll('.check-item');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      // 1. 切換按鈕 active 樣式
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const filterValue = btn.getAttribute('data-filter');
+
+      // 2. 篩選 Day 1 景點列表
+      items.forEach(item => {
+        const itemArea = item.getAttribute('data-area');
+        
+        
+        if (filterValue === 'day4-all' || itemArea === filterValue) {// 修改day1-all'
+          item.style.display = '';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    });
+  });
+});
