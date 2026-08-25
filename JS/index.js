@@ -183,3 +183,99 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const day1Panel = document.querySelector('#day3');		// 修改'#day1'
+  if (!day1Panel) return;
+
+  const filterBtns = day1Panel.querySelectorAll('.filter-btn');
+  const items = day1Panel.querySelectorAll('.check-item');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      // 1. 切換按鈕 active 樣式
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const filterValue = btn.getAttribute('data-filter');
+
+      // 2. 篩選 Day 1 景點列表
+      items.forEach(item => {
+        const itemArea = item.getAttribute('data-area');
+        
+        
+        if (filterValue === 'day3-all' || itemArea === filterValue) {// 修改day1-all'
+          item.style.display = '';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    });
+  });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const day1Panel = document.querySelector('#day2');		// 修改'#day1'
+  if (!day1Panel) return;
+
+  const filterBtns = day1Panel.querySelectorAll('.filter-btn');
+  const items = day1Panel.querySelectorAll('.check-item');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      // 1. 切換按鈕 active 樣式
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const filterValue = btn.getAttribute('data-filter');
+
+      // 2. 篩選 Day 1 景點列表
+      items.forEach(item => {
+        const itemArea = item.getAttribute('data-area');
+        
+        
+        if (filterValue === 'day2-all' || itemArea === filterValue) {// 修改day1-all'
+          item.style.display = '';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    });
+  });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  // 自動綁定所有代購金額輸入框
+  const bindAutoSavePrice = () => {
+    document.querySelectorAll('.check-item[data-key]').forEach(item => {
+      const itemKey = item.getAttribute('data-key');
+      
+      const krwInput = item.querySelector('.save-krw');
+      const twdInput = item.querySelector('.save-twd');
+
+      // 1. 韓幣自動讀取與儲存
+      if (krwInput) {
+        const krwKey = `price-krw-${itemKey}`;
+        const savedKrw = localStorage.getItem(krwKey);
+        if (savedKrw !== null) krwInput.value = savedKrw;
+
+        krwInput.addEventListener('input', (e) => {
+          localStorage.setItem(krwKey, e.target.value);
+        });
+      }
+
+      // 2. 台幣自動讀取與儲存
+      if (twdInput) {
+        const twdKey = `price-twd-${itemKey}`;
+        const savedTwd = localStorage.getItem(twdKey);
+        if (savedTwd !== null) twdInput.value = savedTwd;
+
+        twdInput.addEventListener('input', (e) => {
+          localStorage.setItem(twdKey, e.target.value);
+        });
+      }
+    });
+  };
+
+  bindAutoSavePrice();
+});

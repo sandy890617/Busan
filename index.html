@@ -33,7 +33,6 @@
 		<button class="nav-tab" data-target="day2">海雲台</button>
 		<button class="nav-tab" data-target="day3">廣安里</button>
 		<button class="nav-tab" data-target="day4">西面</button>
-		<button class="nav-tab" data-target="restaurant">餐廳總合</button>
 		<button class="nav-tab nav-tab-info" data-target="info-flight"><i class="fa-solid fa-plane"></i> 航班</button>
 		<button class="nav-tab nav-tab-info" data-target="info-hotel"><i class="fa-solid fa-hotel"></i> 住宿</button>
 		<button class="nav-tab nav-tab-info" data-target="info-pack"><i class="fa-solid fa-list-check"></i> 購物清單</button>
@@ -496,14 +495,23 @@
 		<!-- Day 2 -->
 		<div class="tab-panel" id="day2">
 	        <div class="panel-header">
-				<div class="panel-tag">DAY 2 · 10/21</div>
+				<div class="panel-tag">海雲台</div>
 				<h2>海雲台 · 浪漫日落海景列車</h2>
 				<p class="panel-intro">坐著彩色膠囊列車看海，晚上吃青沙浦現烤海鮮 🦪</p>
 	        </div>
+	        
+	        <!-- 區域篩選按鈕區 -->
+			<div class="filter-btn-group">
+			  <button class="filter-btn active" data-filter="day2-all">全部景點</button>
+			  <button class="filter-btn" data-filter="day2-attractions">景點</button>
+			  <button class="filter-btn" data-filter="day2-cafes">咖啡廳</button>
+			  <button class="filter-btn" data-filter="day2-restaurant">餐廳 / 小吃店</button>
+			  <button class="filter-btn" data-filter="day2-shop">選物店 / 衣服店</button>
+			</div>
 
 			<div class="trip-list">
 				<!-- 海雲台藍線公園 天空膠囊列車（해운대블루라인파크 스카이캡슐） -->
-				<div class="check-item" data-key="d2-1">
+				<div class="check-item" data-key="d2-1" data-area="day2-attractions">
 					<div class="item-text">
 						<strong>海雲台藍線公園 天空膠囊列車（해운대블루라인파크 스카이캡슐）</strong>
 						<div class="map-actions">
@@ -545,7 +553,7 @@
 				</div>
         		
         		<!-- 海雲台海水浴場（해운대해수욕장） -->
-				<div class="check-item" data-key="d2-2">
+				<div class="check-item" data-key="d2-2" data-area="day2-attractions">
 					<div class="item-text">
 						<strong>海雲台海水浴場（해운대해수욕장）</strong>
 						<div class="map-actions">
@@ -582,7 +590,7 @@
 				</div>
         	
         		<!-- 小香牛肋排 -->
-				<div class="check-item" data-key="d2-3">
+				<div class="check-item" data-key="d2-3" data-area="day2-restaurant">
 					<div class="item-text">
 						<strong>小香牛肋排（소향갈비찜）</strong>
 						<div class="map-actions">
@@ -624,7 +632,7 @@
 				</div>
         		
         		<!-- 密陽血腸豬肉湯飯 -->
-				<div class="check-item" data-key="d2-4">
+				<div class="check-item" data-key="d2-4" data-area="day2-restaurant">
 					<div class="item-text">
 						<strong>密陽血腸豬肉湯飯（밀양순대돼지국밥）</strong>
 						<div class="map-actions">
@@ -666,7 +674,7 @@
 				</div>
         		
         		<!-- 百年食堂 -->
-				<div class="check-item" data-key="d2-5">
+				<div class="check-item" data-key="d2-5" data-area="day2-restaurant">
 					<div class="item-text">
 						<strong>百年食堂（백년식당）</strong>
 						<div class="map-actions">
@@ -710,7 +718,7 @@
 				</div>
         	
         		<!-- 高飯食堂 -->
-				<div class="check-item" data-key="d2-6">
+				<div class="check-item" data-key="d2-6" data-area="day2-restaurant">
 					<div class="item-text">
 						<strong>高飯食堂（고반식당）</strong>
 						<div class="map-actions">
@@ -755,7 +763,7 @@
 				</div>
         	
         		<!-- 青沙浦小鎌倉／灌籃高手平交道（청사포 슬램덩크 철길） -->
-				<div class="check-item" data-key="d1-5">
+				<div class="check-item" data-key="d2-7" data-area="day2-attractions">
 					<div class="item-text">
 						<strong>青沙浦小鎌倉（청사포 슬램덩크 철길）</strong>
 						<div class="map-actions">
@@ -793,7 +801,7 @@
 				</div>
         		
         		<!-- Standard Burn（스탠다드번） -->
-				<div class="check-item" data-key="d1-6">
+				<div class="check-item" data-key="d2-8" data-area="day2-cafes">
 					<div class="item-text">
 						<strong>Standard Burn（스탠다드번）</strong>
 						<div class="map-actions">
@@ -830,35 +838,345 @@
 
 		<!-- Day 3 -->
 		<div class="tab-panel" id="day3">
-        <div class="panel-header">
-          <div class="panel-tag">DAY 3 · 10/22</div>
-          <h2>小王子約會 & 懸崖海景咖啡</h2>
-          <p class="panel-intro">漫步在彩繪小村莊，邊看海邊發呆的午後 ☕</p>
-        </div>
+	        <div class="panel-header">
+	          <div class="panel-tag">廣安里</div>
+	          <h2>一眼坐擁廣安大橋，釜山最浪漫的看海與夜景聖地</h2>
+	          <p class="panel-intro">白天吹海風、泡在海景咖啡廳發呆，入夜後廣安大橋亮起璀璨燈光，配上沙灘酒館的微醺氛圍與週末無人機秀</p>
+	        </div>
+	        
+	        <!-- 區域篩選按鈕區 -->
+			<div class="filter-btn-group">
+			  <button class="filter-btn active" data-filter="day3-all">全部景點</button>
+			  <button class="filter-btn" data-filter="day3-attractions">景點</button>
+			  <button class="filter-btn" data-filter="day3-cafes">咖啡廳</button>
+			  <button class="filter-btn" data-filter="day3-restaurant">餐廳 / 小吃店</button>
+			  <button class="filter-btn" data-filter="day3-shop">選物店 / 衣服店</button>
+			</div>
 
-        <div class="trip-list">
-          <div class="check-item" data-key="d3-1">
-            <div class="item-text">
-              <strong>甘川洞文化村 🎨</strong>
-              <p>穿梭彩色小屋，排隊和小王子與狐狸留下專屬背影照。</p>
-            </div>
-          </div>
+	        <div class="trip-list">
+	        	
+	        	<!-- Working Holiday Cafe（워킹홀리데이） -->
+				<div class="check-item" data-key="d3-4" data-area="day3-cafes">
+					<div class="item-text">
+						<strong>Working Holiday Cafe（워킹홀리데이）</strong>
+						<div class="map-actions">
+							<a href="https://naver.me/xgNS92At" target="_blank" rel="noopener noreferrer" class="btn-map btn-naver">
+								🗺️ Naver Map
+							</a>
+							<a href="https://lizzzstyle.tw/working-holiday/" target="_blank" rel="noopener noreferrer" class="btn-map btn-google">
+								📷 網頁資料
+							</a>
+						</div>
+						<p>
+						  釜山廣安里極具人氣的澳洲渡假風早午餐咖啡廳！以澳式「Working Holiday」為靈感，純白明亮的空間搭配自然綠植與質感木質調，營造出悠閒的南半球陽光渡假感。主打色彩繽紛的澳式大早餐、酪梨酸種麵包、法式吐司與香濃滑順的 Flat White（澳白咖啡），是享受慢活早午餐的絕佳去處。
+						</p>
+					
+						<!-- 圖片展示區 -->
+						<div class="item-gallery">
+							<img src="IMG/WorkingHoliday/海景第一排.webp" alt="海景第一排" onclick="openModal(this)" />
+							<img src="IMG/WorkingHoliday/店入口.webp" alt="店入口" onclick="openModal(this)" />
+							<img src="IMG/WorkingHoliday/早午餐餐點.jpg" alt="早午餐餐點" onclick="openModal(this)" />
+							<img src="IMG/WorkingHoliday/煙燻鮭魚班尼迪克蛋.webp" alt="煙燻鮭魚班尼迪克蛋.webp" onclick="openModal(this)" />
+						</div>
+					
+						<!-- 詳細資訊與注意事項 -->
+						<div class="item-details">
+						  <div>🕒 <strong>營業時間：</strong>09:00–22:30（21:30最後點餐）</div>
+						  <div>⚠️ <strong>注意事項：</strong></div>
+						  <ul>
+						    <li>店內熱門時段常需<strong>現場登記候位</strong>，尖峰時段可能設有約 <strong>1.5 小時內用時間限制</strong>。</li>
+						    <li>內用通常規定<strong>每人低消一杯飲品或一份主餐</strong>。</li>
+						    <li>鄰近廣安里海灘，享用完豐盛早午餐後非常適合直接漫步至海邊散步看海。</li>
+						  </ul>
+						</div>
+					</div>
+				</div>
 
-          <div class="check-item" data-key="d3-2">
-            <div class="item-text">
-              <strong>白淺灘文化村 🌊</strong>
-              <p>蔚藍懸崖步道，找一間大面落地窗的咖啡廳坐著看海吃甜點。</p>
-            </div>
-          </div>
+				<!-- CASA BUSANO 義式濃縮咖啡吧（까사 부사노） -->
+				<div class="check-item" data-key="d3-5"  data-area="day3-cafes">
+					<div class="item-text">
+						<strong>CASA BUSANO（까사 부사노）</strong>
+						<div class="map-actions">
+							<a href="https://naver.me/5VmQUln1" target="_blank" rel="noopener noreferrer" class="btn-map btn-naver">
+								🗺️ Naver Map
+							</a>
+							<a href="https://mamahuhu.blog/overseas/casa-busano-terrace/" target="_blank" rel="noopener noreferrer" class="btn-map btn-google">
+								📷 網頁資料
+							</a>
+						</div>
+						<p>
+						  釜山頂級質感的歐式復古濃縮咖啡吧（Espresso Bar）！融合義大利古典沙龍與英倫紳士俱樂部風格，深木質調裝潢搭配雪茄與黑膠唱片元素，氛圍沉穩優雅。主打多款層次豐富的風味濃縮咖啡、雪茄造型費南雪與特調調酒，白天是精品咖啡吧，入夜後則化身微醺 Lounge。
+						</p>
+					
+						<!-- 圖片展示區 -->
+						<div class="item-gallery">
+							<img src="IMG/CasaBusano/店面位置.jpg" alt="店內位置" onclick="openModal(this)" />
+							<img src="IMG/CasaBusano/用餐環境.jpeg" alt="用餐環境" onclick="openModal(this)" />
+							<img src="IMG/CasaBusano/佛卡夏三明治.jpeg" alt="佛卡夏三明治" onclick="openModal(this)" />
+							<img src="IMG/CasaBusano/杏仁奶油拿鐵.jpeg" alt="杏仁奶油拿鐵" onclick="openModal(this)" />
+						</div>
+					
+						<!-- 詳細資訊與注意事項 -->
+						<div class="item-details">
+						  <div>🕒 <strong>營業時間：</strong>08:30–02:00（01:00最後點餐）</div>
+						  <div>⚠️ <strong>注意事項：</strong></div>
+						  <ul>
+						    <li>招牌必點<strong>「Padre 招牌濃縮」</strong>或<strong>「Respresso」</strong>，搭配經典<strong>雪茄造型費南雪蛋糕（Cigar Financier）</strong>拍照與口感皆絕配。</li>
+						    <li>店內提供<strong>站飲吧台（Stand Bar）</strong>與<strong>一般座位區</strong>，立飲體驗極具道地義大利街頭風情。</li>
+						    <li>海雲台本店與廣安里店皆座落於精華地段，交通便利，非常適合作為行程中途充電小憩或夜生活的第一站。</li>
+						  </ul>
+						</div>
+					</div>
+				</div>
+	
+	        	<!-- 那沙里食堂 廣安里店（나사리식당 광안점） -->
+				<div class="check-item" data-key="d3-3" data-area="day3-restaurant">
+					<div class="item-text">
+						<strong>那沙里食堂（나사리식당）</strong>
+						<div class="map-actions">
+							<a href="https://naver.me/GV2tQAcZ" target="_blank" rel="noopener noreferrer" class="btn-map btn-naver">
+								🗺️ Naver Map
+							</a>
+							<a href="https://mamahuhu.blog/overseas/nasari-sigdang/" target="_blank" rel="noopener noreferrer" class="btn-map btn-google">
+								📍 網站資料
+							</a>
+						</div>
+						<p>
+						  坐擁廣安大橋第一排無敵海景的人氣排隊景觀餐廳！主打料多鮮美的「海鮮貝類刀切麵（해물칼국수）」、香氣濃郁的「生牛肉拌麵（육회비빔칼국수）」以及金黃香脆的「滿滿海鮮韭菜煎餅（해물부추전）」。坐在窗邊高腳吧台一邊大啖澎湃海鮮、一邊俯瞰波光粼粼的廣安里海景，視覺與味覺雙重享受。
+						</p>
+					
+						<!-- 圖片展示區 -->
+						<div class="item-gallery">
+							<img src="IMG/那沙里食堂/店面.jpg" alt="店面" onclick="openModal(this)" />
+							<img src="IMG/那沙里食堂/窗邊海景席.jpeg" alt="窗邊海景席" onclick="openModal(this)" />
+							<img src="IMG/那沙里食堂/海鮮刀削麵.jpeg" alt="海鮮刀削麵" onclick="openModal(this)" />
+							<img src="IMG/那沙里食堂/生牛肉拌麵.jpeg" alt="生牛肉拌麵" onclick="openModal(this)" />
+							<img src="IMG/那沙里食堂/海鮮煎餅.jpeg" alt="海鮮煎餅" onclick="openModal(this)" />
+						</div>
+					
+						<!-- 詳細資訊與注意事項 -->
+						<div class="item-details">
+						  <div>🕒 <strong>營業時間：</strong>約 11:00–21:00 / 22:00（最後點餐時間多為打烊前 60 分鐘；部分分店有午後備料時間）</div>
+						  <div>🌅 <strong>建議到訪時間：</strong><strong>建議避開尖峰用餐時段，這樣比較容易搶到窗邊座位</strong> 或 <strong>16:30 傍晚日落前</strong> 提早抵達登記，較有機會坐到面海第一排的景觀吧台席。</div>
+						  <div>⚠️ <strong>注意事項：</strong></div>
+						  <ul>
+						    <li>門口設有 <strong>CatchTable 電子候位機</strong>，登記時可選擇一般座位或<strong>「窗邊海景席（창가석）」</strong>（窗邊席通常等候時間較長）。</li>
+						    <li>若 2～3 人同行，推薦直接點選包含<strong>刀切麵 + 煎餅 + 生牛肉拌麵/飯</strong>的組合套餐（Set Menu），份量豐盛且一次滿足。</li>
+						    <li>店家位於海景大樓高樓層，電梯搭乘至對應樓層即可抵達，用餐完可直接下樓漫步廣安里沙灘。</li>
+						  </ul>
+						</div>
+					</div>
+				</div>
+	        
+	        	<!-- 朝朝刀切麵（조조칼국수） -->
+				<div class="check-item" data-key="d3-2" data-area="day3-restaurant">
+					<div class="item-text">
+						<strong>朝朝刀切麵（조조칼국수）</strong>
+						<div class="map-actions">
+							<a href="https://naver.me/FQVGqeUy" target="_blank" rel="noopener noreferrer" class="btn-map btn-naver">
+								🗺️ Naver Map
+							</a>
+							<a href="https://windko.tw/busan-jojo/" target="_blank" rel="noopener noreferrer" class="btn-map btn-google">
+								📍 網頁資料
+							</a>
+						</div>
+						<p>
+						  大邱發跡、紅遍全韓的超人氣排隊名店！主打鋪滿整碗當日直送新鮮東風螺與鮮甜貝類的「海鮮貝類刀切麵」，湯頭清澈鮮美、麵條Q彈滑順。另一道必點招牌是煎得極度金黃薄脆、鋪滿彈牙小章魚與鮮蝦的「滿滿海鮮煎餅（洛東江蔥餅）」，份量十足且CP值極高。
+						</p>
+					
+						<!-- 圖片展示區 -->
+						<div class="item-gallery">
+							<img src="IMG/朝朝刀切麵/店面.jpg" alt="店面" onclick="openModal(this)" />
+							<img src="IMG/朝朝刀切麵/菜單.jpg" alt="燦單" onclick="openModal(this)" />
+							<img src="IMG/朝朝刀切麵/餐點.jpg" alt="餐點" onclick="openModal(this)" />
+							<img src="IMG/朝朝刀切麵/蛤蠣刀削麵.jpg" alt="蛤蠣刀削麵" onclick="openModal(this)" />
+							<img src="IMG/朝朝刀切麵/蛤蜊湯.jpg" alt="蛤蜊湯" onclick="openModal(this)" />
+							<img src="IMG/朝朝刀切麵/章魚海鮮蔥餅.jpg" alt="章魚海鮮蔥餅.jpg" onclick="openModal(this)" />
+						</div>
+					
+						<!-- 詳細資訊與注意事項 -->
+						<div class="item-details">
+						  <div>🕒 <strong>營業時間：</strong>約 10:30–22:00（最後點餐時間21:30）</div>
+						  <div>🌅 <strong>建議到訪時間：</strong>推薦 <strong>11:00 前</strong> 或 <strong>17:00 晚市初期</strong> 提早入座，可避開午餐 12:00–13:30 及晚餐 18:30 後的排隊人潮。</div>
+						  <div>🚗 <strong>交通方式：</strong>在 2 號線地鐵站民樂站（민락역、Millak、207）1 號出口搭 210 號公車，大約第七站在 민락매립지공영주차장（民樂填海地公營停車場）下車，然後往回走，走到底的路口左轉，就可以看到位於左手邊的朝朝刀削麵（조조칼국수）</div>
+						  <div>⚠️ <strong>注意事項：</strong></div>
+						  <ul>
+						    <li>人氣極高，尖峰時段需於門口<strong>電子候位機（CatchTable）</strong>登記取號。</li>
+						    <li>經典吃法推薦 2 人以上同行點 <strong>1～2 份刀切麵 + 1 份海鮮煎餅</strong> 共同分食，份量最為剛好。</li>
+						    <li>店內附贈的生青辣椒與微辣脆泡菜搭配鮮甜海鮮湯頭極為解膩提味。</li>
+						  </ul>
+						</div>
+					</div>
+				</div>
+	        	
+	        	<!-- La Feuille 手作烘焙坊（라푀유） -->
+				<div class="check-item" data-key="d3-6" data-area="day3-cafes">
+					<div class="item-text">
+						<strong>La Feuille（라푀유）</strong>
+						<div class="map-actions">
+							<a href="https://naver.me/5EUZ755T" target="_blank" rel="noopener noreferrer" class="btn-map btn-naver">
+								🗺️ Naver Map
+							</a>
+							<a href="https://lizzzstyle.tw/la-feuille/" target="_blank" rel="noopener noreferrer" class="btn-map btn-google">
+								📷 網頁資料
+							</a>
+						</div>
+						<p>
+						  釜山極具人氣的法式手作烘焙可頌專賣店！法文「La Feuille」象徵著千層派皮般的精緻層次。店家以嚴選優質發酵奶油製作，主打外皮極致酥脆、內餡香濃爆漿的手作可頌、千層蛋塔與特色法式點心，出爐時濃郁的奶油香氣令人食指大動，是甜點控不可錯過的朝聖名店。
+						</p>
+					
+						<!-- 圖片展示區 -->
+						<div class="item-gallery">
+							<img src="IMG/LaFeuille/店門口.jpg" alt="店門口" onclick="openModal(this)" />
+							<img src="IMG/LaFeuille/用餐環境.jpg" alt="用餐環境" onclick="openModal(this)" />
+							<img src="IMG/LaFeuille/廣安大橋.jpg" alt="風景" onclick="openModal(this)" />
+							<img src="IMG/LaFeuille/麵包.jpg" alt="麵包" onclick="openModal(this)" />
+							<img src="IMG/LaFeuille/羅勒培根蛋麵包.jpg" alt="羅勒培根蛋麵包" onclick="openModal(this)" />
+							<img src="IMG/LaFeuille/司康.jpg" alt="司康" onclick="openModal(this)" />
+						</div>
+					
+						<!-- 詳細資訊與注意事項 -->
+						<div class="item-details">
+						  <div>🕒 <strong>營業時間：</strong>9:00–23:00</div>
+						  <div>🚗 <strong>交通方式：</strong>搭乘地鐵到광안廣安站，下車步行11分鐘抵達餐廳</div>
+						  <div>⚠️ <strong>注意事項：</strong></div>
+						  <ul>
+						    <li>招牌<strong>爆漿奶油可頌、鮮奶油千層</strong>等熱門口味每日限量供應，<strong>午後至傍晚容易提早售罄</strong>。</li>
+						    <li>外帶點心建議當日食用完畢以品嚐最佳酥脆度，冷藏後可使用氣炸鍋或烤箱稍微回溫。</li>
+						    <li>若選擇內用通常需<strong>搭配一杯飲品作為基本低消</strong>。</li>
+						  </ul>
+						</div>
+					</div>
+				</div>
+	        	
+	        	<!-- 廣安里海水浴場（광안리해수욕장） -->
+				<div class="check-item" data-key="d3-1" data-area="day3-attractions">
+					<div class="item-text">
+						<strong>廣安里海水浴場（광안리해수욕장）</strong>
+						<div class="map-actions">
+							<a href="https://naver.me/xzxmzK1j" target="_blank" rel="noopener noreferrer" class="btn-map btn-naver">
+								🗺️ Naver Map
+							</a>
+							<a href="https://damei17.com/gwangalli-beach/#google_vignette" target="_blank" rel="noopener noreferrer" class="btn-map btn-google">
+								📍 網頁資料
+							</a>
+						</div>
+						<p>
+						  釜山最具浪漫氛圍的代表性海灘！正對著壯觀的雙層「廣安大橋（Gwangan Bridge）」，沿岸聚集了無數景觀咖啡廳、特色餐酒館與生魚片中心。每逢週六晚間更有震撼的常態性「無人機燈光秀」，入夜後大橋亮起璀璨霓虹，是釜山夜景與約會首選地。
+						</p>
+					
+						<!-- 圖片展示區 -->
+						<div class="item-gallery">
+							<img src="IMG/廣安里海水浴場/廣安里海水浴場.jpg" alt="廣安里沙灘與廣安大橋" onclick="openModal(this)" />
+							<img src="IMG/廣安里海水浴場/夜景.jpg" alt="夜景" onclick="openModal(this)" />
+						</div>
+					
+						<!-- 詳細資訊與注意事項 -->
+						<div class="item-details">
+						  <div>🕒 <strong>開放時間：</strong>沙灘全天開放；週六無人機秀時間多為 <strong>20:00 / 22:00（冬季 19:00 / 21:00）</strong>各展演約 10 分鐘</div>
+						  <div>🌅 <strong>建議到訪時間：</strong>推薦 <strong>17:30 傍晚日落至 20:30 入夜</strong> 前往，可一次飽覽粉紫晚霞、大橋點燈與浪漫夜景。</div>
+						  <div>🚃 <strong>交通資訊：</strong>搭乘釜山地鐵二號線至廣安站（광안역）下車，從3號出口步行約10分鐘路程</div>
+						  <div>⚠️ <strong>注意事項：</strong></div>
+						  <ul>
+						    <li><strong>週六無人機常態秀</strong>若遇強風、大雨等惡劣天候可能會<strong>臨時取消</strong>，建議出發前查詢官方公告。</li>
+						    <li>沿岸第一排景觀咖啡廳與居酒屋在<strong>傍晚至無人機演出時段極為搶手</strong>，想坐窗邊第一排建議提早 1 小時卡位。</li>
+						    <li>海灘旁即是<strong>民樂生魚片中心</strong>與<strong>民樂水邊公園</strong>，適合外帶炸雞或海鮮在防波堤邊吹海風享用。</li>
+						  </ul>
+						</div>
+					</div>
+				</div>
 
-          <div class="check-item" data-key="d3-3">
-            <div class="item-text">
-              <strong>南浦洞 BIFF 廣場 🥞</strong>
-              <p>一人吃一個熱騰騰的堅果黑糖餅，挑選情侶紀念品。</p>
-            </div>
-          </div>
-        </div>
-      </div>
+				<!-- Soyoutem 廣安里店（소유템 광안리점） -->
+				<div class="check-item" data-key="d3-7" data-area="day3-shop">
+					<div class="item-text">
+						<strong>Soyoutem 廣安里店（소유템 광안리점）</strong>
+						<div class="map-actions">
+							<a href="https://naver.me/5XJyu7sm" target="_blank" rel="noopener noreferrer" class="btn-map btn-naver">
+								🗺️ Naver Map
+							</a>
+							<a href="https://www.instagram.com/reel/DTNgOqLkjs9/?utm_source=ig_web_copy_link&igsi=NTc4MTIwNjQ2YQ==" target="_blank" rel="noopener noreferrer" class="btn-map btn-google">
+								📷 Instagram
+							</a>
+						</div>
+				
+						<!-- 主要販售內容 -->
+						<p>
+							<strong>主要販售：</strong>韓國人氣插畫文具（貼紙/明信片）、手作飾品吊飾，以及<strong>釜山限定伴手禮</strong>（海鷗、廣安大橋主題原創雜貨）。
+						</p>
+					
+						<!-- 圖片展示區 -->
+						<div class="item-gallery">
+							<img src="IMG/廣安里選物店/Soyoutem.jpg" alt="Soyoutem 廣安里店門市外觀" onclick="openModal(this)" />
+						</div>
+					
+						<!-- 基本資訊 -->
+						<div class="item-details">
+							<div>🕒 <strong>營業時間：</strong>00:00-24:00</div>
+						</div>
+					</div>
+				</div>
+	       	
+	       		<!-- Vivanilla House（비바닐라하우스） -->
+				<div class="check-item" data-key="d3-8" data-area="day3-shop">
+					<div class="item-text">
+						<strong>Vivanilla House（비바닐라하우스）</strong>
+						<div class="map-actions">
+							<a href="https://naver.me/5ss6O9sd" target="_blank" rel="noopener noreferrer" class="btn-map btn-naver">
+								🗺️ Naver Map
+							</a>
+							<a href="https://www.instagram.com/v.vanilla.house/" target="_blank" rel="noopener noreferrer" class="btn-map btn-google">
+								📷 Instagram
+							</a>
+						</div>
+				
+						<!-- 主要販售內容 -->
+						<p>
+							<strong>主要販售：</strong>復古可愛風生活雜貨、精緻餐具杯盤、香氛蠟燭、玩偶吊飾及各式文創小物。
+						</p>
+					
+						<!-- 圖片展示區 -->
+						<div class="item-gallery">
+							<img src="IMG/廣安里選物店/Vivanilla.webp" alt="Vivanilla House 門市外觀" onclick="openModal(this)" />
+						</div>
+					
+						<!-- 基本資訊 -->
+						<div class="item-details">
+							<div>🕒 <strong>營業時間：</strong>12:00–19:00（週三休息）</div>
+						</div>
+					</div>
+				</div>
+	        	
+				<!-- Things of Note 廣安店（띵스오브노트 광안점） -->
+				<div class="check-item" data-key="d3-9" data-area="day3-shop">
+					<div class="item-text">
+						<strong>Things of Note 廣安店（띵스오브노트 광안점）</strong>
+						<div class="map-actions">
+							<a href="https://naver.me/FRuEOjAy" target="_blank" rel="noopener noreferrer" class="btn-map btn-naver">
+								🗺️ Naver Map
+							</a>
+							<a href="https://www.instagram.com/p/DXygCxuiRIN/?img_index=6" target="_blank" rel="noopener noreferrer" class="btn-map btn-google">
+								📷 Instagram
+							</a>
+						</div>
+				
+						<!-- 主要販售內容 -->
+						<p>
+							<strong>主要販售：</strong>質感生活選物、天然香氛蠟燭/線香、美學餐具器皿、文青手帳文具及設計感日常配件。
+						</p>
+					
+						<!-- 圖片展示區 -->
+						<div class="item-gallery">
+							<img src="IMG/廣安里選物店/ThingsofNote.jfif" alt="Things of Note 廣安店門市外觀" onclick="openModal(this)" />
+						</div>
+					
+						<!-- 基本資訊 -->
+						<div class="item-details">
+							<div>🕒 <strong>營業時間：</strong>12:00–19:00</div>
+						</div>
+					</div>
+				</div>
+	        </div>
+      	</div>
 
 		<!-- Day 4 -->
 		<div class="tab-panel" id="day4">
@@ -932,386 +1250,91 @@
 			</div>
       </div>
 
-	  	<!-- 餐廳備選 -->
-		<div class="tab-panel" id="restaurant">
-			<div class="panel-header">
-			    <div class="panel-tag">餐廳總集合</div>
-			    <h2>所有餐廳來這裡看</h2>
-			</div>
+      	<!-- 資訊 1：航班 -->
+      	<div class="tab-panel" id="info-flight">
+        	<div class="panel-header">
+          		<div class="panel-tag">FLIGHT INFO</div>
+          		<h2>航班資訊</h2>
+        	</div>
 
-  			<!-- 區域篩選按鈕區 -->
-			<div class="filter-btn-group">
-			  <button class="filter-btn active" data-filter="all">全部餐廳</button>
-			  <button class="filter-btn" data-filter="yeongdo">影島區</button>
-			  <button class="filter-btn" data-filter="haeundae">海雲台</button>
-			  <button class="filter-btn" data-filter="gwangan">廣安里</button>
-			  <button class="filter-btn" data-filter="seomyeon">西面</button>
-			</div>
+        	<div class="trip-list">
+	          <!-- 去程航班 -->
+	          <a href="https://www.google.com/travel/flights" target="_blank" rel="noopener noreferrer" class="trip-card">
+	            <div class="card-top">
+	              <span class="pill-label label-flight"><i class="fa-solid fa-plane-departure"></i> 去程 FLIGHT</span>
+	              <span class="date-text">2026/10/20 (Tue)</span>
+	            </div>
+	            <h4>真航空 LJ570 · 經濟艙</h4>
+	            <p class="card-desc">
+	              <strong>20:00</strong> CJU 濟州國際機場 ➔ <strong>21:05</strong> PUS 金海國際機場 (I)
+	            </p>
+	            <div class="card-footer">
+	              <span>波音 737-800 · 無餐點</span>
+	            </div>
+	          </a>
 
-  			<div class="trip-list">
-	    		<!-- 1. 明星/名聲一隻雞 (影島) -->
-				<div class="check-item" data-key="1" data-area="yeongdo">
-					<div class="item-text">
-						<strong>明星一隻雞 / 名聲一隻雞（명성닭한마리）</strong>
-						<div class="map-actions">
-						  <a href="https://naver.me/G0DXkbNR" target="_blank" rel="noopener noreferrer" class="btn-map btn-naver">🗺️ Naver Map</a>
-						  <a href="https://judyer.com/msc/" target="_blank" rel="noopener noreferrer" class="btn-map btn-google">📍 網頁資料</a>
-						</div>
-						<p>草梁洞與釜山站周邊極具口碑的在地老字號！以整隻新鮮嫩雞搭配大量青蔥、馬鈴薯與秘製清甜高湯熬煮，湯頭甘醇鮮美、不油不膩。雞肉軟嫩多汁，沾上特製辣醬、黃芥末、醬油與高麗菜絲調配的靈魂沾醬更是一絕。最後加入刀削麵與煮成海苔雞蛋粥（죽）是老饕必吃的經典收尾。</p>
-						<div class="item-gallery">
-						  <img src="IMG/明星一隻雞/明星一隻雞.jpg" alt="招牌一隻雞鍋" onclick="openModal(this)" />
-						  <img src="IMG/明星一隻雞/雞肉.jpg" alt="雞肉" onclick="openModal(this)" />
-						  <img src="IMG/明星一隻雞/蔬菜雞蛋粥.jpg" alt="蔬菜雞蛋粥" onclick="openModal(this)" />
-						</div>
-						<div class="item-details">
-							<div>📍 <strong>餐廳地址：</strong>부산 영도구 절영路 22 \ 대교동1가 163-2(釜山 影島區絕影路22 \ 大橋洞1街 163-2)</div>
-							<div>🕒 <strong>營業時間：</strong>每日 11:00 – 24:00 \ 22:00 最後點餐(每月第一和第三個週一休息)</div>
-							<div>🚌 <strong>交通方式：</strong></div>
-							<ul>
-							  <li>從南浦站８號出口，走路過去１１分鐘</li>
-							  <li>南浦站６號出口處，轉搭乘６、７、１７、１１３號巴士過影島大橋</li>
-							</ul>
-							<div>⚠️ <strong>注意事項：</strong></div>
-							<ul>
-							  <li><strong>靈魂沾醬吃法：</strong>依店家推薦比例將「辣椒醬＋黃芥末＋醬油醋＋蒜泥」混合均勻，拌入爽脆高麗菜絲，搭配雞肉一起入口最道地解膩。</li>
-							  <li><strong>二段式收尾：</strong>雞肉與馬鈴薯吃完後，務必先加點<strong>刀削麵（칼국수）</strong>吸附濃郁雞湯精華，最後再請店員加入白飯、海苔與雞蛋煮成<strong>精華粥（죽）</strong>。</li>
-							  <li>用餐尖峰時段常有在地上班族聚餐，建議提早抵達或稍微避開正餐尖峰期以減少候位時間。</li>
-							</ul>
-						</div>
-					</div>
-				</div>
+	          <!-- 回程航班 -->
+	          <a href="https://www.google.com/travel/flights" target="_blank" rel="noopener noreferrer" class="trip-card">
+	            <div class="card-top">
+	              <span class="pill-label label-flight"><i class="fa-solid fa-plane-arrival"></i> 回程 FLIGHT</span>
+	              <span class="date-text">2026/10/24 (Sat)</span>
+	            </div>
+	            <h4>真航空 LJ751 · 經濟艙</h4>
+	            <p class="card-desc">
+	              <strong>22:00</strong> PUS 金海國際機場 (I) ➔ <strong>23:40</strong> TPE 臺灣桃園國際機場 (T1)
+	            </p>
+	            <div class="card-footer">
+	              <span>波音 737-800 · 無餐點</span>
+	            </div>
+	          </a>
+        	</div>
+      	</div>
 
-    			<!-- 2. 影島海女村 (影島) -->
-				<div class="check-item" data-key="2" data-area="yeongdo">
-					<div class="item-text">
-						<strong>影島海女村（영도해녀촌）</strong>
-						<div class="map-actions">
-							<a href="https://naver.me/GCvq1edv" target="_blank" rel="noopener noreferrer" class="btn-map btn-naver">🗺️ Naver Map</a>
-							<a href="https://tessatravel.tw/yeongdo-haenyeo-village/" target="_blank" rel="noopener noreferrer" class="btn-map btn-google">📍 網頁資料</a>
-						</div>
-						<p>坐落於影島海岸邊的道地海味聚落，由在地海女阿姨每日現捕新鮮海鮮。坐在礁岩海岸旁吹著海風，品嚐招牌「紫菜包飯＋生海膽」與熱騰騰海鮮拉麵，體驗最粗獷純粹的釜山海濱風情。</p>
-						<div class="item-gallery">
-							<img src="IMG/影島海女村/海鮮總拼盤.png" alt="海鮮總拼盤" onclick="openModal(this)" />
-							<img src="IMG/影島海女村/海膽.png" alt="海膽" onclick="openModal(this)" />
-							<img src="IMG/影島海女村/海螺.png" alt="海螺" onclick="openModal(this)" />
-							<img src="IMG/影島海女村/海參.png" alt="海參" onclick="openModal(this)" />
-							<img src="IMG/影島海女村/海鮮拉麵.png" alt="海鮮拉麵" onclick="openModal(this)" />
-						</div>
-						<div class="item-details">
-							<div>🕒 <strong>營業時間：</strong>每日 09:00–18:00（1樓海鮮販售區全年無休；2樓海女文化展示館每週一公休）</div>
-							<div>🌅 <strong>建議到訪時間：</strong>推薦 <strong>11:30–14:00</strong> 前往享用午餐，或 <strong>16:00–17:30</strong> 一邊看夕陽海景一邊享用下午茶點心。</div>
-							<div>🚌 <strong>交通方式：</strong></div>
-							<ul>
-								<li>從地鐵南浦站6號出口轉508 / 7 / 71號公車到南高橋站（남고교）步行7分鐘</li>
-								<li>從地鐵釜山站7號出口轉508號公車到南高橋站（남고교）步行7分鐘</li>
-							</ul>
-							<div>⚠️ <strong>注意事項：</strong></div>
-							<ul>
-								<li>戶外岩石座位區地面<strong>高低不平且臨海</strong>，行走與端托盤時請特別注意腳下安全。</li>
-								<li>必點吃法：點一份<strong>紫菜包飯（김밥）</strong>與新鮮<strong>海膽（성게알）</strong>，自行將海膽鋪在飯捲上享用，鮮甜美味。</li>
-								<li>戶外臨海區<strong>風勢通常較大</strong>，建議攜帶防風薄外套，用餐時也請壓好輕便餐具與紙巾。</li>
-							</ul>
-						</div>
-					</div>
-				</div>
+      	<!-- 資訊 2：住宿 -->
+      	<div class="tab-panel" id="info-hotel">
+	        <div class="panel-header">
+	          <div class="panel-tag">HOTEL & STAY</div>
+	          <h2>住宿安排</h2>
+	        </div>
 
-				<!-- 3. 濟州河豚湯 (影島) -->
-				<div class="check-item" data-key="3" data-area="yeongdo">
-				  <div class="item-text">
-				    <strong>濟州河豚湯（제주복국）</strong>
-				    <div class="map-actions">
-				      <a href="https://naver.me/FUhs0sV8" target="_blank" rel="noopener noreferrer" class="btn-map btn-naver">🗺️ Naver Map</a>
-				      <a href="https://journey.tw/jeju-bokguk-busan//" target="_blank" rel="noopener noreferrer" class="btn-map btn-google">📍 網頁資料</a>
-				    </div>
-				    <p>影島在地老牌河豚專門店！主打肉質緊實彈牙的清湯與辣湯河豚料理。湯頭加入大量黃豆芽與水芹菜慢火精燉，極致甘甜清爽且解酒暖胃，搭配豐富特色小菜與酥炸河豚，是來到釜山不可錯過的頂級海味。</p>
-				    <div class="item-gallery">
-				      <img src="IMG/濟州河豚湯/外觀.png" alt="外觀" onclick="openModal(this)" />
-				      <img src="IMG/濟州河豚湯/小菜.png" alt="小菜" onclick="openModal(this)" />
-				      <img src="IMG/濟州河豚湯/河豚湯.webp" alt="河豚湯" onclick="openModal(this)" />
-				      <img src="IMG/濟州河豚湯/辣的河豚湯.webp" alt="辣的河豚湯" onclick="openModal(this)" />
-				    </div>
-				    <div class="item-details">
-				      <div>📍 <strong>餐廳地址：</strong>影島區絕影路481</div>
-				      <div>🍽️ <strong>推薦餐點：</strong>黃鰭東方魨（清湯、辣湯）, 中華多紀魨（清湯、辣湯）</div>
-				      <div>🕒 <strong>營業時間：</strong>週一~五：10:00-20:30(15:00-17:00 午休) 週六~日：09:00-21:00</div>
-				      <div>🚌 <strong>交通方式：</strong></div>
-				      <ul>
-				        <li>計程車：若從「南浦站」或「釜山站」出發，直接搭乘計程車是最省時省力的選擇</li>
-				        <li>地鐵 1 號線至 南浦站（남포역）> 6 號出口轉乘 6、7、9、30、71 或 508 號公車 > 於「東三中學」或「咸池谷修煉館」站下車步行 5–10 分鐘</li>
-				      </ul>
-				    </div>
-				  </div>
-				</div>
+        	<div class="trip-card">
+				<div class="card-top">
+	            	<span class="pill-label label-hotel"><i class="fa-solid fa-hotel"></i> STAY</span>
+	            	<span class="date-text">5 Days · 4 Nights</span>
+	          	</div>
 
-			    <!-- 4. 小香牛肋排 (海雲台) -->
-			    <div class="check-item" data-key="4" data-area="haeundae">
-			      <div class="item-text">
-			        <strong>小香牛肋排（소향갈비찜）</strong>
-			        <div class="map-actions">
-			          <a href="https://naver.me/IItcqd7N" target="_blank" rel="noopener noreferrer" class="btn-map btn-naver">🗺️ Naver Map</a>
-			          <a href="http://lizzzstyle.tw/sochon-galbijjim/" target="_blank" rel="noopener noreferrer" class="btn-map btn-google">📍 網頁資料</a>
-			        </div>
-			        <p>海雲台極具人氣的燉牛肋排專門店！招牌燉牛肋排（소갈비찜）燉煮得軟嫩入味、骨肉輕輕一夾即可分離。濃郁甘甜的特製秘醬帶有淡淡果香與芝麻香，拌飯吃堪稱白飯小偷，還可搭配滿滿拔絲起司與現烤大蔥。</p>
-			        <div class="item-gallery">
-			          <img src="IMG/小香牛肋排/店面.webp" alt="店面" onclick="openModal(this)" />
-			          <img src="IMG/小香牛肋排/排骨湯.webp" alt="排骨湯" onclick="openModal(this)" />
-			          <img src="IMG/小香牛肋排/牛肋排.webp" alt="牛肋排" onclick="openModal(this)" />
-			        </div>
-			        <div class="item-details">
-			          <div>🕒 <strong>營業時間：</strong>每日 11:00~21:00（15:20~17:00休息)</div>
-			          <div>💵 <strong>參考價位：</strong>燉牛肋排（小/2人份）約 35,000–40,000₩、加起司配料（치즈사리）3,000₩、精華炒飯（볶음밥）2,500₩</div>
-			          <div>🌅 <strong>建議用餐時間：</strong>推薦 <strong>午餐 12:00–13:30</strong> 或 <strong>晚餐 17:30–19:00</strong>。</div>
-			          <div>🚌 <strong>交通方式：</strong></div>
-			          <ul>
-			            <li>搭乘釜山地鐵2號線至海雲台站（해운대역），從 4號或2號出口 出站，步行約 2 分鐘往舊火車站方向、越過鐵軌後的紅磚建築2樓即達</li>
-			          </ul>
-			          <div>⚠️ <strong>注意事項：</strong></div>
-			          <ul>
-			            <li><strong>辣度可自選：</strong>可選擇<strong>微辣（순한맛）、普通辣（보통맛）或大辣（매운맛）</strong>。</li>
-			            <li><strong>加起司更美味：</strong>強烈推薦加點<strong>起司（치즈사리）</strong>鋪在牛肋排上炙烤融化。</li>
-			            <li><strong>壓軸必吃炒飯：</strong>肉塊吃完後留下少許醬汁請店家加入海苔、麻油與白飯做成<strong>鐵板炒飯（볶음밥）</strong>。</li>
-			          </ul>
-			        </div>
-			      </div>
-			    </div>
-
-			    <!-- 5. 密陽血腸豬肉湯飯 (海雲台) -->
-			    <div class="check-item" data-key="5" data-area="haeundae">
-			      <div class="item-text">
-			        <strong>密陽血腸豬肉湯飯（밀양순대돼지국밥）</strong>
-			        <div class="map-actions">
-			          <a href="https://naver.me/5T4ABsWP" target="_blank" rel="noopener noreferrer" class="btn-map btn-naver">🗺️ Naver Map</a>
-			          <a href="https://bobbytravel.tw/miryang-sundae/" target="_blank" rel="noopener noreferrer" class="btn-map btn-google">📍 網頁資料</a>
-			        </div>
-			        <p>釜山極具代表性的 24 小時老字號豬肉湯飯名店！以 100% 國內產豬骨長時間大火熬製成濃郁乳白色的醇厚高湯，完全沒有豬腥味。鍋內鋪滿鮮嫩扎實的豬肉切片與手工血腸，熱氣騰騰、份量十足。</p>
-			        <div class="item-gallery">
-			          <img src="IMG/密陽血腸豬肉湯飯/店面.jpg" alt="店面" onclick="openModal(this)" />
-			          <img src="IMG/密陽血腸豬肉湯飯/小菜.jpg" alt="小菜" onclick="openModal(this)" />
-			          <img src="IMG/密陽血腸豬肉湯飯/豬肉湯飯.jpg" alt="豬肉湯飯" onclick="openModal(this)" />
-			          <img src="IMG/密陽血腸豬肉湯飯/血腸湯飯.jpg" alt="血腸湯飯" onclick="openModal(this)" />
-			        </div>
-			        <div class="item-details">
-			          <div>🕒 <strong>營業時間：</strong>24 小時營業（全年無休）</div>
-			          <div>🚌 <strong>交通方式：</strong></div>
-			          <ul>
-			            <li>地鐵2號線<strong>海雲台站 5號出口</strong>直走步行約 3–5 分鐘（位於九南路主要大街上）。</li>
-			          </ul>
-			          <div>⚠️ <strong>注意事項：</strong></div>
-			          <ul>
-			            <li><strong>在地調味秘訣：</strong>加入<strong>蝦醬（새우젓）</strong>提鮮、<strong>辣醬（다대기）</strong>增香，並趁熱加入<strong>涼拌韭菜</strong>與<strong>麵線</strong>。</li>
-			            <li>不敢吃內臟可點純<strong>「豬肉湯飯（돼지국밥）」</strong>；想吃切片三層肉可點<strong>「白切肉定食（수육백반）」</strong>。</li>
-			          </ul>
-			        </div>
-			      </div>
-			    </div>
-
-			    <!-- 6. 百年食堂 (海雲台) -->
-			    <div class="check-item" data-key="6" data-area="haeundae">
-			      <div class="item-text">
-			        <strong>百年食堂（백년식당）</strong>
-			        <div class="map-actions">
-			          <a href="https://naver.me/GZZueewE" target="_blank" rel="noopener noreferrer" class="btn-map btn-naver">🗺️ Naver Map</a>
-			          <a href="https://alinalife.tw/baegnyeon-sikdang/" target="_blank" rel="noopener noreferrer" class="btn-map btn-google">📍 網頁資料</a>
-			        </div>
-			        <p>海雲台超人氣厚切熟成烤肉名店！嚴選高品質韓國產熟成五花肉與厚切豬頸肉，由專業店員提供全程代烤桌邊服務，外皮金黃酥脆、內裡肉汁滿溢。</p>
-			        <div class="item-gallery">
-			          <img src="IMG/百年食堂/店面.webp" alt="店面" onclick="openModal(this)" />
-			          <img src="IMG/百年食堂/小菜.webp" alt="小菜" onclick="openModal(this)" />
-			          <img src="IMG/百年食堂/豬五花.webp" alt="豬五花" onclick="openModal(this)" />
-			          <img src="IMG/百年食堂/大蔥泡菜湯.webp" alt="大蔥泡菜湯" onclick="openModal(this)" />
-			        </div>
-			        <div class="item-details">
-			          <div>📍 <strong>餐廳地址：</strong>부산 해운대구 구남로 23（釜山海雲台區九南路23）</div>
-			          <div>🕒 <strong>營業時間：</strong>每日 11:00–06:00（跨日營業至清晨）</div>
-			          <div>🚌 <strong>交通方式：</strong>釜山地鐵「海雲台站」3號出口，步行約3分鐘</div>
-			          <div>⚠️ <strong>注意事項：</strong>首次點餐基本規定<strong>至少須點 3 份肉品起（3人份）</strong>。</div>
-			        </div>
-			      </div>
-			    </div>
-
-			    <!-- 7. 高飯食堂 (海雲台) -->
-			    <div class="check-item" data-key="7" data-area="haeundae">
-			      <div class="item-text">
-			        <strong>高飯食堂（고반식당）</strong>
-			        <div class="map-actions">
-			          <a href="https://naver.me/5D8tuyAK" target="_blank" rel="noopener noreferrer" class="btn-map btn-naver">🗺️ Naver Map</a>
-			          <a href="https://damei17.com/goban/" target="_blank" rel="noopener noreferrer" class="btn-map btn-google">📍 Google Maps</a>
-			        </div>
-			        <p>韓國知名的連鎖熟成頂級豬肉專門店，主打低溫熟成五花肉、橫膈膜肉（海鷗肉）與特級豬頸肉，提供專業全程桌邊代烤，搭配烤蕨菜與多款特調沾醬，風味層次豐富。</p>
-			        <div class="item-gallery">
-			          <img src="IMG/高飯食堂/店面.jpg" alt="店面" onclick="openModal(this)" />
-			          <img src="IMG/高飯食堂/小菜.jpg" alt="小菜" onclick="openModal(this)" />
-			          <img src="IMG/高飯食堂/蒸蛋.jpg" alt="蒸蛋" onclick="openModal(this)" />
-			          <img src="IMG/高飯食堂/熟成主花肉.jpg" alt="熟成主花肉" onclick="openModal(this)" />
-			          <img src="IMG/高飯食堂/松阪豬.jpg" alt="松阪豬" onclick="openModal(this)" />
-			          <img src="IMG/高飯食堂/烤蕨菜.jpg" alt="烤蕨菜" onclick="openModal(this)" />
-			        </div>
-			        <div class="item-details">
-			          <div>🕒 <strong>營業時間：</strong>平日 15:30–02:00｜週末 11:30–02:00</div>
-			          <div>🚌 <strong>交通方式：</strong>釜山地鐵海雲台站 5號出口，步行約3分鐘</div>
-			          <div>⚠️ <strong>注意事項：</strong>代烤時會將<strong>智異山野生蕨菜</strong>放上烤盤微煎，搭配五花肉食用非常推薦。</div>
-			        </div>
-			      </div>
-			    </div>
-
-			    <!-- 8. Baro Haejang (廣安里) -->
-			    <div class="check-item" data-key="8" data-area="gwangan">
-			      <div class="item-text">
-			        <strong>Baro Haejang（바로해장）</strong>
-			        <div class="map-actions">
-			          <a href="https://naver.me/Gubwk3F5" target="_blank" rel="noopener noreferrer" class="btn-map btn-naver">🗺️ Naver Map</a>
-			          <a href="https://www.threads.com/share/OO-BLT0vG/" target="_blank" rel="noopener noreferrer" class="btn-map btn-google">📍 網頁資料</a>
-			        </div>
-			        <p>釜山廣安里超人氣排隊名店！主打湯頭清澈卻濃醇甘甜的「韓式牛肉解酒湯」與肉質極度軟嫩厚實的「招牌白切牛肉（수육）」，是在地人與遊客爭相造訪的暖胃美食。</p>
-			        <div class="item-gallery">
-			          <img src="IMG/Baro/店面.jpg" alt="Baro Haejang 門市外觀與候位區" onclick="openModal(this)" />
-			          <img src="IMG/Baro/血腸湯.jpg" alt="血腸湯" onclick="openModal(this)" />
-			          <img src="IMG/Baro/牛肉.jpg" alt="招牌白切牛肉拼盤" onclick="openModal(this)" />
-			        </div>
-			        <div class="item-details">
-			          <div>🕒 <strong>營業時間：</strong>約 9:00–22:00（15:30–16:30 午休，21:00 最後點餐）</div>
-			          <div>⚠️ <strong>注意事項：</strong>門口設有 <strong>CatchTable 電子候位機</strong>，抵達後請先抽號碼牌。</div>
-			        </div>
-			      </div>
-			    </div>
-
-			    <!-- 9. 烤肉的男子 (西面) -->
-			    <div class="check-item" data-key="9" data-area="seomyeon">
-			      <div class="item-text">
-			        <strong>烤肉的男子（고기굽는남자）</strong>
-			        <div class="map-actions">
-			          <a href="https://map.naver.com/p/entry/place/36449259?placePath=%2Fhome" target="_blank" rel="noopener noreferrer" class="btn-map btn-naver">🗺️ Naver Map</a>
-			          <a href="https://feitravel.tw/p-5071551129/" target="_blank" rel="noopener noreferrer" class="btn-map btn-google">📍 網頁資料</a>
-			          <a href="https://www.threads.com/share/DuvBVyupg/" target="_blank" rel="noopener noreferrer" class="btn-map btn-google">📍 Thread</a>
-			        </div>
-			        <p>釜山廣受好評的高人氣連鎖熟成烤肉專賣店！主打厚切熟成五花肉與極嫩豬頸肉，提供專人桌邊代烤服務。內用還免費附贈一大鍋清甜鮮美的辣味螃蟹貝類海鮮湯（可免費續湯）！</p>
-			        <div class="item-gallery">
-			          <img src="IMG/烤肉的男子/店面.jpg" alt="店面" onclick="openModal(this)" />
-			          <img src="IMG/烤肉的男子/三點蟹鍋.jpg" alt="三點蟹鍋" onclick="openModal(this)" />
-			          <img src="IMG/烤肉的男子/肉盤.jpg" alt="肉盤" onclick="openModal(this)" />
-			          <img src="IMG/烤肉的男子/肉壽司.jpg" alt="肉壽司" onclick="openModal(this)" />
-			          <img src="IMG/烤肉的男子/杏鮑菇乳酪.jpg" alt="杏鮑菇乳酪" onclick="openModal(this)" />
-			        </div>
-			        <div class="item-details">
-			          <div>🕒 <strong>營業時間：</strong>11:30-00:30（最後點餐 00:00）</div>
-			          <div>🚌 <strong>交通方式：</strong>地鐵2號線西面站6號出口步行約2分鐘</div>
-			          <div>⚠️ <strong>注意事項：</strong>初次點餐需達 3 份以上起點；門口備有取號機。</div>
-			        </div>
-			      </div>
-			    </div>
-
-			    <!-- 10. 融化 Nok 咖啡 (廣安里) -->
-			    <div class="check-item" data-key="d1-11" data-area="gwangan">
-			      <div class="item-text">
-			        <strong>融化 Nok 咖啡（녹아들다 녹카페）</strong>
-			        <div class="map-actions">
-			          <a href="https://naver.me/xExW773B" target="_blank" rel="noopener noreferrer" class="btn-map btn-naver">🗺️ Naver Map</a>
-			          <a href="https://www.instagram.com/noke_cafe/" target="_blank" rel="noopener noreferrer" class="btn-map btn-google">📷 網頁資料</a>
-			          <a href="https://www.threads.com/share/FwQgFTRY_/" target="_blank" rel="noopener noreferrer" class="btn-map btn-google">📍 Thread</a>
-			        </div>
-			        <p>隱身在廣安里寧靜巷弄的療癒系韓屋風日式木質咖啡廳！店內以溫暖的「暖桌（被爐）」座位聞名，招牌必點現烤雙色烤糰子套餐與濃醇抹茶甜點，榮獲韓國藍絲帶美食推薦。</p>
-			        <div class="item-gallery">
-			          <img src="IMG/Nok/店面.jpg" alt="店面" onclick="openModal(this)" />
-			          <img src="IMG/Nok/用餐環境.jpg" alt="用餐環境" onclick="openModal(this)" />
-			          <img src="IMG/Nok/戶外區.jpg" alt="戶外區" onclick="openModal(this)" />
-			          <img src="IMG/Nok/展示品.jpg" alt="展示品" onclick="openModal(this)" />
-			          <img src="IMG/Nok/抹茶芒果冰.jpg" alt="抹茶芒果冰" onclick="openModal(this)" />
-			          <img src="IMG/Nok/烤糰子.jpg" alt="烤糰子" onclick="openModal(this)" />
-			        </div>
-			        <div class="item-details">
-			          <div>🕒 <strong>營業時間：</strong>11:00–20:00</div>
-			          <div>⚠️ <strong>注意事項：</strong>低消每人一杯飲品；暖桌客滿時限時 1.5–2 小時；烤糰子附迷你烤爐可自行烘烤。</div>
-			        </div>
-			      </div>
-    </div>
-			</div>
-		</div>
-
-      <!-- 資訊 1：航班 -->
-      <div class="tab-panel" id="info-flight">
-        <div class="panel-header">
-          <div class="panel-tag">FLIGHT INFO</div>
-          <h2>航班資訊</h2>
-        </div>
-
-        <div class="trip-list">
-          <!-- 去程航班 -->
-          <a href="https://www.google.com/travel/flights" target="_blank" rel="noopener noreferrer" class="trip-card">
-            <div class="card-top">
-              <span class="pill-label label-flight"><i class="fa-solid fa-plane-departure"></i> 去程 FLIGHT</span>
-              <span class="date-text">2026/10/20 (Tue)</span>
-            </div>
-            <h4>真航空 LJ570 · 經濟艙</h4>
-            <p class="card-desc">
-              <strong>20:00</strong> CJU 濟州國際機場 ➔ <strong>21:05</strong> PUS 金海國際機場 (I)
-            </p>
-            <div class="card-footer">
-              <span>波音 737-800 · 無餐點</span>
-            </div>
-          </a>
-
-          <!-- 回程航班 -->
-          <a href="https://www.google.com/travel/flights" target="_blank" rel="noopener noreferrer" class="trip-card">
-            <div class="card-top">
-              <span class="pill-label label-flight"><i class="fa-solid fa-plane-arrival"></i> 回程 FLIGHT</span>
-              <span class="date-text">2026/10/24 (Sat)</span>
-            </div>
-            <h4>真航空 LJ751 · 經濟艙</h4>
-            <p class="card-desc">
-              <strong>22:00</strong> PUS 金海國際機場 (I) ➔ <strong>23:40</strong> TPE 臺灣桃園國際機場 (T1)
-            </p>
-            <div class="card-footer">
-              <span>波音 737-800 · 無餐點</span>
-            </div>
-          </a>
-        </div>
-      </div>
-
-      <!-- 資訊 2：住宿 -->
-      <div class="tab-panel" id="info-hotel">
-        <div class="panel-header">
-          <div class="panel-tag">HOTEL & STAY</div>
-          <h2>住宿安排</h2>
-        </div>
-
-        <div class="trip-card">
-          <div class="card-top">
-            <span class="pill-label label-hotel"><i class="fa-solid fa-hotel"></i> STAY</span>
-            <span class="date-text">5 Days · 4 Nights</span>
-          </div>
-
-         <!-- 標題與 Naver Map 按鈕並排 -->
-	    <div class="product-title-row" style="margin: 8px 0;">
-	      <h4 style="margin: 0;">廣安-埃爾莫門託公寓 (엘모멘토 광安)</h4>
-	      <a 
-	        href="https://naver.me/xnh0yx3F" 
-	        target="_blank" 
-	        rel="noopener noreferrer" 
-	        class="product-link-btn"
-	      >
-	        <i class="fa-solid fa-map-location-dot"></i>
-	        <span>Naver Map</span>
-	      </a>
-	    </div>
+				<!-- 標題與 Naver Map 按鈕並排 -->
+		    	<div class="product-title-row" style="margin: 8px 0;">
+		      		<h4 style="margin: 0;">廣安-埃爾莫門託公寓 (엘모멘토 광安)</h4>
+			      	<a 
+			        	href="https://naver.me/xnh0yx3F" 
+			        	target="_blank" 
+			        	rel="noopener noreferrer" 
+			        	class="product-link-btn"
+			      	>
+			        	<i class="fa-solid fa-map-location-dot"></i>
+			        	<span>Naver Map</span>
+		      		</a>
+		    	</div>
           
-          <p class="card-desc" style="margin: 8px 0; line-height: 1.6;">
-            <strong>入住：</strong>2026/10/20 (16:00 後)<br>
-            <strong>退房：</strong>2026/10/24 (11:00 前)<br>
-            <strong>房型預訂：</strong>1 間 · 4 晚
-          </p>
+				<p class="card-desc" style="margin: 8px 0; line-height: 1.6;">
+	            	<strong>入住：</strong>2026/10/20 (16:00 後)<br>
+	            	<strong>退房：</strong>2026/10/24 (11:00 前)<br>
+	            	<strong>房型預訂：</strong>1 間 · 4 晚
+	          	</p>
 
-          <p class="card-desc" style="margin-bottom: 8px;">
-            <strong>地址：</strong>16 Gwangnam-ro 94beon-gil, 水營區, 釜山<br>
-            <span style="font-size: 0.82rem; color: var(--text-light);">(부산 수영구 광남로 94번길 16)</span><br>
-            <strong>電話：</strong>+82-51-7540801
-          </p>
+          		<p class="card-desc" style="margin-bottom: 8px;">
+            		<strong>地址：</strong>16 Gwangnam-ro 94beon-gil, 水營區, 釜山<br>
+            		<span style="font-size: 0.82rem; color: var(--text-light);">(부산 수영구 광남로 94번길 16)</span><br>
+            		<strong>電話：</strong>+82-51-7540801
+          		</p>
 
-          <div class="card-footer" style="flex-direction: column; align-items: flex-start; gap: 4px;">
-            <span><strong>訂單編號：</strong>1616331252984168 ｜ <strong>PIN 碼：</strong>5362</span>
-            <span><strong>確認編號：</strong>1616331252984586</span>
-            <span style="color: var(--primary); font-size: 0.78rem;">* 免費取消期限：2026/10/13 23:59 前</span>
-          </div>
-        </div>
+          		<div class="card-footer" style="flex-direction: column; align-items: flex-start; gap: 4px;">
+            		<span><strong>訂單編號：</strong>1616331252984168 ｜ <strong>PIN 碼：</strong>5362</span>
+            		<span><strong>確認編號：</strong>1616331252984586</span>
+            		<span style="color: var(--primary); font-size: 0.78rem;">* 免費取消期限：2026/10/13 23:59 前</span>
+          		</div>
+        	</div>
       </div>
 
       <!-- 必買清單 -->
@@ -1369,6 +1392,7 @@
 					    </div>
 					  </div>
 				</div>
+				
 				<!-- Ｍenokin 泡泡精華面膜 -->
 				<div class="check-item has-product-detail" data-key="buy-oy-2">
 	  				<i class="fa-solid fa-circle check-icon"></i>
@@ -1389,6 +1413,7 @@
 					    </div>
 					  </div>
 				</div>
+				
 				<!-- NE:AR青蘋果醋咀嚼糖 -->
 				<div class="check-item has-product-detail" data-key="buy-oy-3">
 	  				<i class="fa-solid fa-circle check-icon"></i>
@@ -1409,6 +1434,7 @@
 					    </div>
 					  </div>
 				</div>
+				
 				<!-- SCALP:TURN 舒緩修護系列 -->
 				<div class="check-item has-product-detail" data-key="buy-oy-4">
 	  				<i class="fa-solid fa-circle check-icon"></i>
@@ -1431,18 +1457,216 @@
 					    </div>
 					  </div>
 				</div>
+
+				<!-- MEDIHEAL積雪草修護精華面膜 -->
+				<div class="check-item has-product-detail" data-key="buy-oy-6">
+	  				<i class="fa-solid fa-circle check-icon"></i>
+	  
+					  <!-- 商品縮圖區 -->
+					  <div class="product-thumb">
+					    <img src="IMG/OY/mediheal積雪草面膜.jfif" alt="MEDIHEAL積雪草修護精華面膜" loading="lazy">
+					  </div>
+	
+					  <!-- 商品介紹與說明 -->
+					  <div class="item-text">
+					    <div class="product-head">
+					      <strong>MEDIHEAL積雪草修護精華面膜</strong>
+					      <div class="product-tags">
+					        <span class="mini-tag">舒緩修護</span>
+					        <span class="mini-tag">調理瑕疵</span>
+					        <span class="mini-tag">溫和保濕</span>
+					      </div>
+					    </div>
+					  </div>
+				</div>
+				
+				<!-- REAL BARRIER Extreme 面霜面膜 -->
+				<div class="check-item has-product-detail" data-key="buy-oy-7">
+	  				<i class="fa-solid fa-circle check-icon"></i>
+	  
+					  <!-- 商品縮圖區 -->
+					  <div class="product-thumb">
+					    <img src="IMG/OY/REAL.jpg" alt="REAL BARRIER Extreme 面霜面膜" loading="lazy">
+					  </div>
+	
+					  <!-- 商品介紹與說明 -->
+					  <div class="item-text">
+					    <div class="product-head">
+					      <strong>REAL BARRIER Extreme 面霜面膜</strong>
+					      <div class="product-tags">
+					        <span class="mini-tag">深層修護</span>
+					        <span class="mini-tag">濃郁質地</span>
+					      </div>
+					    </div>
+					  </div>
+				</div>
+				
+				<!-- coringco 免膠假睫毛 -->
+				<div class="check-item has-product-detail" data-key="buy-oy-5">
+	  				<i class="fa-solid fa-circle check-icon"></i>
+	  
+					  <!-- 商品縮圖區 -->
+					  <div class="product-thumb">
+					    <img src="IMG/OY/coringco.jpg" alt="TURN 舒緩修護系列" loading="lazy">
+					  </div>
+	
+					<!-- 商品介紹與說明 -->
+					<div class="item-text">
+					  <div class="product-head">
+					    <strong>coringco 免膠假睫毛</strong>
+					    <!-- 核心亮點 Tag -->
+					    <div class="product-tags">
+					      <span class="mini-tag">免膠自黏</span>
+					      <span class="mini-tag">新手友好</span>
+					      <span class="mini-tag">女團同款束感</span>
+					    </div>
+					  </div>
+					
+					  <!-- 款式挑選指南（分類展開區） -->
+					  <div class="lash-guide-box" onclick="event.stopPropagation();">
+					    <!-- 自然/日常系列 -->
+					    <div class="lash-group">
+					      <span class="group-title">🌿 自然日常</span>
+					      <div class="lash-list">
+					        <div><strong>#Pure 清純日常：</strong>熱銷第一，原生偽素顏感</div>
+					        <div><strong>#Maple 溫柔楓葉：</strong>柔和浪漫百搭</div>
+					        <div><strong>#Blossom 溫柔綻放：</strong>柔軟層次，自帶氣質</div>
+					      </div>
+					    </div>
+					
+					    <!-- 妝感/女團系列 -->
+					    <div class="lash-group">
+					      <span class="group-title">✨ 女團/氛圍感</span>
+					      <div class="lash-list">
+					        <div><strong>#Filter 偶像濾鏡：</strong>立體仙子毛，女團同款</div>
+					        <div><strong>#Cherry Coke 櫻桃可樂：</strong>甜酷風格</div>
+					        <div><strong>#Bold 清晰濃密：</strong>輪廓分明，上鏡放大雙眼</div>
+					        <div><strong>#Muse 繆思女神：</strong>俏皮俐落有型</div>
+					      </div>
+					    </div>
+					
+					    <!-- 特殊眼型/局部系列 -->
+					    <div class="lash-group">
+					      <span class="group-title">🎯 特殊/局部款</span>
+					      <div class="lash-list">
+					        <div><strong>#Cats 魅惑貓眼：</strong>專為拉長眼尾設計</div>
+					        <div><strong>#Bunny 亮眼萌兔：</strong>萌系大眼重點款</div>
+					        <div><strong>#Underpop 精緻下睫毛：</strong>專用下睫毛，加深眼部層次</div>
+					      </div>
+					    </div>
+					  </div>
+					</div>
+				</div>
+							
+				<!-- ========== 幫別人代購 分隔線與區塊 ========== -->
+				<div class="commission-divider" style="margin: 24px 0 16px; padding: 8px 12px; background: #fef2f2; border-left: 4px solid #ef4444; border-radius: 4px; font-weight: bold; color: #991b1b; font-size: 14px;">
+					🛍️ 幫別人代購專區（連線清單）
+				</div>
+
+				<!-- pure cleansing oil -->
+				<div class="check-item has-product-detail" data-key="buy-oy-help-2">
+					<i class="fa-solid fa-circle check-icon"></i>
+	
+					<!-- 商品縮圖區 -->
+					<div class="product-thumb">
+						<img src="IMG/藥局/PURE_CLEANSING_OIL.jpg" alt="PURE_CLEANSING_OIL" onerror="this.src='https://placehold.co/100x100?text=OY+Item'" loading="lazy">
+					</div>
+	
+					<!-- 商品介紹與說明 -->
+					<div class="item-text">
+						<div class="product-head">
+							<strong>pure cleansing oil</strong>
+							<div class="product-tags">
+								<span class="mini-tag" style="background:#fee2e2; color:#b91c1c;">購買人：Zoe</span>
+							</div>
+						</div>
+	
+						<!-- 金額記錄方框 -->
+						<div class="commission-price-box" onclick="event.stopPropagation();" style="display: flex; gap: 8px; margin-top: 8px;">
+							<div style="background: #f1f5f9; padding: 4px 8px; border-radius: 6px; font-size: 12px; border: 1px solid #cbd5e1;">
+								<span style="color:#64748b;">₩ 韓幣：</span>
+								<input type="number" data-storage-key="krw-buy-oy-help-1" placeholder="金額" style="width: 60px; border: none; background: transparent; font-weight: bold; outline: none;">
+							</div>
+							<div style="background: #fff7ed; padding: 4px 8px; border-radius: 6px; font-size: 12px; border: 1px solid #fdba74;">
+								<span style="color:#c2410c;">NT$ 應收：</span>
+								<input type="number" data-storage-key="twd-buy-oy-help-1" placeholder="金額" style="width: 60px; border: none; background: transparent; font-weight: bold; color: #ea580c; outline: none;">
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 
         <!-- 藥局 面板 -->
         <div class="sub-panel" id="sub-pharmacy">
           <div class="trip-list">
+          	
+          	<!-- ========== 幫別人代購 分隔線與區塊 ========== -->
+			<div class="commission-divider" style="margin: 24px 0 16px; padding: 8px 12px; background: #fef2f2; border-left: 4px solid #ef4444; border-radius: 4px; font-weight: bold; color: #991b1b; font-size: 14px;">
+				🛍️ 幫別人代購專區（連線清單）
+			</div>
+
+			<!-- Reju de Vie 修復 -->
+			<div class="check-item has-product-detail" data-key="buy-oy-help-1">
+				<i class="fa-solid fa-circle check-icon"></i>
+
+				<!-- 商品縮圖區 -->
+				<div class="product-thumb">
+					<img src="IMG/藥局/Reju.jpg" alt="Reju" onerror="this.src='https://placehold.co/100x100?text=OY+Item'" loading="lazy">
+				</div>
+
+				<!-- 商品介紹與說明 -->
+				<div class="item-text">
+					<div class="product-head">
+						<strong>Reju de Vie 修復</strong>
+						<div class="product-tags">
+							<span class="mini-tag" style="background:#fee2e2; color:#b91c1c;">購買人：Zoe</span>
+							<span class="mini-tag" style="background:#fee2e2; color:#b91c1c;">PDRN 1,300 ppm＋膠原蛋白20,000 ppm+外泌體 1,000 ppm</span>
+							<span class="mini-tag" style="background:#fee2e2; color:#b91c1c;">啟動肌膚再生、修護受損，深層補水、提升彈性、淡化細紋，質地輕盈不黏，適合醫美術後使用</span>
+						</div>
+					</div>
+
+					<!-- 金額記錄方框 -->
+					<div class="commission-price-box" onclick="event.stopPropagation();" style="display: flex; gap: 8px; margin-top: 8px;">
+						<div style="background: #f1f5f9; padding: 4px 8px; border-radius: 6px; font-size: 12px; border: 1px solid #cbd5e1;">
+							<span style="color:#64748b;">₩ 韓幣：</span>
+							<input type="number" data-storage-key="krw-buy-oy-help-1" placeholder="金額" style="width: 60px; border: none; background: transparent; font-weight: bold; outline: none;">
+						</div>
+						<div style="background: #fff7ed; padding: 4px 8px; border-radius: 6px; font-size: 12px; border: 1px solid #fdba74;">
+							<span style="color:#c2410c;">NT$ 應收：</span>
+							<input type="number" data-storage-key="twd-buy-oy-help-1" placeholder="金額" style="width: 60px; border: none; background: transparent; font-weight: bold; color: #ea580c; outline: none;">
+						</div>
+					</div>
+				</div>
+			</div>
+          
+          	
           </div>
         </div>
         
         <!-- 韓國大創 面板 -->
         <div class="sub-panel" id="sub-big">
           <div class="trip-list">
+          		<!-- KKONG LASH 聯名的 2in1 雙效睫毛美容液／定型液  -->
+	            <div class="check-item has-product-detail" data-key="buy-big-1">
+	  				<i class="fa-solid fa-circle check-icon"></i>
+	  
+					  <!-- 商品縮圖區 -->
+					  <div class="product-thumb">
+					    <img src="IMG/大創/KKONG.png" alt="KKONG" loading="lazy">
+					  </div>
+	
+					  <!-- 商品介紹與說明 -->
+					  <div class="item-text">
+					    <div class="product-head">
+					      <strong>KKONG LASH 聯名的 2in1 雙效睫毛美容液／定型液  </strong>
+					      <div class="product-tags">
+					        <span class="mini-tag">白天用（定型／睫毛膏端）：用於白天定型，幫助睫毛持久捲翹、抗油抗汗不塌陷。</span>
+					        <span class="mini-tag">夜間用（精華／保養端）：含有生物素等修護成分，於夜間滋養修護睫毛根部</span>
+					      </div>
+					    </div>
+					  </div>
+				</div>
           </div>
         </div>
 
