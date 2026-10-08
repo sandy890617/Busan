@@ -245,6 +245,36 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
+  const day1Panel = document.querySelector('#sub-face');		// 修改'#day1'
+  if (!day1Panel) return;
+
+  const filterBtns = day1Panel.querySelectorAll('.filter-btn');
+  const items = day1Panel.querySelectorAll('.check-item');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      // 1. 切換按鈕 active 樣式
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const filterValue = btn.getAttribute('data-filter');
+
+      // 2. 篩選 Day 1 景點列表
+      items.forEach(item => {
+        const itemArea = item.getAttribute('data-area');
+        
+        
+        if (filterValue === 'face-all' || itemArea === filterValue) {// 修改day1-all'
+          item.style.display = '';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    });
+  });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
   // 自動綁定所有代購金額輸入框
   const bindAutoSavePrice = () => {
     document.querySelectorAll('.check-item[data-key]').forEach(item => {
@@ -278,4 +308,26 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   bindAutoSavePrice();
+});
+
+// 景點卡片點擊折疊/展開
+document.addEventListener('DOMContentLoaded', () => {
+  const checkItems = document.querySelectorAll('.trip-list .check-item');
+
+  checkItems.forEach(item => {
+    item.addEventListener('click', (e) => {
+      // 點擊地圖連結、外部網址、輸入框或圖片時，不觸發折疊
+      if (
+        e.target.closest('a') ||
+        e.target.closest('input') ||
+        e.target.tagName.toLowerCase() === 'img' ||
+        e.target.closest('.lash-guide-box')
+      ) {
+        return;
+      }
+      
+      // 切換展開狀態
+      item.classList.toggle('expanded');
+    });
+  });
 });
