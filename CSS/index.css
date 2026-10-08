@@ -686,3 +686,694 @@ body {
 .lash-list strong {
   color: #1e293b;
 }
+
+
+/* 容器卡片 */
+.product-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 1.25rem;
+  border: 1px solid #f0eee6;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  max-width: 480px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", sans-serif;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(90, 107, 71, 0.12);
+}
+
+/* 頂部縮圖與角標 */
+.card-header {
+  position: relative;
+  width: 100%;
+  height: 140px;
+  background: #fbf9f5;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.product-thumb img {
+  max-height: 110px;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-thumb img {
+  transform: scale(1.06);
+}
+
+.category-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #5a6b47;
+  color: #ffffff;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 20px;
+  letter-spacing: 0.5px;
+}
+
+/* 標題與韓文字體 */
+.brand-tag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #75885c;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.product-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #22252a;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.product-title .spec {
+  font-size: 0.85rem;
+  color: #71767b;
+  font-weight: 500;
+}
+
+.product-kr {
+  font-size: 0.75rem;
+  color: #9aa0a6;
+  margin: 4px 0 12px 0;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+/* 功效區塊（高質感卡片化） */
+.effects-box {
+  background: #f8f7f2;
+  border-radius: 12px;
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.effect-item {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+/* 功效膠囊標籤 */
+.effect-badge {
+  align-self: flex-start;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 6px;
+}
+
+.effect-badge.green {
+  background: #e9f0e1;
+  color: #4a6132;
+}
+
+.effect-badge.blue {
+  background: #e3effa;
+  color: #2b5f8c;
+}
+
+.effect-desc {
+  font-size: 0.8rem;
+  color: #4a5056;
+  line-height: 1.55;
+  margin: 0;
+  padding-left: 2px;
+}
+
+/* 底部標籤 */
+.product-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tag {
+  font-size: 0.72rem;
+  color: #8c6d62;
+  background: #fdf5f2;
+  border: 1px solid #fae5de;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+
+/* 使用方法專區容器 */
+.usage-box {
+  background: #fdfbf7;
+  border: 1px dashed #ded4bc;
+  border-radius: 12px;
+  padding: 10px 12px;
+  margin-bottom: 12px;
+}
+
+/* 使用方法小標題 */
+.usage-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.usage-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #5a6b47;
+  letter-spacing: 0.5px;
+}
+
+/* 使用方法清單 */
+.usage-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.usage-list li {
+  font-size: 0.78rem;
+  color: #4a5056;
+  line-height: 1.5;
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+}
+.arrival-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 8px 0;
+}
+
+.arrival-header .badge {
+  display: inline-block;
+  font-size: 12px;
+  background-color: #f3ece7;
+  color: #8c7365;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-weight: 500;
+}
+
+.arrival-header h3 {
+  margin: 6px 0 2px 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.destination-text {
+  font-size: 13px;
+  color: #777;
+  margin: 0;
+}
+
+/* 交通卡片 */
+.transport-options {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.transport-card {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid #ede8e3;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+}
+
+.transport-card.recommended {
+  border-color: #d6c5b9;
+  background: #faf8f5;
+}
+
+.card-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: #c2a792;
+  color: #fff;
+  font-size: 11px;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.transport-icon {
+  font-size: 22px;
+  margin-bottom: 6px;
+}
+
+.transport-info h4 {
+  margin: 0;
+  font-size: 16px;
+  color: #444;
+}
+
+.transport-info .meta {
+  margin: 4px 0 10px 0;
+  font-size: 12px;
+  color: #888;
+}
+
+/* 步驟清單 */
+.step-list {
+  margin: 0;
+  padding-left: 20px;
+  font-size: 13px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.step-list li {
+  margin-bottom: 4px;
+}
+
+/* 提醒與按鈕 */
+.transport-tips {
+  background: #fdfbf7;
+  border: 1px dashed #e3d7cd;
+  border-radius: 10px;
+  padding: 14px;
+  font-size: 13px;
+  color: #666;
+}
+
+.tips-title {
+  font-weight: 600;
+  color: #8c7365;
+  margin-bottom: 6px;
+}
+
+.transport-tips ul {
+  margin: 0 0 12px 0;
+  padding-left: 18px;
+}
+
+.btn-map {
+  display: block;
+  text-align: center;
+  background: #8c7365;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: opacity 0.2s;
+}
+
+.btn-map:hover {
+  opacity: 0.9;
+}
+/* 步驟小膠囊標籤 */
+.usage-step {
+  font-size: 0.68rem;
+  font-weight: 600;
+  background: #eee8d8;
+  color: #465337;
+  padding: 1px 6px;
+  border-radius: 4px;
+  white-space: nowrap;
+  shrink-to-fit: 0;
+  margin-top: 1px;
+}
+
+/* 額外補充：灰色適用膚質膠囊 */
+.effect-badge.gray {
+  background: #f1f3f5;
+  color: #495057;
+}
+
+/* 交通方案小卡容器 */
+.transport-card.recommended {
+  background: #ffffff;
+  border: 1.5px solid #d9cdbf;
+  border-radius: 16px;
+  padding: 18px 16px;
+  box-shadow: 0 4px 16px rgba(140, 115, 101, 0.08);
+  margin-bottom: 16px;
+}
+
+.card-title-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.transport-icon {
+  font-size: 24px;
+  line-height: 1;
+  padding: 8px;
+  background: #fbf7f4;
+  border-radius: 10px;
+}
+
+.title-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.title-row h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #3f3935;
+}
+
+.badge-tag {
+  background: #c2a792;
+  color: #fff;
+  font-size: 11px;
+  padding: 2px 7px;
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+.meta-info {
+  margin: 4px 0 0 0;
+  font-size: 12px;
+  color: #8c7f76;
+}
+
+/* 路線時間軸樣式 */
+.route-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding-left: 6px;
+}
+
+.timeline-step {
+  display: flex;
+  gap: 12px;
+  position: relative;
+}
+
+/* 步驟連接線 */
+.timeline-step:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 11px;
+  top: 24px;
+  bottom: -14px;
+  width: 2px;
+  background-color: #ede4dc;
+}
+
+.step-marker {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+/* 路線辨識色（搭配釜山輕軌紫色、2號線綠色與大地色） */
+.step-marker.purple { background-color: #7b4f8d; }
+.step-marker.green { background-color: #3eb449; }
+.step-marker.walk { background-color: #b59f8c; }
+
+.step-content {
+  flex: 1;
+}
+
+.step-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #4a4039;
+  margin-bottom: 3px;
+}
+
+.step-desc {
+  font-size: 12.5px;
+  color: #6a625b;
+  line-height: 1.5;
+  margin: 0 0 4px 0;
+}
+
+.step-desc strong {
+  color: #332d29;
+}
+
+.step-tag {
+  display: inline-block;
+  font-size: 11px;
+  color: #9b8474;
+  background: #f8f3ef;
+  padding: 1px 6px;
+  border-radius: 4px;
+}
+
+.arrival-header {
+  margin-bottom: 20px;
+}
+
+/* 小標籤放大 */
+.arrival-header .badge {
+  display: inline-block;
+  font-size: 14px; /* 原 12px -> 14px */
+  font-weight: 600;
+  background-color: #f3ece7;
+  color: #8c7365;
+  padding: 4px 12px;
+  border-radius: 999px;
+  letter-spacing: 0.5px;
+}
+
+/* 主標題放大且加深層次 */
+.arrival-header h3 {
+  margin: 10px 0 6px 0;
+  font-size: 22px; /* 原 18px -> 22px */
+  font-weight: 700;
+  color: #332d29;
+  letter-spacing: -0.2px;
+}
+
+/* 目的地說明文字放大 */
+.destination-text {
+  font-size: 15px; /* 原 13px -> 15px */
+  color: #706761;
+  margin: 0;
+}
+
+.destination-text strong {
+  font-size: 16px; /* 飯店名稱額外醒目 */
+  color: #332d29;
+  font-weight: 600;
+}
+/* 方案二卡片外觀 */
+.transport-card.taxi-card {
+  background: #ffffff;
+  border: 1.5px solid #e5dad0;
+  border-radius: 16px;
+  padding: 18px 16px;
+  box-shadow: 0 4px 16px rgba(140, 115, 101, 0.08);
+  margin-bottom: 16px;
+}
+
+/* 標籤色調 */
+.badge-tag.tag-taxi {
+  background: #d4a373;
+  color: #fff;
+  font-size: 11px;
+  padding: 2px 7px;
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+.step-marker.taxi-marker {
+  background-color: #d4a373;
+}
+
+/* 給司機看的韓文地址專用框 */
+.korean-address-card {
+  background: #fdfaf6;
+  border: 1.5px dashed #c9ad96;
+  border-radius: 10px;
+  padding: 12px 14px;
+  margin-top: 6px;
+}
+
+.korean-address-card .address-label {
+  font-size: 12px;
+  color: #8c7365;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.korean-address-card .address-text {
+  font-size: 15px;
+  font-weight: 700;
+  color: #2b2622;
+  letter-spacing: 0.2px;
+  line-height: 1.4;
+  user-select: all; /* 方便點擊全選複製 */
+}
+
+.korean-address-card .hotel-korean-name {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #5a4f47;
+  margin-top: 2px;
+}
+
+/* 西面 Header 亮點卡片區 */
+.spot-highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.highlight-chip {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background: #ffffff;
+  border: 1px solid #eee4db;
+  border-radius: 12px;
+  padding: 10px 12px;
+  box-shadow: 0 2px 6px rgba(140, 115, 101, 0.04);
+}
+
+.chip-icon {
+  font-size: 16px;
+  line-height: 1.2;
+  padding: 4px;
+  background: #fbf7f4;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.chip-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.chip-text strong {
+  font-size: 13.5px;
+  color: #3b322c;
+  font-weight: 700;
+}
+
+.chip-text span {
+  font-size: 12px;
+  color: #7a6e65;
+  line-height: 1.4;
+}
+
+/* =========================================
+   標題與地鐵/PASS貼紙排版（徹底防止擋字）
+   ========================================= */
+
+/* 標題與貼紙彈性排列 */
+.card-title-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.card-title-row strong {
+  font-size: 16px;
+  color: #332a24;
+  line-height: 1.35;
+  flex: 1 1 200px; /* 自動換行且不縮減 */
+}
+
+/* 🚇 地鐵站專用貼紙（取消 absolute，自然緊貼標題右側） */
+.sticker-subway {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: linear-gradient(135deg, #ff6b6b, #ff8787);
+  color: #ffffff !important;
+  font-size: 11.5px;
+  font-weight: 700;
+  padding: 3px 9px;
+  border-radius: 6px;
+  white-space: nowrap;
+  box-shadow: 0 2px 5px rgba(255, 107, 107, 0.25);
+  flex-shrink: 0;
+}
+
+/* 🎫 若是 PASS 貼紙也可共用自然流排版 */
+.sticker-pass {
+  position: static !important; /* 拔除原本的絕對定位，避免擋字 */
+  display: inline-flex;
+  align-items: center;
+  background: linear-gradient(135deg, #ff6b81, #ff7e67) !important;
+  color: #fff !important;
+  font-size: 11.5px !important;
+  font-weight: 700 !important;
+  padding: 3px 9px !important;
+  border-radius: 6px !important;
+  white-space: nowrap;
+  box-shadow: 0 2px 5px rgba(255, 107, 129, 0.25) !important;
+}
+
+/* =========================================
+   頂部快捷列（營業時間 + 地圖按鈕放同一排）
+   ========================================= */
+.quick-meta-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 6px 0 10px 0;
+  padding-bottom: 8px;
+  border-bottom: 1px dashed #eee3d8;
+}
+
+/* 頂部營業時間標籤 */
+.time-meta {
+  font-size: 12px;
+  color: #8a7c73;
+  font-weight: 600;
+  background: #fbf7f4;
+  padding: 3px 8px;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.time-meta i {
+  color: #c28e6c;
+}
+
+/* 地圖按鈕縮減高度，跟時間並排更俐落 */
+.quick-meta-bar .map-actions {
+  margin: 0 !important;
+}
