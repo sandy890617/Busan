@@ -142,8 +142,8 @@ document.addEventListener('DOMContentLoaded', () => {
       // 2. 篩選 Day 1 景點列表
       items.forEach(item => {
         const itemArea = item.getAttribute('data-area');
-        
-        
+
+
         if (filterValue === 'day1-all' || itemArea === filterValue) {// 修改day1-all'
           item.style.display = '';
         } else {
@@ -172,8 +172,8 @@ document.addEventListener('DOMContentLoaded', () => {
       // 2. 篩選 Day 1 景點列表
       items.forEach(item => {
         const itemArea = item.getAttribute('data-area');
-        
-        
+
+
         if (filterValue === 'day4-all' || itemArea === filterValue) {// 修改day1-all'
           item.style.display = '';
         } else {
@@ -202,8 +202,8 @@ document.addEventListener('DOMContentLoaded', () => {
       // 2. 篩選 Day 1 景點列表
       items.forEach(item => {
         const itemArea = item.getAttribute('data-area');
-        
-        
+
+
         if (filterValue === 'day3-all' || itemArea === filterValue) {// 修改day1-all'
           item.style.display = '';
         } else {
@@ -232,8 +232,8 @@ document.addEventListener('DOMContentLoaded', () => {
       // 2. 篩選 Day 1 景點列表
       items.forEach(item => {
         const itemArea = item.getAttribute('data-area');
-        
-        
+
+
         if (filterValue === 'day2-all' || itemArea === filterValue) {// 修改day1-all'
           item.style.display = '';
         } else {
@@ -262,8 +262,8 @@ document.addEventListener('DOMContentLoaded', () => {
       // 2. 篩選 Day 1 景點列表
       items.forEach(item => {
         const itemArea = item.getAttribute('data-area');
-        
-        
+
+
         if (filterValue === 'face-all' || itemArea === filterValue) {// 修改day1-all'
           item.style.display = '';
         } else {
@@ -279,7 +279,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const bindAutoSavePrice = () => {
     document.querySelectorAll('.check-item[data-key]').forEach(item => {
       const itemKey = item.getAttribute('data-key');
-      
+
       const krwInput = item.querySelector('.save-krw');
       const twdInput = item.querySelector('.save-twd');
 
@@ -325,9 +325,35 @@ document.addEventListener('DOMContentLoaded', () => {
       ) {
         return;
       }
-      
+
       // 切換展開狀態
       item.classList.toggle('expanded');
+    });
+  });
+});
+
+// 綁定西面分頁的項目分類篩選功能
+document.addEventListener('DOMContentLoaded', () => {
+  const filterButtons = document.querySelectorAll('#bu .filter-btn');
+  const cards = document.querySelectorAll('#bu .treatment-card');
+
+  filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      // 移除其他按鈕 active 樣式
+      filterButtons.forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
+
+      const targetCategory = button.getAttribute('data-filter');
+
+      // 篩選卡片顯示
+      cards.forEach(card => {
+        const categories = card.getAttribute('data-category').split(' ');
+        if (targetCategory === 'all' || categories.includes(targetCategory)) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
     });
   });
 });
