@@ -1377,3 +1377,1315 @@ body {
 .quick-meta-bar .map-actions {
   margin: 0 !important;
 }
+
+/* ===================================================
+   西面醫美指南 - 奶油奶茶風格樣式 (Cream Aesthetic)
+   =================================================== */
+
+.clinic-section {
+  --c-bg: #FAF8F5;
+  --c-card: #FFFFFF;
+  --c-primary: #8C7A6B;
+  --c-primary-light: #F4EFEB;
+  --c-accent: #C4A482;
+  --c-text: #4A4036;
+  --c-muted: #8E857B;
+  --c-border: #EFE9E1;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans TC", sans-serif;
+  color: var(--c-text);
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+}
+
+/* 標題區域 */
+.clinic-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.clinic-header h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--c-text);
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
+.clinic-header p {
+  font-size: 0.875rem;
+  color: var(--c-muted);
+}
+
+/* 分類篩選標籤 */
+.clinic-filters {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  padding-bottom: 0.75rem;
+  margin-bottom: 1.5rem;
+  scrollbar-width: none;
+}
+
+.clinic-filters::-webkit-scrollbar {
+  display: none;
+}
+
+.filter-btn {
+  padding: 0.4rem 1rem;
+  border-radius: 9999px;
+  border: 1px solid var(--c-border);
+  background: var(--c-card);
+  color: var(--c-muted);
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+  background: var(--c-primary);
+  color: #FFFFFF;
+  border-color: var(--c-primary);
+}
+
+/* 網格排列 */
+.clinic-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .clinic-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 項目卡片主體 */
+.treatment-card {
+  background: var(--c-card);
+  border-radius: 16px;
+  border: 1px solid var(--c-border);
+  box-shadow: 0 4px 14px rgba(140, 122, 107, 0.05);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.treatment-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(140, 122, 107, 0.08);
+}
+
+/* 卡片頭部 */
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.title-group h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--c-text);
+  margin: 0;
+}
+
+.title-group .kr-sub {
+  font-size: 0.75rem;
+  color: var(--c-muted);
+  margin-top: 2px;
+}
+
+.badge-downtime {
+  background: var(--c-primary-light);
+  color: var(--c-primary);
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.25rem 0.6rem;
+  border-radius: 6px;
+  white-space: nowrap;
+}
+
+/* 關鍵數值指標 (痛感、見效、上妝) */
+.meta-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background: var(--c-bg);
+  border-radius: 10px;
+  padding: 0.6rem 0.5rem;
+  text-align: center;
+  gap: 0.25rem;
+}
+
+.metric-item .label {
+  font-size: 0.7rem;
+  color: var(--c-muted);
+  display: block;
+  margin-bottom: 2px;
+}
+
+.metric-item .value {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--c-text);
+}
+
+/* 項目簡介 */
+.card-desc {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: #665D54;
+  margin: 0;
+}
+
+/* 優缺點區塊 */
+.pros-cons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.825rem;
+  background: #FDFAF7;
+  padding: 0.75rem;
+  border-radius: 10px;
+  border-left: 3px solid var(--c-accent);
+}
+
+.pros-cons .row {
+  display: flex;
+  gap: 0.5rem;
+  line-height: 1.4;
+}
+
+.tag-pro {
+  color: #5C8D76;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.tag-con {
+  color: #C06B5F;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* 術後護理與旅遊注意事項 */
+.aftercare-box {
+  border-top: 1px dashed var(--c-border);
+  padding-top: 0.75rem;
+  font-size: 0.78rem;
+  color: var(--c-muted);
+  line-height: 1.4;
+}
+
+.aftercare-box strong {
+  color: var(--c-text);
+  display: inline-block;
+  margin-bottom: 2px;
+}
+
+/* ===================================================
+   痘痘/針清管理專用標籤與價格排版樣式
+   =================================================== */
+
+/* 痘痘療程專屬標籤顏色 */
+.badge-acne {
+  background: #E8F0EC;
+  color: #44705A;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.25rem 0.6rem;
+  border-radius: 6px;
+  white-space: nowrap;
+}
+
+/* 價格選單區塊 */
+.price-table-box {
+  background: var(--c-bg);
+  border-radius: 10px;
+  padding: 0.75rem 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  font-size: 0.78rem;
+}
+
+.price-table-box .box-title {
+  font-weight: 600;
+  color: var(--c-text);
+  border-bottom: 1px dashed var(--c-border);
+  padding-bottom: 0.35rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price-sub-note {
+  font-size: 0.7rem;
+  color: #C06B5F;
+  font-weight: normal;
+}
+
+/* 價格單列與網格排版 */
+.price-row-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--c-muted);
+}
+
+.price-highlight {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #C06B5F;
+}
+
+.price-grid-dual {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.4rem;
+  color: var(--c-muted);
+}
+
+/* ===================================================
+   痘痘/針清管理專用樣式表 (無任何行內樣式)
+   =================================================== */
+
+/* 痘痘全寬卡片容器 */
+.treatment-card.card-acne {
+  grid-column: 1 / -1;
+  border: 1.5px solid var(--c-accent);
+  background: #FFFCF9;
+}
+
+.treatment-card.card-acne .card-title-lg {
+  color: #6C584C;
+  font-size: 1.25rem;
+}
+
+/* 狀態標籤 */
+.badge-acne {
+  background: #E8F0EC;
+  color: #44705A;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.25rem 0.6rem;
+  border-radius: 6px;
+  white-space: nowrap;
+}
+
+/* 快速選法區塊 */
+.guide-box {
+  background: var(--c-bg);
+  border-radius: 12px;
+  padding: 0.85rem;
+  border: 1px solid var(--c-border);
+  margin-top: 0.25rem;
+}
+
+.guide-box-title {
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--c-text);
+  margin-bottom: 0.5rem;
+}
+
+.guide-grid-2col {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.6rem;
+  font-size: 0.78rem;
+  line-height: 1.45;
+}
+
+@media (max-width: 600px) {
+  .guide-grid-2col {
+    grid-template-columns: 1fr;
+  }
+}
+
+.guide-item {
+  background: #FFFFFF;
+  padding: 0.6rem;
+  border-radius: 8px;
+}
+
+.guide-item.border-muted { border-left: 3px solid #8E857B; }
+.guide-item.border-accent { border-left: 3px solid #C4A482; }
+.guide-item.border-green { border-left: 3px solid #5C8D76; }
+.guide-item.border-red { border-left: 3px solid #C06B5F; }
+
+.guide-item-title {
+  color: var(--c-text);
+  font-weight: 600;
+}
+
+.guide-item-desc {
+  margin: 2px 0 0;
+  color: var(--c-muted);
+  font-size: 0.72rem;
+}
+
+/* 價格清單區塊 */
+.price-table-box {
+  background: var(--c-bg);
+  border-radius: 10px;
+  padding: 0.75rem 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  font-size: 0.78rem;
+}
+
+.price-table-header {
+  font-weight: 600;
+  color: var(--c-text);
+  border-bottom: 1px dashed var(--c-border);
+  padding-bottom: 0.35rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price-note-warning {
+  font-size: 0.7rem;
+  color: #C06B5F;
+  font-weight: normal;
+}
+
+.price-group-item {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.price-group-item.has-divider {
+  border-top: 1px dotted var(--c-border);
+  padding-top: 0.4rem;
+}
+
+.price-group-title {
+  font-weight: 600;
+  color: var(--c-primary);
+}
+
+.price-sub-desc {
+  font-size: 0.72rem;
+  color: var(--c-muted);
+}
+
+.price-grid-dual {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.4rem;
+  color: var(--c-muted);
+  margin-top: 2px;
+}
+
+@media (max-width: 480px) {
+  .price-grid-dual {
+    grid-template-columns: 1fr;
+  }
+}
+
+.price-row-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price-highlight {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #C06B5F;
+}
+
+/* 防忽悠警告框 */
+.anti-trap-box {
+  background: #FFF5F2;
+  border-radius: 10px;
+  padding: 0.75rem 0.85rem;
+  border-left: 3px solid #C06B5F;
+  font-size: 0.78rem;
+  line-height: 1.45;
+}
+
+.anti-trap-title {
+  color: #C06B5F;
+  display: block;
+  margin-bottom: 4px;
+  font-size: 0.825rem;
+  font-weight: 600;
+}
+
+.anti-trap-list {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: #554A41;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+
+/* ===================================================
+   探頭費科普小卡專用樣式
+   =================================================== */
+
+.tip-info-box {
+  background: var(--c-bg);
+  border-radius: 12px;
+  padding: 0.85rem;
+  border: 1px solid var(--c-border);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  line-height: 1.45;
+}
+
+.tip-info-header {
+  font-weight: 600;
+  color: var(--c-primary);
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.tip-calc-card {
+  background: #FFFFFF;
+  border-radius: 8px;
+  padding: 0.65rem 0.8rem;
+  border-left: 3px solid var(--c-accent);
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.tip-calc-title {
+  font-weight: 600;
+  color: var(--c-text);
+  font-size: 0.78rem;
+}
+
+.tip-calc-desc {
+  color: var(--c-muted);
+  font-size: 0.72rem;
+  margin: 0;
+}
+/* ===================================================
+   抗痘三巨頭對比小卡專用樣式 (無行內樣式)
+   =================================================== */
+
+/* 表格欄位寬度與對齊 */
+.acne-compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.78rem;
+  text-align: left;
+}
+
+.acne-compare-table th {
+  padding: 0.5rem;
+  background: var(--c-primary-light);
+  color: var(--c-text);
+}
+
+.acne-compare-table th:first-child {
+  border-radius: 6px 0 0 6px;
+}
+
+.acne-compare-table th:last-child {
+  border-radius: 0 6px 6px 0;
+}
+
+.acne-compare-table td {
+  padding: 0.5rem;
+  border-bottom: 1px solid var(--c-border);
+  vertical-align: top;
+  line-height: 1.4;
+}
+
+.acne-compare-table td.col-label {
+  font-weight: 600;
+  color: var(--c-muted);
+  white-space: nowrap;
+}
+
+.acne-compare-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* 價格凸顯 */
+.price-pill-red {
+  color: #C06B5F;
+  font-weight: 600;
+}
+
+/* 狀態微標籤 */
+.tag-method {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 1px 6px;
+  border-radius: 4px;
+  margin-bottom: 3px;
+}
+
+.tag-method.blue {
+  background: #EBF3F5;
+  color: #4A7C8A;
+}
+
+.tag-method.gold {
+  background: #FDF4E7;
+  color: #A67C38;
+}
+
+.tag-method.green {
+  background: #EDF5F0;
+  color: #4D8265;
+}
+
+/* ===================================================
+   煥膚針清管理專用樣式表 (無行內樣式)
+   =================================================== */
+
+.badge-peel {
+  background: #F4EFEB;
+  color: #8C7A6B;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.25rem 0.6rem;
+  border-radius: 6px;
+  white-space: nowrap;
+}
+
+.peel-compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.78rem;
+  text-align: left;
+}
+
+.peel-compare-table th {
+  padding: 0.5rem;
+  background: var(--c-primary-light);
+  color: var(--c-text);
+}
+
+.peel-compare-table th:first-child {
+  border-radius: 6px 0 0 6px;
+}
+
+.peel-compare-table th:last-child {
+  border-radius: 0 6px 6px 0;
+}
+
+.peel-compare-table td {
+  padding: 0.5rem;
+  border-bottom: 1px solid var(--c-border);
+  vertical-align: top;
+  line-height: 1.4;
+}
+
+.peel-compare-table td.col-label {
+  font-weight: 600;
+  color: var(--c-muted);
+  white-space: nowrap;
+}
+
+.peel-compare-table tr:last-child td {
+  border-bottom: none;
+}
+/* ===================================================
+   毛孔/痘疤雷射專用樣式表 (無行內樣式，僅單次價格)
+   =================================================== */
+
+.treatment-card.card-pore-laser {
+  grid-column: 1 / -1;
+  border: 1.5px solid var(--c-accent);
+  background: #FFFCF9;
+}
+
+.treatment-card.card-pore-laser .card-title-lg {
+  color: #6C584C;
+  font-size: 1.25rem;
+}
+
+.badge-laser {
+  background: #F4EFEB;
+  color: #8C7A6B;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.25rem 0.6rem;
+  border-radius: 6px;
+  white-space: nowrap;
+}
+
+.single-price-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  background: var(--c-bg);
+  border-radius: 10px;
+  padding: 0.85rem;
+  font-size: 0.8rem;
+}
+
+.single-price-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.single-price-item.bordered {
+  border-top: 1px dotted var(--c-border);
+  padding-top: 0.5rem;
+}
+
+.single-item-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.single-item-title {
+  font-weight: 600;
+  color: var(--c-text);
+}
+
+.single-item-tags {
+  font-size: 0.72rem;
+  color: var(--c-muted);
+}
+
+.single-price-val {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #C06B5F;
+  white-space: nowrap;
+}
+
+/* ===================================================
+   外泌體科普小卡專用樣式 (無行內樣式)
+   =================================================== */
+
+.exosome-box {
+  background: var(--c-bg);
+  border-radius: 12px;
+  padding: 0.85rem;
+  border: 1px solid var(--c-border);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  line-height: 1.45;
+}
+
+.exosome-header {
+  font-weight: 600;
+  color: var(--c-primary);
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.exosome-benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  margin-top: 2px;
+}
+
+@media (max-width: 600px) {
+  .exosome-benefits-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.exosome-benefit-item {
+  background: #FFFFFF;
+  border-radius: 8px;
+  padding: 0.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.exosome-benefit-item.border-red { border-top: 3px solid #C06B5F; }
+.exosome-benefit-item.border-green { border-top: 3px solid #5C8D76; }
+.exosome-benefit-item.border-accent { border-top: 3px solid #C4A482; }
+
+.exosome-benefit-title {
+  font-weight: 600;
+  color: var(--c-text);
+  font-size: 0.78rem;
+}
+
+.exosome-benefit-desc {
+  font-size: 0.72rem;
+  color: var(--c-muted);
+  margin: 0;
+}
+
+/* ===================================================
+   皮秒美白提亮專用樣式表 (無行內樣式，僅單次價格)
+   =================================================== */
+
+.treatment-card.card-pico-bright {
+  grid-column: 1 / -1;
+  border: 1.5px solid var(--c-accent);
+  background: #FFFCF9;
+}
+
+.treatment-card.card-pico-bright .card-title-lg {
+  color: #6C584C;
+  font-size: 1.25rem;
+}
+
+.badge-bright {
+  background: #FFF3E0;
+  color: #B26A00;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.25rem 0.6rem;
+  border-radius: 6px;
+  white-space: nowrap;
+}
+
+.pico-compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.78rem;
+  text-align: left;
+}
+
+.pico-compare-table th {
+  padding: 0.5rem;
+  background: var(--c-primary-light);
+  color: var(--c-text);
+}
+
+.pico-compare-table th:first-child {
+  border-radius: 6px 0 0 6px;
+}
+
+.pico-compare-table th:last-child {
+  border-radius: 0 6px 6px 0;
+}
+
+.pico-compare-table td {
+  padding: 0.5rem;
+  border-bottom: 1px solid var(--c-border);
+  vertical-align: top;
+  line-height: 1.4;
+}
+
+.pico-compare-table td.col-label {
+  font-weight: 600;
+  color: var(--c-muted);
+  white-space: nowrap;
+}
+
+.pico-compare-table tr:last-child td {
+  border-bottom: none;
+}
+/* ===================================================
+   熱門醫美項目指南 - 奶油奶茶風格核心樣式表
+   =================================================== */
+
+:root {
+  --c-bg: #FAF8F5;
+  --c-card: #FFFFFF;
+  --c-primary: #8C7A6B;
+  --c-primary-light: #F4EFEB;
+  --c-accent: #C4A482;
+  --c-accent-light: #FAF5EE;
+  --c-text: #4A4036;
+  --c-muted: #8E857B;
+  --c-border: #EFE9E1;
+  --c-red: #C06B5F;
+  --c-red-bg: #FFF5F2;
+  --c-green: #5C8D76;
+  --c-green-bg: #EFF6F2;
+}
+
+/* 模組外層容器 */
+.clinic-section {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans TC", sans-serif;
+  color: var(--c-text);
+  line-height: 1.5;
+}
+
+/* 標題區塊 */
+.clinic-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.clinic-header h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--c-text);
+  letter-spacing: 0.05em;
+  margin: 0 0 0.5rem;
+}
+
+.clinic-header p {
+  font-size: 0.875rem;
+  color: var(--c-muted);
+  margin: 0;
+}
+
+/* 分類篩選導覽 */
+.clinic-filters {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  padding: 0.25rem 0.25rem 1rem;
+  margin-bottom: 1.5rem;
+  scrollbar-width: none;
+}
+
+.clinic-filters::-webkit-scrollbar {
+  display: none;
+}
+
+.filter-btn {
+  padding: 0.45rem 1.1rem;
+  border-radius: 9999px;
+  border: 1px solid var(--c-border);
+  background: var(--c-card);
+  color: var(--c-muted);
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+  background: var(--c-primary);
+  color: #FFFFFF;
+  border-color: var(--c-primary);
+  box-shadow: 0 2px 8px rgba(140, 122, 107, 0.2);
+}
+
+/* 卡片網格：預設雙欄，全寬卡片跨滿兩欄 */
+.clinic-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .clinic-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 卡片主體 */
+.treatment-card {
+  background: var(--c-card);
+  border-radius: 16px;
+  border: 1px solid var(--c-border);
+  box-shadow: 0 4px 16px rgba(140, 122, 107, 0.05);
+  padding: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.treatment-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(140, 122, 107, 0.09);
+}
+
+.treatment-card.card-full {
+  grid-column: 1 / -1;
+  border: 1.5px solid var(--c-accent);
+  background: #FFFCF9;
+}
+
+/* 卡片頂部 */
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.title-group h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--c-text);
+  margin: 0;
+}
+
+.title-group .kr-sub {
+  font-size: 0.75rem;
+  color: var(--c-muted);
+  margin-top: 3px;
+}
+
+/* 修復期標籤 */
+.badge-downtime {
+  background: var(--c-primary-light);
+  color: var(--c-primary);
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.25rem 0.65rem;
+  border-radius: 6px;
+  white-space: nowrap;
+}
+
+/* 三大指標 (痛感/顯效/上妝) */
+.meta-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background: var(--c-bg);
+  border-radius: 10px;
+  padding: 0.65rem 0.5rem;
+  text-align: center;
+  gap: 0.25rem;
+}
+
+.metric-item .label {
+  font-size: 0.7rem;
+  color: var(--c-muted);
+  display: block;
+  margin-bottom: 2px;
+}
+
+.metric-item .value {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--c-text);
+}
+
+/* 規格清單 */
+.specs-box {
+  font-size: 0.8rem;
+  background: var(--c-bg);
+  padding: 0.7rem 0.85rem;
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.35rem 0.75rem;
+  line-height: 1.45;
+}
+
+.specs-label {
+  color: var(--c-muted);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* 說明內文 */
+.card-desc {
+  font-size: 0.85rem;
+  line-height: 1.55;
+  color: #665D54;
+  margin: 0;
+}
+
+/* 核心特點微標籤群 */
+.feature-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  font-size: 0.75rem;
+}
+
+.feature-tag {
+  background: var(--c-primary-light);
+  color: var(--c-primary);
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+/* 價格專區 */
+.price-block {
+  font-size: 0.8rem;
+  background: var(--c-bg);
+  padding: 0.8rem 0.9rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.price-block-header {
+  font-weight: 600;
+  color: var(--c-text);
+  border-bottom: 1px dashed var(--c-border);
+  padding-bottom: 0.35rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price-sub-note {
+  font-size: 0.7rem;
+  color: var(--c-muted);
+  font-weight: normal;
+}
+
+.price-row-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--c-muted);
+}
+
+.price-row-item.bordered {
+  border-top: 1px dotted var(--c-border);
+  padding-top: 0.45rem;
+}
+
+.price-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.4rem 0.8rem;
+  color: var(--c-muted);
+}
+
+@media (max-width: 480px) {
+  .price-grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.price-red {
+  color: var(--c-red);
+  font-weight: 600;
+}
+
+/* 30秒直覺指引卡片區 */
+.guide-box {
+  background: var(--c-bg);
+  border-radius: 12px;
+  padding: 0.9rem;
+  border: 1px solid var(--c-border);
+}
+
+.guide-box-title {
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--c-text);
+  margin-bottom: 0.5rem;
+}
+
+.guide-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.6rem;
+}
+
+.guide-grid.cols-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 650px) {
+  .guide-grid, .guide-grid.cols-3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.guide-item {
+  background: #FFFFFF;
+  padding: 0.65rem 0.75rem;
+  border-radius: 8px;
+  font-size: 0.78rem;
+  line-height: 1.45;
+  border-left: 3px solid var(--c-accent);
+}
+
+.guide-item.border-muted { border-left-color: var(--c-muted); }
+.guide-item.border-green { border-left-color: var(--c-green); }
+.guide-item.border-red   { border-left-color: var(--c-red); }
+
+.guide-item strong {
+  display: block;
+  color: var(--c-text);
+  margin-bottom: 2px;
+}
+
+.guide-item p {
+  margin: 0;
+  color: var(--c-muted);
+  font-size: 0.72rem;
+}
+
+/* 表格專區 */
+.table-scroll-wrapper {
+  overflow-x: auto;
+  border-radius: 8px;
+  border: 1px solid var(--c-border);
+}
+
+.card-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.78rem;
+  text-align: left;
+  background: #FFFFFF;
+}
+
+.card-table th {
+  padding: 0.55rem 0.7rem;
+  background: var(--c-primary-light);
+  color: var(--c-text);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.card-table td {
+  padding: 0.6rem 0.7rem;
+  border-bottom: 1px solid var(--c-border);
+  vertical-align: top;
+  line-height: 1.45;
+}
+
+.card-table tr:last-child td {
+  border-bottom: none;
+}
+
+.card-table td.col-label {
+  font-weight: 600;
+  color: var(--c-muted);
+  white-space: nowrap;
+  background: #FAF8F5;
+}
+
+/* 優缺點框 */
+.pros-cons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  font-size: 0.825rem;
+  background: var(--c-accent-light);
+  padding: 0.75rem 0.85rem;
+  border-radius: 10px;
+  border-left: 3px solid var(--c-accent);
+}
+
+.pros-cons .row {
+  display: flex;
+  gap: 0.5rem;
+  line-height: 1.45;
+}
+
+.tag-pro {
+  color: var(--c-green);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.tag-con {
+  color: var(--c-red);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* 折疊式科普與防忽悠區塊 (Details/Summary) */
+.toggle-drawer {
+  background: #FFFFFF;
+  border: 1px solid var(--c-border);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.toggle-drawer summary {
+  padding: 0.65rem 0.85rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--c-primary);
+  cursor: pointer;
+  background: #FFFDFC;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.toggle-drawer summary::-webkit-details-marker {
+  display: none;
+}
+
+.toggle-drawer summary::after {
+  content: '＋';
+  font-size: 0.9rem;
+  color: var(--c-muted);
+}
+
+.toggle-drawer[open] summary::after {
+  content: '－';
+}
+
+.toggle-drawer-content {
+  padding: 0.75rem 0.85rem;
+  font-size: 0.76rem;
+  line-height: 1.5;
+  color: #554A41;
+  border-top: 1px dashed var(--c-border);
+  background: #FFFEFD;
+}
+
+/* 防忽悠警告框 */
+.anti-trap-box {
+  background: var(--c-red-bg);
+  border-radius: 10px;
+  padding: 0.8rem 0.9rem;
+  border-left: 3px solid var(--c-red);
+  font-size: 0.78rem;
+  line-height: 1.45;
+}
+
+.anti-trap-title {
+  color: var(--c-red);
+  display: block;
+  margin-bottom: 5px;
+  font-size: 0.825rem;
+  font-weight: 600;
+}
+
+.anti-trap-list {
+  margin: 0;
+  padding-left: 1.15rem;
+  color: #554A41;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* 術後護理小叮嚀 */
+.aftercare-box {
+  border-top: 1px dashed var(--c-border);
+  padding-top: 0.75rem;
+  font-size: 0.78rem;
+  color: var(--c-muted);
+  line-height: 1.45;
+}
+
+.aftercare-box strong {
+  color: var(--c-text);
+  display: inline-block;
+  margin-bottom: 2px;
+}
